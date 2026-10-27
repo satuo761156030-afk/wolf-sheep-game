@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#122e2c"><title>狼与幻羊 · v6 · 狩猎博弈</title>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#122e2c"><title>狼与幻羊 · v8 · 森林围猎</title>
 <style>
 :root{color-scheme:dark;font-family:ui-rounded,'PingFang SC','Microsoft YaHei',system-ui,sans-serif;--ink:#edf8ec;--sub:#bbd6c7;--lime:#d7f1a2;--border:#5d8175}
 *{box-sizing:border-box}body{margin:0;min-height:100svh;padding:12px;background:radial-gradient(circle at 50% 0%,#2e5141 0%,#102822 62%);color:var(--ink)}button{font:inherit;font-size:12px;font-weight:780;cursor:pointer;touch-action:manipulation;color:var(--ink);border-radius:11px;border:1px solid #688a7b;background:#3b6455;padding:9px 11px;min-height:42px}button:active{transform:translateY(1px);filter:brightness(1.1)}button:disabled{opacity:.38;cursor:default}.primary{background:var(--lime);border-color:#e5fac3;color:#2a4430}.secondary{background:#203f37}.small{font-size:11px;min-height:35px;padding:7px 9px}
@@ -11,18 +11,79 @@
 .aimNote{margin-top:9px;padding:8px;text-align:center;font-size:12px;color:#fff0be;border:1px solid #d1a75a;background:#62533a;border-radius:9px}.aimNote[hidden]{display:none}.instruction{text-align:center;font-size:11px;color:#c1dcc7;margin:5px 0 12px;line-height:1.5}.levelheader{display:flex;gap:6px;align-items:center;justify-content:space-between;margin:5px 0 8px;font-size:12px;font-weight:780}.levelheader span:last-child{font-size:10px;color:#d9f3ab;background:#365e47;border-radius:16px;padding:5px 8px}.levels{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:5px}.levels button{min-height:32px;border-radius:8px;font-size:11px;padding:0}.levels button.active{background:#d6f1a0;color:#21402b;border-color:#e4ffb2}.footer{text-align:center;color:#9fc5b0;font-size:10px;line-height:1.5;margin:13px auto 1px}
 .overlay{position:fixed;inset:0;z-index:20;padding:16px;display:grid;place-items:center;background:#081b17d9;backdrop-filter:blur(5px)}.overlay[hidden]{display:none}.panel{width:100%;max-width:424px;padding:23px 18px 20px;background:linear-gradient(140deg,#336149,#1c433b);border:1px solid #93b18b;border-radius:20px;box-shadow:0 20px 55px #0009;text-align:center}.panel .pic{font-size:45px;line-height:1.3}.panel .index{font-size:11px;font-weight:800;letter-spacing:1px;color:#d4efab}.panel h2{font-size:22px;margin:8px 0 10px}.panel p{font-size:13px;line-height:1.8;margin:0 auto 18px;color:#e6f4e6;white-space:pre-line}.panel .buttons{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}.panel button{font-size:13px;min-width:115px;min-height:44px}
 @media(max-width:388px){body{padding:5px}#game{padding:8px}.head h1{font-size:19px}.controls{gap:6px}.pad{grid-template-columns:repeat(3,39px);grid-template-rows:repeat(2,40px);gap:3px}.actions{gap:4px}.actions button{font-size:10px;padding:4px 2px}.tile .sprite{font-size:clamp(21px,5.8vw,32px)}}
+
+/* v8 Forest Edition / refined mobile-first layout */
+:root{color-scheme:dark;--ink:#F0FAED;--sub:#BAD3BC;--lime:#D8F6A3;--border:#4B6658}
+body{padding:16px 12px 42px;background:radial-gradient(ellipse at 50% -12%,#486d55 0%,#18392f 46%,#10241e 100%);background-attachment:fixed}
+#game{max-width:530px;padding:16px;background:linear-gradient(165deg,#244c3d 0%,#16382f 96%);box-shadow:0 22px 70px #061b15a5;border:1px solid #69866b;border-radius:25px}
+.head{align-items:center}.head h1{font-size:22px;font-weight:900;letter-spacing:1px}.head small{font-size:11px;letter-spacing:.6px;color:#bfdbbd}.head .btns{gap:6px}
+.head button{min-height:36px;letter-spacing:.2px}
+.stats{gap:8px;margin-bottom:10px}.stat{background:#2c5544;border:1px solid #486b55;border-radius:13px;font-size:10px;padding:8px 4px}.stat b{font-size:13px;margin-top:4px}
+#board{border:5px solid #5a7b61;outline:2px solid #193d34;box-shadow:0 12px 20px #0a221849,inset 0 0 5px #2c5734;border-radius:15px;max-width:500px;}
+.tile:nth-child(2n){background:#97BB80}.tile:nth-child(2n+1){background:#ABD091}.tile{isolation:isolate;cursor:pointer;transition:background .13s ease}
+.tile.mud{background:repeating-linear-gradient(25deg,#9c885e,#9c885e 8px,#ab976a 9px,#ab976a 12px)}
+.tile.wall{background:#78968c}.tile.fence{background:#91ab77}.tile.grass{background:repeating-linear-gradient(45deg,#76ac70,#76ac70 8px,#82b579 8px,#82b579 16px)}
+.tile .sprite{font-size:clamp(23px,5.8vw,34px);filter:drop-shadow(0 3px 1px #23402b5a)}
+.sprite svg{display:block;width:100%;height:100%}.tile .sprite.vector{width:72%;height:72%;display:grid;place-items:center;transform-origin:center bottom;animation:enterSprite .16s ease-out}
+@keyframes enterSprite{from{transform:scale(.82) translateY(2px);opacity:.73}to{transform:scale(1);opacity:1}}
+.tile .ring{border-width:3px;inset:10%;box-shadow:0 0 0 3px #f0be5070}.tile .playerMark{font-size:9px;font-weight:900;letter-spacing:.5px;color:#153f37;background:#e2f7ad;border-radius:4px;padding:0 2px;bottom:0px}
+.tile .mind{position:absolute;top:0px;left:1px;font-size:13px;z-index:6;line-height:1;filter:drop-shadow(0 1px 1px #183624);}
+.tile .marker{position:absolute;bottom:0;right:1px;z-index:8;font-size:15px;filter:drop-shadow(0 1px 1px #1b2616)}
+.tile .vision{position:absolute;inset:4px;border-radius:7px;background:#fcbf6070;pointer-events:none;z-index:1;border:1px dashed #8f542b}
+.tile .gate-overlay{position:absolute;inset:8%;z-index:2;display:grid;place-items:center;font-weight:900;pointer-events:none;font-size:28px;color:#704c25;text-shadow:0 1px #efdb93}
+.tile .gate-overlay.closed{background:#b98a50b0;border:2px solid #6f512a;border-radius:6px}
+.tile .gate-overlay.open{border-left:4px solid #91622d;border-right:4px solid #91622d;border-radius:6px;opacity:.65}
+.tile .shield{font-size:14px}.tile.protectedSheep{outline:2px dashed #fcdf9e;outline-offset:-5px}
+#coach{background:#455c42;color:#f9f7d8;border:1px solid #a4c69b}
+.message{background:#285344;border:1px solid #436e59;min-height:55px;border-radius:13px}
+.controls{display:grid;grid-template-columns:minmax(127px,145px) minmax(0,1fr);align-items:center;gap:10px;margin:12px 0}
+.pad{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,51px);width:100%;gap:5px}
+.pad button{background:#446d56;border:1px solid #77987a;box-shadow:0 3px 0 #244333;font-size:25px;min-height:48px;border-radius:12px}
+.actions{max-width:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.actions button{min-height:47px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:10px;font-weight:800;background:#315b4c;border-color:#668976;padding:5px 2px}
+.actions button .ability-icon{font-size:21px;line-height:1.05}
+.actions button .ability-caption{font-size:10px;line-height:1.25}
+.actions button.active{background:#f2d18b;color:#34291d}
+#sniff .ability-icon{filter:drop-shadow(0 1px 0 #e4d9b5)}
+#utilityRow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-top:-2px}
+#utilityRow button{min-height:39px;background:#24463d;border:1px solid #4b7565;font-size:11px;padding:5px}
+#utilityRow button.active{background:#dbe9b5;color:#264132}
+#utilityRow button:disabled{opacity:.4}
+#subactions{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;margin-top:7px}
+#subactions button{font-size:11px;min-height:35px}
+#hintBar{display:flex;align-items:center;justify-content:space-between;color:#d1e3cb;font-size:11px;padding:7px 3px 3px;gap:6px}
+#statusPill{background:#355e4c;border:1px solid #698b6a;padding:6px 8px;border-radius:12px;white-space:nowrap;color:#e8eecb;font-size:10px}
+.instruction{color:#bcd7bb;margin:6px 0;font-size:10.5px}
+.levelheader{display:none}.levels{display:none}.footer{margin-top:11px}
+.overlay{background:#081915e6;backdrop-filter:blur(8px)}.panel{background:linear-gradient(170deg,#345f4e,#1b3e32);border:1px solid #81a38c;border-radius:24px;padding:24px 19px;box-shadow:0 25px 80px #000a}
+.panel h2{font-size:23px}.panel p{font-size:13px}
+#chooseOverlay[hidden]{display:none}#chooseOverlay{z-index:30}
+.choosePanel{width:min(100%,490px);max-height:90svh;overflow:auto;border-radius:22px;padding:16px;background:linear-gradient(150deg,#2a5845,#15372f);border:1px solid #91aa86;box-shadow:0 25px 55px #0008}
+.chooseHeader{display:flex;align-items:center;justify-content:space-between;gap:7px;margin-bottom:13px}.chooseHeader h2{margin:0;font-size:21px}.choosePanel>p{font-size:12px;color:#c7dbc7}
+#levelsPicker{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+#levelsPicker button{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:5px;text-align:left;min-height:77px;background:#315b47;border:1px solid #75957b;padding:10px;border-radius:13px}
+#levelsPicker button .num{font-size:11px;color:#dfedb6}#levelsPicker button .nm{font-size:13px;font-weight:800}#levelsPicker button .best{font-size:10px;color:#c2dec4}
+#levelsPicker button.active{background:#d4efa9;color:#1f4331}#levelsPicker button.active *{color:#1f4331!important}
+#endlessPick{width:100%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(90deg,#6e5e3d,#a47f47);margin:11px 0;min-height:60px;color:#fff8d4;font-weight:850}
+#tutorialBadge{margin-top:9px;color:#d5efb5;font-size:11px}
+@media(max-width:390px){body{padding:6px}#game{padding:11px}.head h1{font-size:19px}.controls{grid-template-columns:120px 1fr;gap:7px}.pad{grid-template-rows:repeat(2,47px)}.pad button{min-height:46px}.actions{gap:5px}.actions button{min-height:44px}.tile .sprite.vector{width:78%;height:78%}}
+@media(min-width:620px){body{padding-top:30px}}
 </style></head><body><main id="game">
-<header class="head"><div><h1>🐺 狼与幻羊</h1><small>v6 · 预判扑击、守卫反制与追踪</small></div><div class="btns"><button class="small" id="help">📖 机制</button><button class="small" id="restart">↺ 重来</button></div></header>
-<div class="stats"><div class="stat">关卡<b id="level">1 / 10</b></div><div class="stat">回合<b id="turn">0</b></div><div class="stat">状态 / 换位<b id="clock">教学中</b></div></div>
-<div id="board" role="grid" aria-label="七乘七棋盘"></div>
+<header class="head"><div><h1>🐺 狼与幻羊</h1><small>森林围猎 · v8</small></div><div class="btns"><button class="small secondary" id="help">📖 图鉴</button><button class="small secondary" id="openLevels">🗺 选关</button></div></header>
+<div class="stats"><div class="stat">当前关卡<b id="level">1 / 10</b></div><div class="stat">猎场回合<b id="turn">0</b></div><div class="stat">幻影换位<b id="clock">准备中</b></div></div>
+<div id="board" role="grid" aria-label="七乘七牧场棋盘"></div>
 <div id="coach" hidden></div>
-<div class="message" role="status"><p id="message">观察金圈里的真羊。</p><button class="primary" id="begin">开始</button></div>
-<div id="aimNote" class="aimNote" hidden>选中战术后，点棋盘上的发光格子；再点一次按钮可取消。</div>
-<div class="controls"><div class="pad"><button data-d="0" aria-label="向上">↑</button><button data-d="3" aria-label="向左">←</button><button data-d="2" aria-label="向下">↓</button><button data-d="1" aria-label="向右">→</button></div><div class="actions"><button id="dash">⚡ 扑击 · 3关</button><button id="trap">🎯 伏击 · 5关</button><button id="sniff">👃 嗅觉 ×2</button><button id="howl">📣 嚎叫 · 4关</button><button id="wait">⏳ 等一回合</button><button id="cancel">✕ 取消瞄准</button></div></div>
-<div class="instruction">真羊通关 · 假羊失败 · 牧羊人可护卫反击。嗅觉耗回合，扑击要猜落点。</div>
-<div class="levelheader"><span>🗺️ 自由选关</span><span>测试模式 · 全部解锁</span></div><nav class="levels" id="levels" aria-label="自由选关"></nav>
-<div class="footer">手机滑动 / 点击方向键 · 电脑方向键 / WASD · 本地记录教程与通关成绩</div>
+<div class="message" role="status"><p id="message">记住金圈里的真羊。</p><button class="primary" id="begin">开始猎捕</button></div>
+<div id="hintBar"><span>✨ 识破身份不等于抓住目标</span><span id="statusPill">🌿 观察猎场</span></div>
+<div id="aimNote" class="aimNote" hidden>点棋盘上的高亮格子选择落点</div>
+<div class="controls"><div class="pad"><button data-d="0" aria-label="向上">↑</button><button data-d="3" aria-label="向左">←</button><button data-d="2" aria-label="向下">↓</button><button data-d="1" aria-label="向右">→</button></div>
+<div class="actions"><button id="sniff"><span class="ability-icon">👃</span><span class="ability-caption">嗅觉 ×2</span></button><button id="dash"><span class="ability-icon">⚡</span><span class="ability-caption">预判扑击</span></button><button id="trap"><span class="ability-icon">🎯</span><span class="ability-caption">守位伏击</span></button><button id="howl"><span class="ability-icon">📣</span><span class="ability-caption">嚎叫驱赶</span></button></div></div>
+<div id="utilityRow"><button id="marker">📍 推理标记</button><button id="gateBtn">🚪 开关围栏</button><button id="wait">⏳ 等一回合</button></div>
+<div id="subactions"><button class="secondary" id="cancel">✕ 取消瞄准</button><button class="secondary" id="restart">↺ 重玩本关</button></div>
+<div class="instruction">方向键 / WASD / 棋盘滑动 · 点棋盘落点扑击、伏击、标记和围栏</div>
+<div id="levels" hidden></div><div class="footer">独立离线小游戏 · 十关故事 + 无尽猎场 · 本机保存最佳记录</div>
 </main>
+<div class="overlay" id="chooseOverlay" hidden><div class="choosePanel"><div class="chooseHeader"><h2>🗺️ 选择猎场</h2><button class="small" id="closeLevels">✕ 返回</button></div><p>10 关全部开放，自由跳关。金星表示已通关。</p><div id="levelsPicker"></div><button id="endlessPick">🌙 无尽猎场 <span id="endlessBest">最佳连猎 0</span></button><div id="tutorialBadge">🧭 首关可以重新观看完整的新手教程</div></div></div>
 <div class="overlay" id="overlay" hidden><div class="panel"><div class="index" id="cardIndex">机制说明</div><div class="pic" id="cardIcon"></div><h2 id="cardTitle"></h2><p id="cardText"></p><div class="buttons" id="cardButtons"></div></div></div>
 <script>
 (()=>{'use strict';
@@ -33,14 +94,14 @@ const stages=[
  {name:'两格扑击',n:2,e:5,w:[[2,3],[4,3]],mud:[],intro:['dash']},
  {name:'高草里的牧羊人',n:2,e:5,w:[[2,2]],mud:[],guard:[5,5],intro:['guard']},
  {name:'泥地的脚印',n:3,e:5,w:[[2,2],[4,4]],mud:[[1,5],[3,5],[5,1]],guard:[5,5],intro:['trap','foot']},
- {name:'引开守卫',n:3,e:4,w:[[3,1],[1,3]],mud:[[2,5],[4,5]],guard:[5,5],bell:[3,5],intro:['bell']},
- {name:'羊群中的帽子',n:3,e:4,w:[[2,3],[4,3]],mud:[[1,4],[5,2]],mask:true,intro:['mask']},
- {name:'双重庇护',n:4,e:4,w:[[2,1],[4,1]],mud:[[1,4],[5,1]],guard:[5,5],mask:true,intro:[]},
- {name:'全图幻移',n:4,e:3,w:[[2,2],[4,2],[2,4]],mud:[[1,5],[5,1]],guard:[5,5],global:true,intro:['global']},
- {name:'最后的围猎',n:5,e:3,w:[[2,1],[4,5],[2,4]],mud:[[1,1],[3,5],[5,0]],guard:[5,5],mask:true,global:true,decoy:true,intro:['decoy']}
+ {name:'引开守卫',n:3,e:4,w:[[3,1],[1,3]],mud:[[2,5],[4,5]],guard:[5,5],bell:[3,5],intro:['bell','mind','patrol']},
+ {name:'羊群中的帽子',n:3,e:4,w:[[2,3],[4,3]],mud:[[1,4],[5,2]],mask:true,gates:[[3,2]],fences:[[2,2],[4,2]],intro:['mask','gate','mark']},
+ {name:'双重庇护',n:4,e:4,w:[[2,1],[4,1]],mud:[[1,4],[5,1]],guard:[5,5],mask:true,gates:[[3,3]],fences:[[2,3],[4,3]],intro:[]},
+ {name:'全图幻移',n:4,e:4,w:[[2,2],[4,2],[2,4]],mud:[[1,5],[5,1]],guard:[5,5],global:true,gates:[[3,1]],fences:[[2,1],[4,1]],intro:['global']},
+ {name:'最后的围猎',n:5,e:4,w:[[2,1],[4,5],[2,4]],mud:[[1,1],[3,5],[5,0]],guard:[5,5],mask:true,global:true,decoy:true,gates:[[3,1],[3,5]],fences:[[2,1],[4,1],[2,5]],intro:['decoy']}
 ];
 const info={
- basic:{icon:'🐺 🐑',title:'新手教程 · 先做再学',text:'你控制狼，目标是抓住开局金圈标出的真羊。\n每行动一回合，羊也会动；抓到假羊直接失败。\n先亲自走一步，再用嗅觉让真羊显形两个回合。'},
+ basic:{icon:'🐺 🐑',title:'新手教程 · 先做再学',text:'记住金圈里的真羊，狼每行动一步，羊群就会同时行动。\n撞到真羊获胜，撞到假羊失败。\n先尝试移动一次，再使用嗅觉获得一次真羊的位置快照。'},
  swap:{icon:'🐑 ⇄ 🐑',title:'新机制 · 局部换位',text:'普通关卡里，只有相距不超过 3 格的两只羊才能交换现有位置。\n它们不会凭空刷新，更不会强制逃到地图另一侧。\n如果你已贴近真羊，换位会暂缓。'},
  dash:{icon:'⚡ 🐺',title:'新机制 · 预判扑击',text:'第3关起解锁。选择两步内落点（允许拐弯），羊先走一步，狼再扑过去。\n你得猜羊将往哪逃，不能直接点着真羊秒杀！落点如果有假羊，也会失败。冷却3回合。'},
  trap:{icon:'🎯 🐺',title:'新机制 · 守位伏击',text:'第5关起解锁。选狼身边一块空地设伏：狼原地守住，羊下一步踏入该格才会被咬住。\n真羊被咬会通关，假羊会失败；狼不会瞬间移动到伏击格。\n牧羊人可以挡下附近被庇护的羊。'},
@@ -48,36 +109,50 @@ const info={
  foot:{icon:'🐾',title:'新机制 · 泥地脚印',text:'真羊经过泥地时会留下短暂脚印。\n脚印表示它之前走过的位置，不一定是现在的位置。\n高级关卡中，假羊也会伪造脚印。'},
  bell:{icon:'🔔',title:'新机制 · 风铃',text:'走到风铃所在的格子，可以短暂看见真羊的金色标记。\n每局只能触发一次。注意牧羊人也会行动，别为了线索跑进死角。'},
  mask:{icon:'🐑 🎩',title:'新机制 · 伪装牧羊人',text:'羊群里混进了一名伪装成羊的牧羊人。\n他会偶尔露出草帽。狼靠近时，他会暴露身份并开始追狼。\n真羊和假羊也会试图靠近他获得保护。'},
- global:{icon:'✨ 🌍',title:'高级机制 · 全图换位',text:'第9关起可跨全图交换两只羊已有的位置，换位前有紫色预警。\n如果狼已经贴近真羊，交换会被压制。\n嗅觉显影会跟着真羊一起换位，灵活利用它与精准扑击来完成围猎。'},
+ global:{icon:'✨ 🌍',title:'高级机制 · 全图换位',text:'第9关起可跨全图交换两只羊已有的位置，换位前有紫色预警。\n如果狼已经贴近真羊，交换会被压制。\n嗅觉只记住一次当前位置，换位后并不会跟随真羊。你必须继续观察并预判落点。'},
+ mind:{icon:'💛 🐑',title:'新机制 · 羊的情绪',text:'羊有平静、警觉和惊慌三种情绪。狼逼近会令它们警觉，扑击与嚎叫可能引发惊慌。\n观察羊行动和表情，就能更合理地预判落点。真假羊都遵守同一套情绪规则。'},
+ patrol:{icon:'👀 🧑‍🌾',title:'新机制 · 牧羊人巡视',text:'中后期牧羊人不再一直站着，他会沿草地巡逻并盯着面前的方向。\n橙色区域代表短距离视野，靠近视野会先引起警觉；可以趁他转身绕过，或将他引开再抓羊。'},
+ gate:{icon:'🚪 🐑',title:'新机制 · 牧场围栏',text:'木围栏会形成窄道，关闭门能阻断狼、羊及牧羊人的通路。\n先走到门旁，点击「开关围栏」，再点门格；开关会消耗一个回合，不能在有角色站着时关闭。\n封路也可能困住自己，不要乱关。'},
+ mark:{icon:'📍 🕵️',title:'新机制 · 手动推理标记',text:'点击「推理标记」再点棋盘格子，可以放置或取消位置标记，不消耗回合。\n标记只属于你的猜测，不会跟着羊自动移动，换位后记得自己更新。最多保留3个。'},
+ endless:{icon:'🌙 🎯',title:'无尽猎场 · 连续挑战',text:'每抓到一只真羊就进入更复杂的新牧场。抓错羊或被牧羊人抓住，会结束整轮连猎。\n记录最高连续成功次数，没有生命数，也不强制限时；可以随时返回十关模式。'},
  decoy:{icon:'🐾 🎭',title:'最终挑战 · 假脚印',text:'最后一关里，假羊也可能在泥地留下脚印。\n同样的痕迹未必代表同样的身份。结合牧羊人的行动、嗅觉和换位预警进行判断。'}
 };
-const STORAGE='wolf_sheep_v6_memory';let save={seen:{},best:{},introDone:false};try{const s=JSON.parse(localStorage.getItem(STORAGE)||'null');if(s&&typeof s==='object')save={...save,...s}}catch{};const remember=()=>{try{localStorage.setItem(STORAGE,JSON.stringify(save))}catch{}};
-let stage=0,S=null,screenSeq=0,cardQueue=[],testHook=false;
+const STORAGE='wolf_sheep_v8_memory';let save={seen:{},best:{},introDone:false,endlessBest:0};try{const s=JSON.parse(localStorage.getItem(STORAGE)||'null');if(s&&typeof s==='object')save={...save,...s}}catch{};const remember=()=>{try{localStorage.setItem(STORAGE,JSON.stringify(save))}catch{}};
+let stage=0,S=null,screenSeq=0,cardQueue=[],testHook=false,endlessWave=1;
+let savedPrev=null;
 function card(entry){$('cardIndex').textContent=entry.index||'新机制解锁';$('cardIcon').textContent=entry.icon;$('cardTitle').textContent=entry.title;$('cardText').textContent=entry.text;$('cardButtons').innerHTML='';for(const a of entry.actions||[{label:'知道了',primary:true}]){const b=document.createElement('button');b.className=a.primary?'primary':'';b.textContent=a.label;b.onclick=()=>{$('overlay').hidden=true;a.action?.();showNextCard()};$('cardButtons').appendChild(b)}$('overlay').hidden=false}
 function showNextCard(){if(cardQueue.length)card(cardQueue.shift())}
 function mechanicCard(id,{force=false}={}){if(!force&&save.seen[id])return;save.seen[id]=true;remember();const m=info[id];cardQueue.push({...m,index:id==='basic'?'开场教学':'新机制登场'});}
 function post(t){$('message').textContent=t}
-function config(){return stages[stage]}
-function inside(p){return p.x>=0&&p.x<N&&p.y>=0&&p.y<N&&!S.walls.has(K(p))}
+function config(){if(stage!==10)return stages[stage];const layouts=[
+ {w:[[2,2],[4,4]],mud:[[1,4],[5,2]],gates:[[3,1]],fences:[[2,1],[4,1]]},
+ {w:[[2,3],[4,3]],mud:[[1,5],[5,1]],gates:[[3,2]],fences:[[2,2],[4,2]]},
+ {w:[[2,1],[4,5]],mud:[[2,5],[5,2]],gates:[[3,4]],fences:[[2,4],[4,4]]},
+ {w:[[2,4],[4,2]],mud:[[1,1],[5,5]],gates:[[3,1]],fences:[[2,1],[4,1]]}
+ ];const a=layouts[(endlessWave-1)%layouts.length];return {...a,name:'第 '+endlessWave+' 次围猎',n:Math.min(5,2+Math.floor((endlessWave-1)/2)),e:Math.max(4,7-Math.floor(endlessWave/3)),guard:endlessWave>=2?[5,5]:null,mask:endlessWave>=4,global:endlessWave>=6,decoy:endlessWave>=7,bell:endlessWave%3===0?[3,5]:null,intro:endlessWave===1?['endless']:[]}}
+function openPicker(){drawPicker();$('chooseOverlay').hidden=false}
+function drawPicker(){const holder=$('levelsPicker');holder.innerHTML=stages.map((c,i)=>`<button data-pick="${i}" class="${i===stage?'active':''}"><span class="num">CHAPTER ${String(i+1).padStart(2,'0')}</span><span class="nm">${c.name}</span><span class="best">${save.best[i]?'★ 最佳 '+save.best[i]+' 回合':'◇ 尚未通关'}</span></button>`).join('');$('endlessBest').textContent='最佳连猎 '+(save.endlessBest||0)}
+function setStage(i){$('chooseOverlay').hidden=true;if(i===10){endlessWave=1;newLevel(10)}else newLevel(i)}
+function inside(p){return p.x>=0&&p.x<N&&p.y>=0&&p.y<N&&!S.walls.has(K(p))&&!S.fences.has(K(p))&&!(S.gates?.has(K(p))&&S.gates.get(K(p))===false)}
 function pathDist(a,b){const queue=[[a,0]],seen=new Set([K(a)]);while(queue.length){const [p,d]=queue.shift();if(eq(p,b))return d;for(const [dx,dy] of D.slice(0,4)){const np=xy(p.x+dx,p.y+dy);if(inside(np)&&!seen.has(K(np))){seen.add(K(np));queue.push([np,d+1])}}}return 99}
 function chooseSpawn(){// All initial sheep are at least four moves from the wolf; normal levels start with a locally swappable pair.
- const pool=[];for(let y=0;y<N;y++)for(let x=0;x<N;x++){let p=xy(x,y);if(!inside(p)||dist(p,S.wolf)<4||S.guard&&dist(p,S.guard.home)<=1||S.bell&&eq(p,S.bell))continue;pool.push(p)}
+ const pool=[];for(let y=0;y<N;y++)for(let x=0;x<N;x++){let p=xy(x,y);if(!inside(p)||dist(p,S.wolf)<4||S.guard&&dist(p,S.guard.home)<=1||S.bell&&eq(p,S.bell)||S.gates?.has(K(p)))continue;pool.push(p)}
  shuffle(pool);const n=config().n;let first=pool.find(p=>pool.some(q=>!eq(p,q)&&dist(p,q)<=3));let second=pool.find(q=>!eq(q,first)&&dist(q,first)<=3);if(!first||!second)throw Error('No spawn pair');const used=new Set([K(first),K(second)]),extra=pool.filter(p=>!used.has(K(p)));if(extra.length<n-2+(config().mask?1:0))throw Error('Not enough spawn positions');return [first,second,...extra.slice(0,n-2+(config().mask?1:0))]
 }
-function newLevel(i,playTutorial=false){screenSeq++;stage=i;const c=config();cardQueue=[];S={mode:'preview',wolf:xy(3,3),round:0,walls:new Set(c.w.map(p=>p.join(','))),mud:new Set(c.mud.map(p=>p.join(','))),sheep:[],guard:c.guard?{home:point(c.guard),p:point(c.guard),state:'hidden',cool:0,escape:0,awakeRound:0,mask:false}:null,bell:point(c.bell),bellUsed:false,sniff:2,reveal:0,scentMark:null,prints:[],dashCd:0,dashArmed:false,trapArmed:false,trapFx:null,blockFx:null,howlCd:0,swapDue:false,swapFx:0,moveLog:'',teaching:playTutorial,tut:0,won:false};if(c.mask){S.otherGuard={home:null,p:null,state:'masked',cool:0,escape:0,awakeRound:0,mask:true}};
- const locations=chooseSpawn();for(let j=0;j<c.n;j++)S.sheep.push({...locations[j],id:j,real:j===0});if(c.mask){S.otherGuard.p={...locations[c.n]};S.otherGuard.home={...locations[c.n]}}
- $('begin').hidden=false;$('begin').onclick=start;post('看清楚金圈里的真羊，再点击「开始」。');tutText();draw();
+function newLevel(i,playTutorial=false){screenSeq++;stage=i;const c=config();cardQueue=[];S={mode:'preview',wolf:xy(3,3),round:0,walls:new Set(c.w.map(p=>p.join(','))),fences:new Set((c.fences||[]).map(p=>p.join(','))),gates:new Map((c.gates||[]).map(p=>[p.join(','),true])),markers:[],markerArmed:false,gateArmed:false,prevAction:null,lastPounce:false,mud:new Set(c.mud.map(p=>p.join(','))),sheep:[],guard:c.guard?{home:point(c.guard),p:point(c.guard),state:'hidden',cool:0,escape:0,awakeRound:0,mask:false,facing:3,alertRound:0}:null,bell:point(c.bell),bellUsed:false,sniff:2,reveal:0,scentMark:null,prints:[],dashCd:0,dashArmed:false,trapArmed:false,trapFx:null,blockFx:null,howlCd:0,swapDue:false,swapFx:0,moveLog:'',teaching:playTutorial,tut:0,won:false};if(c.mask){S.otherGuard={home:null,p:null,state:'masked',cool:0,escape:0,awakeRound:0,mask:true,facing:1,alertRound:0}};
+ if(S.guard&&stage>=5)S.guard.state='patrol';const locations=chooseSpawn();for(let j=0;j<c.n;j++)S.sheep.push({...locations[j],id:j,real:j===0,mood:'calm',stress:0});if(c.mask){S.otherGuard.p={...locations[c.n]};S.otherGuard.home={...locations[c.n]}}
+ $('begin').hidden=false;$('begin').onclick=start;post(stage===10?`第 ${endlessWave} 次围猎：看清金圈真羊。`:'看清楚金圈里的真羊，再点击「开始」。');tutText();draw();
  for(const id of c.intro)if(id!=='basic')mechanicCard(id);
  if(stage===0&&!save.introDone){mechanicCard('basic',{force:true});cardQueue[0].actions=[{label:'开始互动教学',primary:true,action:()=>{S.teaching=true;S.tut=0;tutText()}},{label:'跳过教程',action:()=>{S.teaching=false;save.introDone=true;remember();tutText()}}]}
  showNextCard();
 }
 function start(){if(S.mode!=='preview')return;S.mode='play';$('begin').hidden=true;post('开始！方向键移动狼。羊会同时采取行动。');if(S.teaching)S.tut=1;tutText();draw()}
 function tutText(){const e=$('coach');if(!S.teaching){e.hidden=true;return}e.hidden=false;const texts=['教学①：先辨认金圈真羊，然后点击「开始」。','教学②：点击一个方向，观察羊同时移动。','教学③：点击「嗅觉」，消耗一回合后看清真羊现在的位置。','教学完成：线索只显示一次，趁记忆清楚时继续追踪。第3关学预判扑击，第5关学守位伏击。'];e.textContent=texts[Math.min(S.tut,3)];if(S.tut>=3){save.introDone=true;remember()}}
-function win(){S.mode='won';save.best[stage]=Math.min(save.best[stage]||999,S.round);remember();draw();card({icon:'🏆',title:'抓到真羊！',text:`第 ${stage+1} 关通关 · ${S.round} 回合。\n${stage<9?'新机制正在后面的关卡等你。':'全部十关挑战完成！'}`,index:'胜利',actions:[{label:stage===9?'重玩第一关':'下一关',primary:true,action:()=>newLevel(stage===9?0:stage+1)},{label:'重玩本关',action:()=>newLevel(stage)}]})}
-function lose(cause){S.mode='lost';draw();card({icon:'💥',title:'追捕失败',text:cause+'\n抓错或被牧羊人抓住，直接重开本关。',index:'失败',actions:[{label:'本关重来',primary:true,action:()=>newLevel(stage)},{label:'自由选关',action:()=>newLevel(stage)}]})}
+function win(){S.mode='won';if(stage===10){const streak=endlessWave;save.endlessBest=Math.max(save.endlessBest||0,streak);remember();draw();card({icon:'🌙',title:'连猎成功 '+streak+' 场！',text:`用 ${S.round} 回合抓到了真羊。\n准备迎接下一场更复杂的猎场。`,index:'无尽猎场',actions:[{label:'下一场',primary:true,action:()=>{endlessWave++;newLevel(10)}},{label:'结束本轮',action:()=>openPicker()}]});return}save.best[stage]=Math.min(save.best[stage]||999,S.round);remember();draw();card({icon:'🏆',title:'抓到真羊！',text:`第 ${stage+1} 关通关 · ${S.round} 回合。\n${stage<9?'新机制正在后面的关卡等你。':'全部十关挑战完成！'}`,index:'胜利',actions:[{label:stage===9?'重玩第一关':'下一关',primary:true,action:()=>newLevel(stage===9?0:stage+1)},{label:'重玩本关',action:()=>newLevel(stage)}]})}
+function lose(cause){if(stage===10){S.mode='lost';draw();card({icon:'💥',title:'连猎中断',text:`${cause}\n本轮连续抓捕 ${endlessWave-1} 只真羊。\n最高记录 ${save.endlessBest||0}。`,index:'无尽猎场',actions:[{label:'重新挑战',primary:true,action:()=>{endlessWave=1;newLevel(10)}},{label:'返回选关',action:()=>openPicker()}]});return}S.mode='lost';draw();card({icon:'💥',title:'追捕失败',text:cause+'\n抓错或被牧羊人抓住，直接重开本关。',index:'失败',actions:[{label:'本关重来',primary:true,action:()=>newLevel(stage)},{label:'自由选关',action:()=>newLevel(stage)}]})}
 function sheepAt(p){return S.sheep.find(a=>eq(a,p))}
 // Guard protection applies to BOTH real and decoy sheep, only while a shepherd is actually on watch.
-function protectingGuard(victim){return allGuards().find(g=>['hidden','masked','return'].includes(g.state)&&dist(g.p,victim)<=1)||null}
+function protectingGuard(victim){return allGuards().find(g=>['hidden','masked','patrol','alert','return'].includes(g.state)&&dist(g.p,victim)<=1)||null}
 function attemptCapture(victim,origin,kind){
  const g=protectingGuard(victim);
  if(g){
@@ -91,34 +166,67 @@ function attemptCapture(victim,origin,kind){
 }
 function allGuards(){return [S.guard,S.otherGuard].filter(Boolean)}
 function woke(g){return g.state==='chase'||g.state==='return'}
-function wake(g){if(!g||g.state==='chase')return;if(g.state==='hidden'||g.state==='masked'||g.state==='return'){g.state='chase';g.awakeRound=S.round;g.escape=0;g.cool=0;post('🚨 牧羊人现身，开始反追捕！先跑出视野，再绕回来抓羊。')}}
+function wake(g){if(!g||g.state==='chase')return;if(['hidden','masked','patrol','alert','return'].includes(g.state)){g.state='chase';g.awakeRound=S.round;g.escape=0;g.cool=0;post('🚨 牧羊人现身，开始反追捕！先跑出视野，再绕回来抓羊。')}}
 function touchGuardian(){for(const g of allGuards()){if(eq(S.wolf,g.p)){if(woke(g)&&g.awakeRound!==S.round){lose('你撞上了牧羊人。');return true}if(!woke(g))wake(g); /* sudden ambush: give the player one turn to escape */ const opts=D.slice(0,4).map(([dx,dy])=>xy(g.p.x+dx,g.p.y+dy)).filter(p=>inside(p)&&!eq(p,S.wolf)&&!allGuards().some(q=>q!==g&&eq(q.p,p)));if(opts.length)g.p=opts.sort((a,b)=>dist(b,S.wolf)-dist(a,S.wolf))[0]}}return false}
-function guardsDetect(){for(const g of allGuards())if((g.state==='hidden'||g.state==='masked'||g.state==='return')&&dist(g.p,S.wolf)<=1)wake(g)}
+function inSight(g,p){if(!g||!g.p||!p||!['patrol','alert'].includes(g.state))return false;
+ const [dx,dy]=D[g.facing??3],vx=p.x-g.p.x,vy=p.y-g.p.y;return dist(g.p,p)<=2&&vx*dx+vy*dy>0&&Math.abs(vx*dy-vy*dx)<=1}
+function guardsDetect(){for(const g of allGuards()){
+ if(['hidden','masked','patrol','alert','return'].includes(g.state)&&dist(g.p,S.wolf)<=1){wake(g);continue}
+ if(g.state==='patrol'&&inSight(g,S.wolf)){g.state='alert';g.alertRound=S.round;post('👀 牧羊人好像看见你了！下一回合可以撤出视线。')}
+ }}
 function moveTowards(from,to,forbid){const opts=D.slice(0,4).map(([dx,dy])=>xy(from.x+dx,from.y+dy)).filter(p=>inside(p)&&!forbid.has(K(p)));opts.push({...from});return opts.sort((a,b)=>pathDist(a,to)-pathDist(b,to))[0]||from}
 function guardTurns(){for(const g of allGuards()){
  if(g.state==='chase'){
   if(g.awakeRound===S.round)continue; // Ambush grants a grace turn; the player can escape on the next input.
   if(g.cool>0){g.cool--;continue}
-  const next=moveTowards(g.p,S.wolf,new Set(allGuards().filter(x=>x!==g).map(q=>K(q.p))));g.p=next;if(eq(g.p,S.wolf)){lose('牧羊人追上你了。');return true}
+  const next=moveTowards(g.p,S.wolf,new Set([...allGuards().filter(x=>x!==g).map(q=>K(q.p)),...S.sheep.map(K)]));g.p=next;if(eq(g.p,S.wolf)){lose('牧羊人追上你了。');return true}
   if(dist(S.wolf,g.home)>=4)g.escape++;else g.escape=0;
   if(g.escape>=2){g.state='return';g.escape=0;post('🌿 成功摆脱牧羊人！他开始返回守护的位置。')}
  }else if(g.state==='return'){
-   if(eq(g.p,g.home)){g.state=g.mask?'masked':'hidden';continue}
-   g.p=moveTowards(g.p,g.home,new Set(allGuards().filter(x=>x!==g).map(q=>K(q.p))));if(eq(g.p,g.home))g.state=g.mask?'masked':'hidden';
+   if(eq(g.p,g.home)){g.state=g.mask?'masked':stage>=5?'patrol':'hidden';continue}
+   g.p=moveTowards(g.p,g.home,new Set(allGuards().filter(x=>x!==g).map(q=>K(q.p))));if(eq(g.p,g.home))g.state=g.mask?'masked':stage>=5?'patrol':'hidden';
+ }else if(g.state==='alert'){
+  if(g.alertRound>=S.round)continue;
+  if(inSight(g,S.wolf)||dist(g.p,S.wolf)<=1){wake(g)}else{g.state='patrol';post('🌿 牧羊人没有看清你，重新巡视。')}
+ }else if(g.state==='patrol'){
+  if(S.round%2===0){const opts=D.slice(0,4).map(([dx,dy],i)=>({p:xy(g.p.x+dx,g.p.y+dy),f:i})).filter(o=>inside(o.p)&&dist(o.p,g.home)<=2&&!S.sheep.some(s=>eq(s,o.p))&&!eq(o.p,S.wolf)&&!allGuards().some(h=>h!==g&&eq(h.p,o.p)));
+   if(opts.length){const target=opts.sort((a,b)=>dist(a.p,g.home)-dist(b.p,g.home)+Math.random()*.6)[0];g.p=target.p;g.facing=target.f}
+   else g.facing=(g.facing+1)%4;
+  }else g.facing=(g.facing+1)%4;
+  if(inSight(g,S.wolf)){g.state='alert';g.alertRound=S.round;post('👀 进入了牧羊人的警戒视野！')}
  }else if(g.state==='masked'){ // Disguised shepherd occasionally follows the sheep flock.
   const lead=S.sheep.find(z=>z.real);const opts=D.map(([dx,dy])=>xy(g.p.x+dx,g.p.y+dy)).filter(p=>inside(p)&&!eq(p,S.wolf)&&!S.sheep.some(s=>eq(s,p))&&!allGuards().some(q=>q!==g&&eq(q.p,p)));
   if(opts.length){opts.sort((a,b)=>(.35*dist(a,lead)+Math.random())-(.35*dist(b,lead)+Math.random()));g.p=opts[0];g.home={...g.p}}
  }
  }return false}
-function moveSheep({howled=false}={}){const old=S.sheep.map(z=>({...z}));const guards=allGuards();let used=new Set(guards.map(g=>K(g.p))),actors=shuffle(S.sheep.slice());for(const s of actors){const rest=new Set([...used,...S.sheep.filter(a=>a!==s).map(K)]);let opts=D.map(([dx,dy])=>xy(s.x+dx,s.y+dy)).filter(p=>inside(p)&&!eq(p,S.wolf)&&!rest.has(K(p)));if(!opts.length){used.add(K(s));continue}
- let best=null,high=-Infinity;for(const p of opts){const wolfDist=dist(p,S.wolf),threat=dist(s,S.wolf)<=3;let value=Math.random()*1.8+Math.min(5,wolfDist)*(.13+stage*.012)-(eq(p,s)?.5:0);
- if(S.guard&&S.guard.state==='hidden'&&threat){const dc=dist(p,S.guard.home);value+= Math.max(0,4-dc)*.9; if(howled&&dc<=2)value-=5}
- if(S.otherGuard&&S.otherGuard.state==='masked'&&threat)value+=Math.max(0,4-dist(p,S.otherGuard.p))*.55;
- if(config().e&&S.round%config().e>=config().e-2&&!s.real){const real=S.sheep.find(a=>a.real);value+=Math.max(0,5-dist(p,real))*.5}
- if(howled&&S.guard&&dist(s,S.guard.home)<=2)value+=Math.min(4,dist(p,S.guard.home))*1.5;
- if(value>high){high=value;best=p}}
- s.x=best.x;s.y=best.y;used.add(K(best))}
- S.prints=S.prints.map(t=>({...t,ttl:t.ttl-1})).filter(t=>t.ttl>0);for(const s of S.sheep){const p=old.find(o=>o.id===s.id);if(S.mud.has(K(p))&&!eq(p,s)&&(s.real||(config().decoy&&Math.random()<.35)))S.prints.push({...p,ttl:3})}S.prints=S.prints.slice(-9)
+function moveSheep({howled=false}={}){
+ const old=S.sheep.map(z=>({...z}));const flock=shuffle(S.sheep.slice());const occupied=new Set(allGuards().map(g=>K(g.p)));
+ const threatAction=howled||S.lastPounce;const futureSwapping=!!config().e&&(S.round%config().e>=config().e-2);
+ for(const s of flock){
+  const distance=dist(s,S.wolf);
+  const stressDelta=howled?(distance<=4?2:0):S.lastPounce?(distance<=3?2:0):distance<=2?1:distance>=4?-1:0;
+  s.stress=Math.max(0,Math.min(5,(s.stress||0)+stressDelta));s.mood=s.stress>=4?'panic':s.stress>=2?'alert':'calm';
+  const restricted=new Set([...occupied,...S.sheep.filter(other=>other!==s).map(K)]);
+  const options=D.map(([dx,dy])=>xy(s.x+dx,s.y+dy)).filter(p=>inside(p)&&!eq(p,S.wolf)&&!restricted.has(K(p)));
+  if(!options.length){occupied.add(K(s));continue}
+  const nearGuards=allGuards().filter(g=>['hidden','masked','patrol','alert','return'].includes(g.state));
+  let best=options[0],bestScore=-1e9;
+  for(const p of options){const now=dist(p,S.wolf),previous=dist(s,S.wolf),stays=eq(p,s);
+   let score=Math.random()*(s.mood==='panic'?2.8:s.mood==='alert'?1.8:1.3);
+   // Panic is more volatile: may rush to safety, but can also make poor moves.
+   score+=(Math.min(5,now)-Math.min(5,previous))*(s.mood==='calm'?.36:s.mood==='alert'?.85:.42);
+   score-=stays*(s.mood==='panic'?.2:.48);
+   if(s.mood!=='calm')for(const g of nearGuards){const safe=dist(p,g.p);score+=Math.max(0,3-safe)*(s.mood==='panic'?.75:.48)}
+   if(futureSwapping&&!s.real){const real=S.sheep.find(a=>a.real);score+=Math.max(0,4-dist(p,real))*.23}
+   if(howled&&S.guard&&dist(p,S.guard.home)<=2)score-=2.5;
+   if(stays&&now<=2)score-=.5;
+   if(score>bestScore){bestScore=score;best=p}
+  }
+  s.x=best.x;s.y=best.y;occupied.add(K(best))
+ }
+ S.prints=S.prints.map(t=>({...t,ttl:t.ttl-1})).filter(t=>t.ttl>0);
+ for(const s of S.sheep){const p=old.find(o=>o.id===s.id);if(S.mud.has(K(p))&&!eq(p,s)&&(s.real||(config().decoy&&Math.random()<.4)))S.prints.push({...p,ttl:3})}
+ S.prints=S.prints.slice(-9);S.lastPounce=false
 }
 function swap(){if(!config().e)return false;const real=S.sheep.find(s=>s.real);
  if(dist(real,S.wolf)<=1){post('🐺 狼已逼近真羊！这次幻影换位被压制，继续围堵。');return false}
@@ -134,8 +242,21 @@ function pouncePath(target){if(!target||!inside(target)||eq(target,S.wolf))retur
   }
  }return null}
 function trapCandidate(p){return !!p&&inside(p)&&dist(S.wolf,p)===1&&!sheepAt(p)&&!allGuards().some(g=>eq(g.p,p))}
-function tacticalCancel(){S.dashArmed=false;S.trapArmed=false;draw()}
-function selectTile(p){if(S.mode!=='play'||!$('overlay').hidden)return;
+function tacticalCancel(){S.dashArmed=false;S.trapArmed=false;S.markerArmed=false;S.gateArmed=false;draw()}
+function markTile(p){if(!p||p.x<0||p.x>=N||p.y<0||p.y>=N)return;
+ const index=S.markers.findIndex(a=>eq(a,p));if(index>=0)S.markers.splice(index,1);else{if(S.markers.length>=3)S.markers.shift();S.markers.push({...p})}post('📍 已记录猜测位置，标记不会跟随换位。');draw()}
+function toggleGate(p){if(!S.gates?.has(K(p))){post('🚪 请选择有栅栏门的格子。');return}
+ if(dist(p,S.wolf)>1){post('🚪 必须走到门旁边才可以开关。');return}
+ const current=S.gates.get(K(p));if(current&&(eq(S.wolf,p)||S.sheep.some(s=>eq(s,p))||allGuards().some(g=>eq(g.p,p)))){post('🚪 门口有人，不能关门。');return}
+ S.gates.set(K(p),!current);S.gateArmed=false;S.round++;S.scentMark=null;S.lastPounce=false;S.dashCd=Math.max(0,S.dashCd-1);S.howlCd=Math.max(0,S.howlCd-1);if(S.blockFx)S.blockFx.ttl=Math.max(0,S.blockFx.ttl-1);
+ for(const g of allGuards())if(g.state==='chase'&&g.awakeRound!==S.round){/* reaction next turn */}
+ if(guardTurns())return;moveSheep();if(config().e&&S.round%config().e===0)S.swapDue=true;
+ if(S.swapDue){const close=dist(S.sheep.find(s=>s.real),S.wolf)<=1;if(swap()||close)S.swapDue=false}
+ post(current?'🚪 关上围栏，路线改变了；狼与羊都不能穿过。':'🚪 打开围栏，通道重新可用。');tutText();draw()}
+function selectTile(p){
+ if(S.mode==='play'&&$('overlay').hidden&&S.markerArmed){markTile(p);return}
+ if(S.mode==='play'&&$('overlay').hidden&&S.gateArmed){toggleGate(p);return}
+if(S.mode!=='play'||!$('overlay').hidden)return;
  if(S.dashArmed){if(!pouncePath(p)){post('只能选两步范围内的落点。');return}advance({type:'pounce',target:p});return}
  if(S.trapArmed){if(!trapCandidate(p)){post('只能在狼相邻的空地设伏。');return}advance({type:'trap',target:p});return}
 }
@@ -155,7 +276,7 @@ function advance(direction){if(S.mode!=='play'||!$('overlay').hidden)return;
  }
  if(isTrap&&!trapCandidate(direction.target)){post('伏击只能选狼身边的空地。');return}
  if(isSniff&&S.sniff<1)return;
- S.round++;
+ S.round++;S.lastPounce=isPounce||sprint;
  // A scent clue is a one-decision snapshot, not an always-on target lock.
  S.scentMark=null;
  if(S.blockFx)S.blockFx.ttl=Math.max(0,S.blockFx.ttl-1);
@@ -223,18 +344,51 @@ function dash(){if(S.mode!=='play'||stage<2||S.dashCd||!$('overlay').hidden)retu
 function trap(){if(S.mode!=='play'||stage<4||!$('overlay').hidden)return;
  S.trapArmed=!S.trapArmed;S.dashArmed=false;post(S.trapArmed?'🎯 点击相邻空地：狼会原地守住，羊踏入才触发抓捕。':'已取消设伏。');draw()}
 function howl(){if(S.mode!=='play'||stage<3||S.howlCd||!$('overlay').hidden)return;S.dashArmed=false;S.trapArmed=false;advance('howl')}
-function draw(){if(!S)return;const c=config();let html='';for(let y=0;y<N;y++)for(let x=0;x<N;x++){let p=xy(x,y),wall=S.walls.has(K(p)),grass=S.guard&&eq(p,S.guard.home),shelter=S.guard&&dist(p,S.guard.home)<=2,at=eq(p,S.wolf),sheep=sheepAt(p),other=S.otherGuard&&eq(p,S.otherGuard.p)?S.otherGuard:null,gs=S.guard&&eq(p,S.guard.p)?S.guard:null,guardHere=gs||other,masked=guardHere&&guardHere.state==='masked',visible=guardHere&&woke(guardHere),scent=!!S.scentMark&&S.mode==='play'&&eq(p,S.scentMark),ring=scent||sheep&&sheep.real&&(S.mode==='preview'||S.reveal>0),protectedSheep=!!sheep&&!!protectingGuard(sheep),blockedHere=!!S.blockFx&&S.blockFx.ttl>0&&eq(p,S.blockFx),aim=S.dashArmed&&!!pouncePath(p),trapPick=S.trapArmed&&trapCandidate(p),hat=masked&&S.mode==='play'&&S.round%3===2,omen=c.global&&c.e&&S.mode==='play'&&(S.round+1)%c.e===0&&sheep;
- let icon=wall?'🪨':at?'🐺':visible?'🧑‍🌾':sheep?'🐑':masked?'🐑':grass?'🌾':S.bell&&eq(p,S.bell)&&!S.bellUsed?'🔔':'';
- html+=`<div class="tile ${wall?'wall':''} ${S.mud.has(K(p))?'mud':''} ${grass?'grass':''} ${shelter?'shelter':''} ${visible?'alert':''} ${omen?'omen':''} ${scent?'scent':''} ${protectedSheep?'protectedSheep':''} ${blockedHere?'alert':''} ${aim?'aim':''} ${trapPick?'trapPick':''} ${S.trapFx&&S.trapFx.ttl>0&&eq(p,S.trapFx)?'trapShown':''}" data-x="${x}" data-y="${y}">${S.prints.some(t=>eq(t,p))?'<span class="foot">🐾</span>':''}${icon?`<span class="sprite">${icon}</span>`:''}${hat?'<span class="hat">🎩</span>':''}${protectedSheep?'<span class="shield">🛡️</span>':''}${ring?'<span class="ring"></span>':''}${S.swapFx&&sheep?'<span class="spark"></span>':''}${at?'<span class="playerMark">YOU</span>':''}${S.trapFx&&S.trapFx.ttl>0&&eq(p,S.trapFx)?'<span class="trapBadge">🎯</span>':''}</div>`}
- $('board').innerHTML=html;$('level').textContent=`${stage+1} / 10`;$('turn').textContent=S.round;const chase=allGuards().some(g=>g.state==='chase');$('clock').textContent=chase?'🚨 被追捕':!c.e?'无换位':S.swapDue?'换位待机':`${c.e-S.round%c.e} 回合`;
- $('sniff').textContent=S.scentMark&&S.mode==='play'?'👃 位置快照 · 下一步失效':`👃 嗅觉 ×${S.sniff}`;$('sniff').disabled=S.mode!=='play'||S.sniff<1;$('dash').disabled=S.mode!=='play'||stage<2||S.dashCd>0;$('dash').textContent=stage<2?'⚡ 扑击 · 3关':S.dashCd?'⚡ 冷却 '+S.dashCd:S.dashArmed?'⚡ 选择落点':'⚡ 预判扑击';$('dash').classList.toggle('active',S.dashArmed);$('trap').disabled=S.mode!=='play'||stage<4;$('trap').textContent=stage<4?'🎯 伏击 · 5关':S.trapArmed?'🎯 选择伏击格':'🎯 守位伏击';$('trap').classList.toggle('active',S.trapArmed);$('cancel').disabled=!S.dashArmed&&!S.trapArmed;$('aimNote').hidden=!S.dashArmed&&!S.trapArmed;$('aimNote').textContent=S.dashArmed?'⚡ 猜羊下一步的位置并点击落点，羊先走狼后扑（可拐弯）':'🎯 点击橙色邻格守位，不会传送狼';$('howl').disabled=S.mode!=='play'||stage<3||S.howlCd>0;$('howl').textContent=stage<3?'📣 嚎叫 · 4关':S.howlCd?'📣 冷却 '+S.howlCd:'📣 嚎叫驱赶';$('wait').disabled=S.mode!=='play';
- $('levels').innerHTML=stages.map((s,i)=>`<button data-l="${i}" class="${i===stage?'active':''}" aria-label="跳到第${i+1}关 ${s.name}" title="${s.name}">${i+1}${save.best[i]?'★':''}</button>`).join('')}
-function showHelp(){const c=config();const ids=['basic',...c.intro.filter(x=>x!=='basic')];if(stage>=1&&!ids.includes('swap'))ids.push('swap');if(stage>=2&&!ids.includes('dash'))ids.push('dash');if(stage>=3&&!ids.includes('guard'))ids.push('guard');if(stage>=4&&!ids.includes('trap'))ids.push('trap');if(stage>=4&&!ids.includes('foot'))ids.push('foot');if(stage>=5&&!ids.includes('bell'))ids.push('bell');if(stage>=6&&!ids.includes('mask'))ids.push('mask');if(stage>=8&&!ids.includes('global'))ids.push('global');for(const id of ids){const a=info[id];cardQueue.push({...a,index:'机制回顾'})}showNextCard()}
+// Harmonized, self-contained vector sprites. No external fonts/assets or network requests.
+const V={
+ wolf:`<svg viewBox="0 0 64 64"><path d="M11 29L8 6l18 14 12-4L56 6l-3 24 4 10-5 13-17 8-22-8-6-14z" fill="#505e6a" stroke="#24383d" stroke-width="3"/><path d="M14 13l10 12-8 6zM49 13L39 25l9 7z" fill="#dda6b1"/><ellipse cx="32" cy="42" rx="22" ry="18" fill="#d0d7d4"/><circle cx="23" cy="33" r="3" fill="#1d2e32"/><circle cx="42" cy="33" r="3" fill="#1d2e32"/><ellipse cx="33" cy="43" rx="6" ry="4" fill="#293339"/><path d="M33 47v5l-5 3m5-3 5 3" stroke="#394849" stroke-width="2" fill="none" stroke-linecap="round"/></svg>`,
+ sheep:`<svg viewBox="0 0 64 64"><g fill="#fff9e8" stroke="#a3baa7" stroke-width="2"><circle cx="22" cy="19" r="13"/><circle cx="40" cy="18" r="13"/><circle cx="13" cy="34" r="13"/><circle cx="49" cy="34" r="13"/><circle cx="32" cy="46" r="15"/></g><ellipse cx="32" cy="35" rx="17" ry="18" fill="#e9d8b9" stroke="#9b8772" stroke-width="2"/><ellipse cx="13" cy="32" rx="8" ry="6" fill="#f6bdc8" transform="rotate(20 13 32)"/><ellipse cx="51" cy="32" rx="8" ry="6" fill="#f6bdc8" transform="rotate(-20 51 32)"/><circle cx="26" cy="34" r="2.4" fill="#332f2c"/><circle cx="39" cy="34" r="2.4" fill="#332f2c"/><path d="M31 42l2 2 2-2" stroke="#7d645a" stroke-width="2" fill="none" stroke-linecap="round"/></svg>`,
+ guard:`<svg viewBox="0 0 64 64"><ellipse cx="32" cy="51" rx="21" ry="12" fill="#527d57" stroke="#2f543a" stroke-width="3"/><path d="M20 29V15h24v14" fill="#d1b17b"/><circle cx="32" cy="36" r="16" fill="#f4cda6" stroke="#855e43" stroke-width="2"/><path d="M9 25h46M19 25l4-16h18l4 16" stroke="#805328" stroke-width="5" fill="#b98e4c"/><circle cx="26" cy="35" r="2.3" fill="#403327"/><circle cx="38" cy="35" r="2.3" fill="#403327"/><path d="M27 43q5 4 10 0" stroke="#744c36" stroke-width="2" fill="none"/></svg>`,
+ fence:`<svg viewBox="0 0 64 64"><path d="M10 7h10v53H10zM43 7h10v53H43z" fill="#8B6035" stroke="#5a3a22" stroke-width="2"/><path d="M5 21h54v12H5zM5 42h54v10H5z" fill="#C39456" stroke="#79532c" stroke-width="2"/><path d="M14 13v39m34-39v39" stroke="#d9b47c" stroke-width="2"/></svg>`,
+ rock:`<svg viewBox="0 0 64 64"><path d="M8 51l6-27 15-13 21 9 8 31z" fill="#93a7a4" stroke="#526b68" stroke-width="3"/><path d="M14 25l15-13-1 25-14 14" fill="#b9c4bc"/><path d="M28 37l22-17 8 31H15z" fill="#748c8c"/></svg>`,
+ grass:`<svg viewBox="0 0 64 64"><path d="M12 57q-4-22-7-32 12 10 19 26-2-32 2-43 9 18 10 42 8-25 21-31-9 19-12 39" fill="#438d57" stroke="#2e6b42" stroke-width="2"/><path d="M30 56q6-16 24-29-8 20-14 29" fill="#9ccd69"/></svg>`,
+ bell:`<svg viewBox="0 0 64 64"><path d="M27 16v-5h10v5c11 4 10 14 12 29H15c2-15 0-25 12-29z" fill="#edc44f" stroke="#876520" stroke-width="3"/><rect x="11" y="44" width="42" height="7" rx="3" fill="#bb852c"/><circle cx="32" cy="54" r="5" fill="#a87427"/></svg>`
+};
+function svgSprite(id){return `<span class="sprite vector">${V[id]||V.sheep}</span>`}
+function draw(){if(!S)return;const c=config();let html='';const vision=[];
+ for(const g of allGuards())if(['patrol','alert'].includes(g.state)){for(let y=0;y<N;y++)for(let x=0;x<N;x++)if(inSight(g,xy(x,y)))vision.push(x+','+y)}
+ for(let y=0;y<N;y++)for(let x=0;x<N;x++){const p=xy(x,y),key=K(p),fence=S.fences.has(key),wall=S.walls.has(key),grass=S.guard&&eq(p,S.guard.home),shelter=S.guard&&dist(p,S.guard.home)<=2,at=eq(p,S.wolf),sheep=sheepAt(p),other=S.otherGuard&&eq(p,S.otherGuard.p)?S.otherGuard:null,gs=S.guard&&eq(p,S.guard.p)?S.guard:null,guardHere=gs||other,masked=guardHere&&guardHere.state==='masked',visible=guardHere&&woke(guardHere)||guardHere&&['patrol','alert'].includes(guardHere.state),scent=!!S.scentMark&&S.mode==='play'&&eq(p,S.scentMark),ring=scent||sheep&&sheep.real&&(S.mode==='preview'||S.reveal>0),protectedSheep=!!sheep&&!!protectingGuard(sheep),blockedHere=!!S.blockFx&&S.blockFx.ttl>0&&eq(p,S.blockFx),aim=S.dashArmed&&!!pouncePath(p),trapPick=S.trapArmed&&trapCandidate(p),omen=c.global&&c.e&&S.mode==='play'&&(S.round+1)%c.e===0&&sheep;
+  let sp=fence?svgSprite('fence'):wall?svgSprite('rock'):at?svgSprite('wolf'):visible?svgSprite('guard'):sheep?svgSprite('sheep'):masked?svgSprite('sheep'):grass?svgSprite('grass'):S.bell&&eq(p,S.bell)&&!S.bellUsed?svgSprite('bell'):'';
+  if(S.gates?.has(key)){sp+='<span class="gate-overlay '+(S.gates.get(key)?'open':'closed')+'">'+(S.gates.get(key)?'⌇':'╬')+'</span>'}
+  const mood=sheep&&S.mode==='play'?(sheep.mood==='panic'?'‼':sheep.mood==='alert'?'!':''):'';
+  const marked=S.markers?.some(m=>eq(m,p));const hat=masked&&S.mode==='play'&&S.round%3===2;
+  html+=`<div role="gridcell" aria-label="第${x+1}列第${y+1}行" class="tile ${wall?'wall':''} ${fence?'fence':''} ${S.mud.has(key)?'mud':''} ${grass?'grass':''} ${shelter?'shelter':''} ${visible?'alert':''} ${omen?'omen':''} ${scent?'scent':''} ${protectedSheep?'protectedSheep':''} ${blockedHere?'alert':''} ${aim?'aim':''} ${trapPick?'trapPick':''}" data-x="${x}" data-y="${y}">${vision.includes(key)?'<span class="vision"></span>':''}${S.prints.some(t=>eq(t,p))?'<span class="foot">🐾</span>':''}${sp}${mood?`<span class="mind">${mood}</span>`:''}${hat?'<span class="hat">🎩</span>':''}${protectedSheep?'<span class="shield">🛡</span>':''}${ring?'<span class="ring"></span>':''}${S.swapFx&&sheep?'<span class="spark"></span>':''}${at?'<span class="playerMark">YOU</span>':''}${marked?'<span class="marker">📍</span>':''}${S.trapFx&&S.trapFx.ttl>0&&eq(p,S.trapFx)?'<span class="trapBadge">🎯</span>':''}</div>`
+ }
+ $('board').innerHTML=html;
+ $('level').textContent=stage===10?'∞ 第'+endlessWave+'场':`${stage+1} / 10`;$('turn').textContent=S.round;
+ const chase=allGuards().some(g=>g.state==='chase');const alert=allGuards().some(g=>g.state==='alert');$('clock').textContent=chase?'🚨 追捕中':!c.e?'无换位':S.swapDue?'换位待机':`${c.e-S.round%c.e} 回合`;
+ $('statusPill').textContent=chase?'🚨 牧羊人追狼':alert?'👀 守卫警觉':S.scentMark?'👃 已获气味线索':S.markers?.length?'📍 已标记 '+S.markers.length+' 处':'🌿 观察猎场';
+ const setAb=(id,icon,label,disabled=false,active=false)=>{const b=$(id);b.disabled=disabled;b.classList.toggle('active',active);b.innerHTML=`<span class="ability-icon">${icon}</span><span class="ability-caption">${label}</span>`};
+ setAb('sniff','👃',`嗅觉 · ${S.sniff}次`,S.mode!=='play'||S.sniff<1);
+ setAb('dash','⚡',stage<2?'第3关解锁':S.dashCd?'冷却 '+S.dashCd:S.dashArmed?'选择扑击格':'预判扑击',S.mode!=='play'||stage<2||S.dashCd>0,S.dashArmed);
+ setAb('trap','🎯',stage<4?'第5关解锁':S.trapArmed?'选择伏击格':'守位伏击',S.mode!=='play'||stage<4,S.trapArmed);
+ setAb('howl','📣',stage<3?'第4关解锁':S.howlCd?'冷却 '+S.howlCd:'嚎叫驱赶',S.mode!=='play'||stage<3||S.howlCd>0);
+ $('cancel').disabled=!S.dashArmed&&!S.trapArmed&&!S.markerArmed&&!S.gateArmed;
+ $('aimNote').hidden=!S.dashArmed&&!S.trapArmed&&!S.markerArmed&&!S.gateArmed;
+ $('aimNote').textContent=S.markerArmed?'📍 点任意格子放置或取消标记（不耗回合）':S.gateArmed?'🚪 点狼身旁的门格开关（消耗一回合）':S.dashArmed?'⚡ 选一个羊可能到达的格子。羊先走，狼再扑。':'🎯 选择相邻空格伏击';
+ $('marker').disabled=S.mode!=='play';$('marker').classList.toggle('active',S.markerArmed);
+ $('gateBtn').disabled=S.mode!=='play'||!S.gates?.size;$('gateBtn').classList.toggle('active',S.gateArmed);
+ $('wait').disabled=S.mode!=='play';
+}
+function showHelp(){const c=config();const ids=['basic',...c.intro.filter(x=>x!=='basic')];if(stage>=1&&!ids.includes('swap'))ids.push('swap');if(stage>=2&&!ids.includes('dash'))ids.push('dash');if(stage>=3&&!ids.includes('guard'))ids.push('guard');if(stage>=4&&!ids.includes('trap'))ids.push('trap');if(stage>=4&&!ids.includes('foot'))ids.push('foot');if(stage>=5&&!ids.includes('bell'))ids.push('bell');if(stage>=6&&!ids.includes('mask'))ids.push('mask');if(stage>=5)for(const id of ['mind','patrol'])if(!ids.includes(id))ids.push(id);if(stage>=6)for(const id of ['gate','mark'])if(!ids.includes(id))ids.push(id);if(stage>=8&&!ids.includes('global'))ids.push('global');if(stage===10)ids.push('endless');for(const id of ids){const a=info[id];cardQueue.push({...a,index:'机制回顾'})}showNextCard()}
 $('begin').onclick=start;$('sniff').onclick=sniff;$('dash').onclick=dash;$('trap').onclick=trap;$('cancel').onclick=tacticalCancel;$('howl').onclick=howl;$('wait').onclick=()=>advance(4);$('help').onclick=showHelp;$('restart').onclick=()=>newLevel(stage,S.teaching&&S.tut<3);
+$('openLevels').onclick=openPicker;$('closeLevels').onclick=()=>{$('chooseOverlay').hidden=true};$('levelsPicker').onclick=e=>{const b=e.target.closest('[data-pick]');if(b)setStage(Number(b.dataset.pick))};$('endlessPick').onclick=()=>setStage(10);
+$('marker').onclick=()=>{if(S.mode!=='play')return;S.markerArmed=!S.markerArmed;S.gateArmed=false;S.dashArmed=false;S.trapArmed=false;draw()};
+$('gateBtn').onclick=()=>{if(S.mode!=='play'||!S.gates.size)return;S.gateArmed=!S.gateArmed;S.markerArmed=false;S.dashArmed=false;S.trapArmed=false;draw()};
 $('board').addEventListener('click',e=>{const t=e.target.closest('.tile[data-x]');if(!t)return;selectTile(xy(Number(t.dataset.x),Number(t.dataset.y)))});for(const b of document.querySelectorAll('[data-d]'))b.onclick=()=>advance(Number(b.dataset.d));$('levels').onclick=e=>{const b=e.target.closest('[data-l]');if(b)newLevel(Number(b.dataset.l))};
 document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)||!$('overlay').hidden)return;const moves={ArrowUp:0,ArrowRight:1,ArrowDown:2,ArrowLeft:3,w:0,d:1,s:2,a:3,W:0,D:1,S:2,A:3};if(Object.prototype.hasOwnProperty.call(moves,e.key)){e.preventDefault();advance(moves[e.key])}});
-let finger=null;$('board').addEventListener('touchstart',e=>{finger=xy(e.touches[0].clientX,e.touches[0].clientY)},{passive:true});$('board').addEventListener('touchend',e=>{if(!finger||!$('overlay').hidden)return;const dx=e.changedTouches[0].clientX-finger.x,dy=e.changedTouches[0].clientY-finger.y;finger=null;if(Math.max(Math.abs(dx),Math.abs(dy))<18)return;advance(Math.abs(dx)>Math.abs(dy)?dx>0?1:3:dy>0?2:0)},{passive:true});
-if(window.__WOLF_DEBUG_DEV__){testHook=true;window.__wolfTest={load:(i)=>newLevel(i),start,step:advance,swap,trap,pouncePath,selectTile,sniff,dash,howl,card,clean:()=>{$('overlay').hidden=true;cardQueue=[]},state:()=>JSON.parse(JSON.stringify(S)),patch:o=>Object.assign(S,o),render:draw,cover:protectingGuard,capture:attemptCapture,guards:allGuards,spawn:chooseSpawn,info,levels:stages,save:()=>save}}
+let finger=null;$('board').addEventListener('touchstart',e=>{finger=xy(e.touches[0].clientX,e.touches[0].clientY)},{passive:true});$('board').addEventListener('touchend',e=>{if(!finger||!$('overlay').hidden||!$('chooseOverlay').hidden||S.markerArmed||S.gateArmed||S.dashArmed||S.trapArmed)return;const dx=e.changedTouches[0].clientX-finger.x,dy=e.changedTouches[0].clientY-finger.y;finger=null;if(Math.max(Math.abs(dx),Math.abs(dy))<18)return;advance(Math.abs(dx)>Math.abs(dy)?dx>0?1:3:dy>0?2:0)},{passive:true});
+if(window.__WOLF_DEBUG_DEV__){testHook=true;window.__wolfTest={load:(i)=>newLevel(i),start,step:advance,swap,trap,pouncePath,selectTile,sniff,dash,howl,card,clean:()=>{$('overlay').hidden=true;cardQueue=[]},state:()=>JSON.parse(JSON.stringify(S,(k,v)=>v instanceof Map?Object.fromEntries(v):v instanceof Set?[...v]:v)),patch:o=>Object.assign(S,o),render:draw,cover:protectingGuard,capture:attemptCapture,guards:allGuards,spawn:chooseSpawn,info,levels:stages,save:()=>save,setStage,endless:()=>endlessWave,markTile,toggleGate,openPicker,inSight}}
 newLevel(0);
 })();
 </script></body></html>
