@@ -997,7 +997,8 @@ function evaluateAlarm({howled=false}={}){
  else if(allGuards().some(g=>g.snared<=0&&['patrol','alert','chase','intercept'].includes(g.state)&&dist(g.p,S.alarmPoint)<=2&&inSight(g,S.wolf)))soundAlarm('守卫发现了可疑踪迹');
 }
 function advance(direction){if(S.mode!=='play'||!$('overlay').hidden||!$('chooseOverlay').hidden)return;
- const mode=typeof direction==='object'&&direction?direction.type:null; const isPounce=mode==='pounce',isTrap=mode==='trap',isSniff=direction==='sniff',howl=direction==='howl',move=typeof direction==='number';
+ const mode=typeof direction==='object'&&direction?direction.type:null;
+ const isPounce=mode==='pounce',isTrap=mode==='trap',isSniff=direction==='sniff',howl=direction==='howl',move=typeof direction==='number';
  // Internal execution is gated too, not just disabled buttons.
  // This prevents an armed action from slipping through when switching stages or difficulty.
  if(mode==='pounce'&&(!canUseAbility('dash')||S.dashCd>0||!S.dashArmed))return;
