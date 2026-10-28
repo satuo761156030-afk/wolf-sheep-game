@@ -998,6 +998,7 @@ if(S.mode!=='play'||!$('overlay').hidden||!$('settingsOverlay').hidden)return;
  if(S.dashArmed){if(!pouncePath(p)){post('只能选两步范围内的落点。');return}if(dangerousLanding(p))post('⚠ 该落点可达，但守卫可能接着抓住你。');advance({type:'pounce',target:p});return}
  if(S.trapArmed){if(!trapCandidate(p)){post('只能在狼相邻的空地设置陷阱。');return}advance({type:'trap',target:p});return}
 }
+
 function updateMoonAndAlarm(){
  if(!S||S.mode!=='play')return;
  if(S.moonEnabled){
