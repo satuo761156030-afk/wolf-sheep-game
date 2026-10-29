@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#122e2c"><title>狼与幻羊 · v27.2 幻影博弈 · 32关</title>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#122e2c"><title>狼与幻羊 · v28.0 月影追猎 · 32关</title>
 <style>
 :root{color-scheme:dark;font-family:ui-rounded,'PingFang SC','Microsoft YaHei',system-ui,sans-serif;--ink:#edf8ec;--sub:#bbd6c7;--lime:#d7f1a2;--border:#5d8175}
 *{box-sizing:border-box}body{margin:0;min-height:100svh;padding:12px;background:radial-gradient(circle at 50% 0%,#2e5141 0%,#102822 62%);color:var(--ink)}button{font:inherit;font-size:12px;font-weight:780;cursor:pointer;touch-action:manipulation;color:var(--ink);border-radius:11px;border:1px solid #688a7b;background:#3b6455;padding:9px 11px;min-height:42px}button:active{transform:translateY(1px);filter:brightness(1.1)}button:disabled{opacity:.38;cursor:default}.primary{background:var(--lime);border-color:#e5fac3;color:#2a4430}.secondary{background:#203f37}.small{font-size:11px;min-height:35px;padding:7px 9px}
@@ -292,6 +292,8 @@ button.secondary,.secondary{background:#24424a;border-color:#577779}
 #board.shaped .tile.aim{box-shadow:inset 0 0 0 2px #f4d486!important}
 @media(max-width:430px){#board.shaped .tile .mind{font-size:8px;max-width:100%}#board.shaped .tile .shield{font-size:12px}}
 
+#moonForecast{margin:8px 0;padding:8px 10px;border-left:3px solid #e9d098;border-radius:6px;background:#273e46;color:#f5e5c0;font-size:11px;line-height:1.55}
+#moonForecast[hidden]{display:none!important}
 /* v27: late-game warning and moon-phase cues */
 #board .tile .alarmBell{position:absolute;right:1px;top:0;z-index:9;font-size:clamp(12px,2.9vw,18px);filter:drop-shadow(0 1px 2px #213)}
 #board .tile .moonBadge{opacity:.75}
@@ -364,21 +366,42 @@ button.secondary,.secondary{background:#24424a;border-color:#577779}
 .settings-row input[type=range]{min-width:70px;width:40%;accent-color:#dbeaa9}.settings-actions{display:grid;gap:9px;margin-top:18px}.settings-actions button{min-height:38px;font-size:12px}
 body.reduceMotion *,body.reduceMotion *:before,body.reduceMotion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 @media(max-width:430px){.head .btns{max-width:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.head .btns button{width:100%;white-space:nowrap}}
+
+/* Outcome effects: pointer-events are disabled so player can restart immediately. */
+#outcomeFx{position:fixed;inset:0;z-index:80;pointer-events:none;display:grid;place-content:center;text-align:center;overflow:hidden;isolation:isolate}
+#outcomeFx[hidden]{display:none!important}
+#outcomeFx .outcome-halo{position:absolute;inset:-30%;border-radius:50%;background:radial-gradient(circle at center,rgba(255,209,86,.36),rgba(25,68,60,.12) 43%,transparent 70%);animation:fxHalo 1.3s ease-out both}
+#outcomeFx.failure .outcome-halo{background:radial-gradient(circle at center,rgba(233,70,93,.36),transparent 67%)}
+#outcomeFx .outcome-symbol{font-size:clamp(65px,18vw,140px);line-height:1.15;filter:drop-shadow(0 6px 12px #081d22);animation:fxHero 1.1s cubic-bezier(.2,.7,.25,1) both}
+#outcomeFx .outcome-label{font-size:clamp(23px,7vw,46px);font-weight:900;color:#fff0b6;letter-spacing:.12em;text-shadow:0 4px 8px #0b2829;animation:fxText 1.4s both}
+#outcomeFx.failure .outcome-label{color:#ffc4c1}
+#outcomeFx .outcome-particles{position:absolute;inset:0}
+#outcomeFx .outcome-particles i{position:absolute;left:var(--x);top:var(--y);font-style:normal;font-size:clamp(16px,3vw,30px);animation:fxParticle 1.4s ease-out both;animation-delay:var(--delay)}
+@keyframes fxHalo{0%{opacity:0;transform:scale(.25)}28%{opacity:1}100%{opacity:0;transform:scale(1.1)}}
+@keyframes fxHero{0%{opacity:0;transform:scale(.4) rotate(-18deg)}34%{opacity:1;transform:scale(1.2) rotate(7deg)}62%{transform:scale(.94)}100%{opacity:0;transform:scale(1.1)}}
+@keyframes fxText{0%,16%{opacity:0;transform:translateY(25px)}32%{opacity:1;transform:translateY(0)}75%{opacity:1}100%{opacity:0;transform:translateY(-13px)}}
+@keyframes fxParticle{0%{opacity:0;transform:translate(0,0) scale(.5)}25%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(var(--spin)) scale(.7)}}
+body.fxSuccess #board{animation:fxBoardWin .65s ease-out}
+body.fxFailure #board{animation:fxBoardLose .5s ease-out}
+@keyframes fxBoardWin{50%{filter:brightness(1.45) saturate(1.3)}}
+@keyframes fxBoardLose{15%,45%{transform:translateX(-4px)}30%,60%{transform:translateX(4px)}100%{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){#outcomeFx{display:none!important}body.fxSuccess #board,body.fxFailure #board{animation:none!important}}
+body.reduceMotion #outcomeFx{display:none!important}body.reduceMotion.fxSuccess #board,body.reduceMotion.fxFailure #board{animation:none!important}
 </style></head><body><main id="game">
 <div class="chapter-masthead" aria-hidden="true"><span class="mast-stamp">MOONLIT MEADOW</span><span class="mast-stars">✦ &nbsp; ✧ &nbsp; ✦</span></div>
-<header class="head"><div><h1>🐺 狼与幻羊</h1><small>月影牧场 · 月下草原 v27.2</small><span id="difficultyPill">🌿 简单模式</span><span id="challengeBadge" class="challengeBadge">🏆 标准挑战 · 固定开局</span></div><div class="btns"><button class="small secondary" id="soundSwitch" aria-pressed="true">🔊 音效</button><button class="small secondary" id="help">🎬 演示</button><button class="small secondary" id="openLevels">🗺 选关</button><button class="small secondary" id="openSettings">⚙️ 设置</button></div></header>
+<header class="head"><div><h1>🐺 狼与幻羊</h1><small>月影牧场 · 月影追猎 v28.0</small><span id="difficultyPill">🌿 简单模式</span><span id="challengeBadge" class="challengeBadge">🏆 标准挑战 · 固定开局</span></div><div class="btns"><button class="small secondary" id="soundSwitch" aria-pressed="true">🔊 音效</button><button class="small secondary" id="help">🎬 演示</button><button class="small secondary" id="openLevels">🗺 选关</button><button class="small secondary" id="openSettings">⚙️ 设置</button></div></header>
 <div class="stats"><div class="stat">当前关卡<b id="level">1 / 32</b></div><div class="stat">猎场回合<b id="turn">0</b></div><div class="stat">幻影动向<b id="clock">平静</b></div></div>
 <section id="hardPanel" hidden><div class="contractTitle"><span>🔥 战术成就</span><small id="hardProgress">0 / 0</small></div><div id="hardChecklist"></div><div class="contractNote" id="hardNote">战术成就可选。抓到真羊即可赢。</div></section>
 <div class="stage-frame">
 <div class="stage-caption" aria-hidden="true"><span>✦ &nbsp; 月影猎场</span><span>FOLLOW THE TRACES · <b id="mapDimensions">07 × 07</b></span></div>
 <div id="board" role="grid" aria-label="七乘七牧场棋盘"></div>
-<div class="battle-legend" aria-label="战术颜色说明"><span><i style="background:#e83d53"></i>守卫警戒</span><span><i style="background:#39c4dc"></i>扑击落点</span><span><i style="background:#ff9a48"></i>陷阱</span><span><i style="background:#bb87ef"></i>换位</span><span><i style="background:#75d7be"></i>守卫护盾</span></div>
+<div class="battle-legend" aria-label="战术颜色说明"><span title="明面守卫偏回防，伪装守卫暴露后偏追击">🧑‍🌾 回防 / 🎭 追击</span><span><i style="background:#e83d53"></i>守卫警戒</span><span><i style="background:#39c4dc"></i>扑击落点</span><span><i style="background:#ff9a48"></i>陷阱</span><span><i style="background:#bb87ef"></i>换位</span><span><i style="background:#75d7be"></i>守卫护盾</span></div>
 <div class="stage-foot" aria-hidden="true"><span>❧ 森 林 低 语</span><span>✣ &nbsp; 寻找真正的羊</span></div>
 </div>
 <section id="finaleGuide" hidden><div class="guide-head"><div><b>🌙 终幕 · 猎月牧场</b><span>线索随局势更新，不替你操作</span></div><button class="small secondary" id="finalGuideToggle" aria-expanded="false">🧭 战术提示</button></div><div id="finalGuideText" hidden role="status"></div></section>
 <div id="coach" hidden></div>
 <div class="message" role="status" aria-live="polite"><p id="message">记住金圈里的真羊。</p><button class="primary" id="begin">开始猎捕</button></div>
-<div id="hintBar"><span>✨ 识破身份不等于抓住目标</span><span id="statusPill">🌿 观察猎场</span></div>
+<div id="hintBar"><span>✨ 识破身份不等于抓住目标</span><span id="statusPill">🌿 观察猎场</span></div><div id="moonForecast" role="status" hidden></div>
 <div id="aimNote" class="aimNote" hidden>点棋盘上的高亮格子选择落点</div>
 <div class="control-head"><span>行 动 指 令</span><i></i><small>CHOOSE YOUR PATH</small></div>
 <div class="controls"><div class="pad"><button data-d="0" aria-label="向上">↑</button><button data-d="3" aria-label="向左">←</button><button data-d="2" aria-label="向下">↓</button><button data-d="1" aria-label="向右">→</button></div>
@@ -388,6 +411,7 @@ body.reduceMotion *,body.reduceMotion *:before,body.reduceMotion *:after{animati
 <div class="instruction">方向键 / WASD / 棋盘滑动 · 点棋盘落点扑击、陷阱、标记和围栏</div>
 <div id="levels" hidden></div><div class="footer">异形牧场 · 全 32 关 / 无尽猎场 · 支持离线游玩</div>
 <details style="margin:14px 0;padding:10px 14px;border:1px solid #8da692;border-radius:12px;font-size:12px;line-height:1.6"><summary style="cursor:pointer;font-weight:750">📜 音效作者与授权说明</summary><p>已采用的素材名单如下。署名与许可根据用户提供的来源清单整理，发布商用版本前应复核素材页面及授权条件。</p><ul><li><b>S03 牧羊人冲出草丛</b> · Rustle.ogg — egomassive · CC-BY-4.0 · <a href="https://freesound.org/s/536767/" target="_blank" rel="noopener noreferrer">来源</a></li><li><b>S04 守卫警戒</b> · 守卫警戒 · 程序化合成 A — 本项目程序化生成（噪声塑形 + 滤波 + 短混响） · 原创（可商用，无需署名） · 本项目程序化音效</li><li><b>S09 狼嚎</b> · freesound 810171 — mokasza · CC-BY-4.0 · <a href="https://freesound.org/s/810171/" target="_blank" rel="noopener noreferrer">来源</a></li><li><b>S13 真假羊换位</b> · 真假羊换位 · 程序化合成 B — 本项目程序化生成（噪声塑形 + 滤波 + 短混响） · 原创（可商用，无需署名） · 本项目程序化音效</li><li><b>S15 牧羊人挡下抓捕</b> · freesound 160043 — jorickhoofd · CC-BY-4.0 · <a href="https://freesound.org/s/160043/" target="_blank" rel="noopener noreferrer">来源</a></li><li><b>S16 胜利</b> · 胜利 · 程序化合成 B — 本项目程序化生成（噪声塑形 + 滤波 + 短混响） · 原创（可商用，无需署名） · 本项目程序化音效</li><li><b>S17 失败</b> · 失败 · 程序化合成 B — 本项目程序化生成（噪声塑形 + 滤波 + 短混响） · 原创（可商用，无需署名） · 本项目程序化音效</li><li><b>S18 UI 按键</b> · UI 按键 · 程序化合成 A — 本项目程序化生成（噪声塑形 + 滤波 + 短混响） · 原创（可商用，无需署名） · 本项目程序化音效</li><li><b>S19 清晨森林环境</b> · freesound 221758 — Motion_S · CC-BY-4.0 · <a href="https://freesound.org/s/221758/" target="_blank" rel="noopener noreferrer">来源</a></li><li><b>S20 夜间森林环境</b> · freesound 642761 — Garuda1982 · CC-BY-4.0 · <a href="https://freesound.org/s/642761/" target="_blank" rel="noopener noreferrer">来源</a></li><li><b>S21 羊惊叫</b> · Sheep_Bleat.wav — n_audioman · CC-BY-4.0 · <a href="https://freesound.org/s/321967/" target="_blank" rel="noopener noreferrer">来源</a></li></ul><p>S10 扑击冲刺、S11 扑击命中未采用音频；S12 守位伏击为静音。</p></details></main>
+<div id="outcomeFx" aria-hidden="true" hidden><div class="outcome-halo"></div><div class="outcome-symbol"></div><div class="outcome-label"></div><div class="outcome-particles"></div></div>
 <div class="overlay" id="chooseOverlay" hidden><div class="choosePanel"><div class="chooseHeader"><h2>🗺️ 选择猎场</h2><button class="small" id="closeLevels">✕ 返回</button></div><p>32 关各有公平固定开局；自由牧场可随机重玩。旧版最佳回合保留为历史，不能参与新版标准排名。</p><div class="modeTabs"><button id="pickEasy" class="selected">🌿 简单模式</button><button id="pickHard" class="hard">🔥 困难模式</button></div><div class="challengeTabs"><button id="pickStandard" class="selected">🏆 标准挑战</button><button id="pickFree">🎲 自由牧场</button></div><div class="modeExplainer" id="modeExplainer">原版玩法，自由捕猎。</div><div id="levelsPicker"></div><button id="endlessPick">🌙 无尽猎场 <span id="endlessBest">最佳连猎 0</span></button><div id="tutorialBadge">🧭 首关可以重新观看完整的新手教程</div></div></div>
 <div class="overlay" id="overlay" hidden><div class="panel guide-panel"><button id="dismissAllGuides" class="dismiss-guides" type="button" title="关闭全部自动教程" aria-label="关闭全部自动教程">✕ 不再弹教程</button><div class="index" id="cardIndex">机制说明</div><div class="pic" id="cardIcon"></div><div class="demoWrap" id="cardDemoWrap" hidden><div class="demoTitle"><span class="demoTag">🎬 机制动态演示</span><span id="demoMeta">离线 · 动画演示</span></div><div class="demoScreen"><canvas id="cardDemoCanvas" width="800" height="450" role="img" aria-label="机制动作示范"></canvas></div><div class="demoTimeline"><span class="demoVideoTip">逐步演示移动与机制结果</span><button class="small demoReplay" id="demoReplay" type="button">↺ 重播</button><button class="small demoToggle" id="demoToggle" type="button">⏸ 暂停</button></div></div><h2 id="cardTitle"></h2><p id="cardText"></p><div class="buttons" id="cardButtons"></div></div></div>
 <div class="overlay" id="settingsOverlay" hidden><div class="panel settings-panel">
@@ -460,7 +484,7 @@ const stages=[
  {"w":[],"mud":[],"guard":[8,2],"gates":[],"fences":[],"global":true,"decoy":true,"bell":null,"name":"巡夜警钟","n":4,"e":5,"mask":true,"mapKind":"bastion","moonCycle":true,"alarm":true,"intro":["watchpost"]},
  {"w":[],"mud":[],"guard":[8,2],"gates":[],"fences":[],"global":true,"decoy":true,"bell":null,"name":"双岗协防","n":5,"e":5,"mask":true,"mapKind":"bastion","moonCycle":true,"alarm":true,"intro":[]},
  {"w":[],"mud":[],"guard":[8,2],"gates":[],"fences":[],"global":true,"decoy":true,"bell":null,"name":"断桥回防","n":4,"e":4,"mask":true,"mapKind":"twin","moonCycle":true,"alarm":true,"intro":[]},
- {"w":[],"mud":[],"guard":[8,2],"gates":[],"fences":[],"global":true,"decoy":true,"bell":null,"name":"真假铃阵","n":5,"e":5,"mask":true,"mapKind":"crescent","moonCycle":true,"alarm":true,"intro":[]},
+ {"w":[],"mud":[],"guard":[8,2],"gates":[],"fences":[],"global":true,"decoy":true,"bell":null,"name":"真假铃阵","n":4,"e":5,"mask":true,"mapKind":"crescent","moonCycle":true,"alarm":true,"bell":[5,8],"intro":["chapter28Guide"]},
  {"w":[],"mud":[],"guard":[8,2],"gates":[],"fences":[],"global":true,"decoy":true,"bell":null,"name":"三岔围猎","n":4,"e":5,"mask":true,"mapKind":"maze","moonCycle":true,"alarm":true,"intro":["mazeMap"]},
  {"w":[],"mud":[],"guard":[8,2],"gates":[],"fences":[],"global":true,"decoy":true,"bell":null,"name":"草原反扑","n":5,"e":4,"mask":true,"mapKind":"maze","moonCycle":true,"alarm":true,"intro":[]},
  {"w":[],"mud":[],"guard":[8,2],"gates":[],"fences":[],"global":true,"decoy":true,"bell":null,"name":"两道防线","n":5,"e":5,"mask":true,"mapKind":"bastion","moonCycle":true,"alarm":true,"intro":[]},
@@ -483,7 +507,7 @@ function abilityLockText(key){return `第${ABILITY_FIRST_CHAPTER[key]}关解锁`
 const info={
  basic:{icon:'🐺 🐑',title:'新手教程 · 先做再学',text:'记住金圈里的真羊，狼每行动一步，羊群就会同时行动。\n撞到真羊获胜，撞到假羊失败。\n先尝试移动一次，再使用嗅觉获得一次真羊的位置快照。'},
  swap:{icon:'🐑 ⇄ 🐑',title:'公平换位 · 先预兆、再行动',text:'不会按固定回合突然换位。目标受到威胁时，两只附近的羊可能出现紫色换位征兆。\n征兆出现后，你至少有一次完整行动机会：可贴近打断、嚎叫打断，或者利用陷阱布控。\n安心只是让羊少逃跑，不再封印换位；被困的羊不能交换。追踪、嗅觉、嚎叫都可能诱发幻影筹备，发生后仍保留脚印与紫色残影。'},
- dash:{icon:'⚡ 🐺',title:'新机制 · 预判扑击',text:'第3关起解锁。选择两步内落点（允许拐弯），羊先走一步，狼再扑过去；牧羊人会追向你的落点，因此能用来脱离原位置，但落进守卫身边仍危险。\n你得猜羊将往哪逃，不能直接点着真羊秒杀！落点如果有假羊，也会失败。冷却3回合。'},
+ dash:{icon:'⚡ 🐺',title:'新机制 · 预判扑击 / 草丛突袭',text:'第3关起解锁。选择两步内落点（允许拐弯），羊先走一步，狼再扑过去；牧羊人会追向你的落点，因此能用来脱离原位置，但落进守卫身边仍危险。\n从草丛现身或扑击会惊动附近羊，可能引起连锁逃跑。不能直接点着真羊秒杀：要预判落点和守卫位置。冷却3回合。'},
  trap:{icon:'🪤 🐺',title:'新机制 · 可持续陷阱',text:'第5关起解锁。选择狼身边的空地布置陷阱，狼可以离开。放置后最多等待7回合触发。\n羊和未现身的伪装守卫踩中后均会失去之后3次行动机会；普通守卫被困2回合、困难守卫1回合。陷阱不会自动抓羊或判胜。\n困难羊更会避开陷阱，清醒的牧羊人可能解救受困的羊。'},
  howl:{icon:'📣 🐺',title:'新技能 · 嚎叫诱敌',text:'第4关解锁。嚎叫会惊动羊群，也会暴露狼的方位：近处的牧羊人可能立即抓住狼，远处的守卫才可能调查声音。\n它能打乱幻影换位预兆，却不是定住守卫的免费技能。'},
  guard:{icon:'🌾 🧑‍🌾',title:'新机制 · 牧羊人反追捕',text:'狼能进入草丛，但靠近潜伏的牧羊人，他会现身追捕狼！\n真羊假羊若紧挨正在守护的牧羊人，会显示🛡保护；只要发起行动时盾还在，本回合扑击也会被挡下。\n隐藏的牧羊人突然现身时会给狼一次脱险机会；但可见的守卫占据格子，直接冲撞就会被抓。必须绕路或扑到安全落点。嚎叫也会惊动守卫。'},
@@ -491,8 +515,8 @@ const info={
  bell:{icon:'🔔',title:'新机制 · 风铃',text:'走到风铃所在的格子，可以短暂看见真羊的金色标记。\n每局只能触发一次。注意牧羊人也会行动，别为了线索跑进死角。'},
  mask:{icon:'🐑 🎩',title:'新机制 · 伪装牧羊人',text:'羊群里混进了一名披着羊皮的守卫。\n它仍以守羊、卡位为目标，不会像普通羊一样逃跑；站在羊相邻一格时，真假羊都获得护盾。狼抓受保护羊时会被挡下，守卫随后暴露。\n羊形态被陷阱困住3回合，期间不能护羊或反击。可利用诱敌、陷阱和绕路拆掉防线。'},
  global:{icon:'✨ 🌍',title:'高级机制 · 局部幻影换位',text:'第9关起更容易出现局部幻影换位：两只距离较近的羊预先出现紫色预兆，玩家获得完整应对机会后才可能交换。\n只有狼真正贴身（相邻一格）才会压制换位，不会隔两格就封印。\n嗅觉只记录一次位置，换位后不会自动追踪真羊。你必须继续观察并预判落点。'},
- mind:{icon:'💛 🐑',title:'新机制 · 羊的情绪',text:'羊有平静、警觉和惊慌三种情绪。狼逼近会令它们警觉，扑击与嚎叫可能引发惊慌。\n观察羊行动和表情，就能更合理地预判落点。真假羊都遵守同一套情绪规则。'},
- patrol:{icon:'👀 🧑‍🌾',title:'新机制 · 牧羊人巡视',text:'中后期牧羊人不再一直站着，他会沿草地巡逻并盯着面前的方向。\n红色区域代表短距离视野，靠近视野会先引起警觉；可以趁他转身绕过，或将他引开再抓羊。'},
+ mind:{icon:'💛 🐑',title:'新机制 · 羊群连锁惊慌',text:'狼嚎、扑击和从高草突然现身会惊动附近羊群；紧挨着惊慌羊的同伴也会受影响。\n安心不是无敌：真危险到来时仍会惊散。真羊与假羊都可能突然冲刺，单看谁先逃跑不能断定身份；观察守卫职责和地形再截路。'},
+ patrol:{icon:'👀 🧑‍🌾',title:'新机制 · 两种守卫性格',text:'👀 明面守卫偏谨慎：优先回到受威胁羊的身边，追丢狼后较快回防。\n🎭 伪装守卫暴露后偏莽撞：更倾向继续追狼、追更久。它们都不会知道哪只是真羊，仍会被陷阱和路线误导。\n红色扇面是短距离警戒；从高草现身会发出声响。'},
  gate:{icon:'🚪 🐑',title:'新机制 · 牧场围栏',text:'木围栏会形成窄道，关闭门能阻断狼、羊及牧羊人的通路。\n先走到门旁，点击「开关围栏」，再点门格；开关会消耗一个回合，不能在有角色站着时关闭。\n封路也可能困住自己，不要乱关。'},
  mark:{icon:'📍 🕵️',title:'新机制 · 手动推理标记',text:'点击「推理标记」再点棋盘格子，可以放置或取消位置标记，不消耗回合。\n标记只属于你的猜测，不会跟着羊自动移动，换位后记得自己更新。最多保留3个。'},
  ringMap:{icon:'🌙 ⭕',title:'新地图 · 环形牧场',text:'中间湖泊不可走，狼可以从上下两侧绕过牧场，也可经过横穿通路。声音诱敌后从另一条路线折返。'},
@@ -503,7 +527,8 @@ const info={
  decoy:{icon:'🐾 🎭',title:'最终挑战 · 假脚印',text:'最后一关里，假羊也可能在泥地留下脚印。\n同样的痕迹未必代表同样的身份。结合牧羊人的行动、嗅觉和换位预警进行判断。'},
  highGrass:{icon:'🌾 🐺',title:'新机制 · 高草潜行',text:'高草会遮住狼的身形：守卫隔着高草不会主动远距看穿你，但狼穿行其中会发出细微动静。\n如果高草里传出动静，附近守卫会去搜查，而不是立刻锁定狼。'},
  moonPrairie:{icon:'🌙 🌾',title:'新地图 · 月下草原',text:'月光会照亮部分空地，也会在高草边缘留下背光盲区。\n守卫不会积极扫视弱背光区；你可以沿高草和阴影绕行，把守卫从羊群身边引开后再切入。'},
- moonShift:{icon:'🌗',title:'新机制 · 月影预兆',text:'月光将变向时会先出现预兆，给狼一次完整行动机会。背光与月光位置随后交换，守卫视线也随之改变；不会发生无预警的即死。'},
+ moonShift:{icon:'🌗',title:'新机制 · 月影预兆（动态演示）',text:'浅金色是月光照亮的地面，深蓝色是背光区。第4回合结束先给出变向预兆；你能完整行动一次，随后亮处与背光区互换。\n守卫不是直接瞬移到狼身旁；看清新的阴影，及时调整路线。下面的动画会演示完整的变向过程。'},
+  chapter28Guide:{icon:'🐺 🌙',title:'第28关 · 真假铃阵（重新平衡）',text:'这次两名守卫分守两片羊群，真羊不再被两名守卫同时贴身护住。南侧连接路有风铃，可以先找线索，再选择绕行或诱敌。\n不要在守卫三格内无脑嚎叫——可能直接引来追捕。靠近保护区时可先布陷阱或利用岔路引走守卫。月光变向会预警一整次行动；紫色幻影预兆也能打断。'},
  alarm:{icon:'🔔 🚨',title:'新机制 · 牧场警报',text:'警报装置被狼嚎、附近暴露或踩踏触发后，守卫会戒备并巡查声源；它不会隔墙精确定位狼。警报也可以被狼主动利用来诱开防线。'},
  crescentMap:{icon:'🌙 🌀',title:'新地形 · 弯月洼地',text:'围绕洼地走弯月弧线。内圈有缺口，外圈可以绕行；用高草和通道分开羊群。'},
  watchpost:{icon:'🏰 🐑',title:'新地图 · 夜间岗哨',text:'中央岗哨与两翼牧场相连，两个守卫不能只顾一边；预判他们的接应顺序。'},
@@ -512,21 +537,26 @@ const info={
 };
 
 // v25 challenge framework: standard configurations are locked to a frozen ruleset and seed.
-const CHALLENGE_RULESET='v27.2-fair-swap-1';
+const CHALLENGE_RULESET='v28.0-flock-balance-1';
 const STANDARD_LAYOUTS={"easy":[[[0,1],[1,0]],[[6,6],[6,5]],[[6,0],[6,3]],[[0,0],[1,0]],[[6,0],[6,1],[0,6]],[[7,7],[6,7],[0,0]],[[4,9],[5,8],[6,0],[1,2]],[[5,2],[6,1],[9,8],[1,8],[5,10]],[[4,1],[5,2],[6,10],[1,8]],[[4,8],[5,9],[9,7],[6,10],[4,10],[5,10]],[[9,7],[8,7],[4,10],[4,7],[6,9]],[[9,7],[9,8],[4,10],[4,7]],[[10,5],[10,6],[7,1],[8,9],[9,3],[9,1]],[[10,5],[10,4],[7,9],[7,1],[9,8]],[[10,5],[10,6],[8,1],[7,9],[9,8],[9,2]],[[10,5],[9,6],[8,9],[8,1],[9,5]]],"hard":[[[1,6],[0,5],[6,0]],[[0,0],[1,0],[6,6]],[[0,0],[1,0],[6,6]],[[6,0],[6,1],[0,6]],[[0,0],[1,0],[6,6]],[[7,7],[6,7],[0,0]],[[4,9],[6,9],[5,0],[9,2]],[[6,1],[4,1],[5,10],[9,8],[1,8]],[[4,9],[5,8],[1,2],[6,0]],[[6,10],[5,9],[9,7],[4,10],[5,10],[8,6]],[[6,10],[5,9],[9,7],[4,7],[4,10]],[[9,7],[8,7],[4,10],[5,8]],[[10,5],[10,6],[8,1],[7,9],[9,4],[9,8]],[[10,6],[10,4],[8,1],[7,9],[9,8]],[[10,5],[9,6],[7,9],[9,1],[9,9],[9,5]],[[10,5],[9,4],[8,9],[8,1],[9,5]]]};
+// Chapter 28 used to place the true sheep between both shepherds AND hide the clue bell
+// under the visible shepherd. Keep one real defensive puzzle, but separate both patrol duties.
+// Fixed seeds remain stable. This intentional chapter-specific layout changes the v27.4 record category.
+STANDARD_LAYOUTS.easy[27]=[[7,9],[8,8],[7,5],[7,1],[8,5]];
+STANDARD_LAYOUTS.hard[27]=[[7,9],[8,8],[7,5],[7,1],[8,5]];
 let challengeMode='standard',pickerChallengeMode='standard',gameRngState=1,freeRunSeed=0;
 function gameRandom(){let x=gameRngState|0;x^=x<<13;x^=x>>>17;x^=x<<5;gameRngState=x|0;return (x>>>0)/4294967296}
 function freshFreeSeed(){if(typeof crypto!=='undefined'&&crypto.getRandomValues){const a=new Uint32Array(1);crypto.getRandomValues(a);return (a[0]||0x9e3779b9)>>>0}return ((Date.now()^Math.floor(Math.random()*0xFFFFFFFF))>>>0)||1}
 function standardSeed(i,d){let x=0x3c6ef372^(i*2654435761)^(d==='hard'?0x9e3779b9:0x85ebca6b);return (x>>>0)||1}
-function standardRecord(){return save.v272Standard?.[difficulty]?.[stage]}
-function freeRecord(){return save.v272Free?.[difficulty]?.[stage]}
+function standardRecord(){return save.v274Standard?.[difficulty]?.[stage]}
+function freeRecord(){return save.v274Free?.[difficulty]?.[stage]}
 function challengeLabel(){return challengeMode==='standard'?'🏆 标准挑战 · 固定开局':'🎲 自由牧场 · 随机局面'}
 
-const STORAGE='wolf_sheep_v26_memory';let save={seen:{},best:{},hardBest:{},introDone:false,endlessBest:0,v264Standard:{easy:{},hard:{}},v264Free:{easy:{},hard:{}}};try{const s=JSON.parse(localStorage.getItem(STORAGE)||'null');if(s&&typeof s==='object')save={...save,...s}}catch{};if(save.demoBuild!==13){save.seen={};save.demoBuild=13;}save.v264Standard=save.v264Standard||{easy:{},hard:{}};save.v264Free=save.v264Free||{easy:{},hard:{}};save.v27Standard=save.v27Standard||{easy:{},hard:{}};save.v27Free=save.v27Free||{easy:{},hard:{}};save.v271Standard=save.v271Standard||{easy:{},hard:{}};save.v271Free=save.v271Free||{easy:{},hard:{}};save.v272Standard=save.v272Standard||{easy:{},hard:{}};save.v272Free=save.v272Free||{easy:{},hard:{}};save.options={ambient:true,reduceMotion:false,tutorials:true,resumeOnOpen:false,volume:1,...(save.options||{})};const remember=()=>{try{localStorage.setItem(STORAGE,JSON.stringify(save))}catch{}};
+const STORAGE='wolf_sheep_v26_memory';let save={seen:{},best:{},hardBest:{},introDone:false,endlessBest:0,v264Standard:{easy:{},hard:{}},v264Free:{easy:{},hard:{}}};try{const s=JSON.parse(localStorage.getItem(STORAGE)||'null');if(s&&typeof s==='object')save={...save,...s}}catch{};if(save.demoBuild!==13){save.seen={};save.demoBuild=13;}save.v264Standard=save.v264Standard||{easy:{},hard:{}};save.v264Free=save.v264Free||{easy:{},hard:{}};save.v27Standard=save.v27Standard||{easy:{},hard:{}};save.v27Free=save.v27Free||{easy:{},hard:{}};save.v271Standard=save.v271Standard||{easy:{},hard:{}};save.v271Free=save.v271Free||{easy:{},hard:{}};save.v272Standard=save.v272Standard||{easy:{},hard:{}};save.v272Free=save.v272Free||{easy:{},hard:{}};if(save.moonDemoRevision!==1){delete save.seen.moonShift;save.moonDemoRevision=1;}save.v274Standard=save.v274Standard||{easy:{},hard:{}};save.v274Free=save.v274Free||{easy:{},hard:{}};save.v280Standard=save.v280Standard||{easy:{},hard:{}};save.v280Free=save.v280Free||{easy:{},hard:{}};save.options={ambient:true,reduceMotion:false,tutorials:true,resumeOnOpen:false,volume:1,...(save.options||{})};const remember=()=>{try{localStorage.setItem(STORAGE,JSON.stringify(save))}catch{}};
 save.lastPlayedRun=save.lastPlayedRun||save.activeV25||null;let startupSavedRun=save.lastPlayedRun?{...save.lastPlayedRun}:null;let stage=0,S=null,screenSeq=0,cardQueue=[],testHook=false,endlessWave=1,difficulty='easy',pickerDifficulty='easy';
 let savedPrev=null;
 let demoSceneId=null;
-const demoScenes={howl:'嚎叫暴露位置并引走守卫',basic:'认识真羊并移动',swap:'紫色预兆后才交换',dash:'先预测再扑击',trap:'设置陷阱并困住目标',guard:'牧羊人保护羊群',foot:'泥地留下脚印',bell:'风铃显示线索',mask:'伪装的羊也会受困',global:'换位保留路径',mind:'惊慌与安心',patrol:'守卫巡逻与警戒',gate:'开关围栏',mark:'保留玩家推理标记',ringMap:'环形道路',canyonMap:'峡谷绕行',twinMap:'双牧场双通路',highGrass:'高草藏身但会有动静',moonPrairie:'月光与背光',hardIntro:'困难模式读懂对手',endless:'连续围猎',decoy:'假脚印需重新判断'};
+const demoScenes={moonShift:'月影预兆 → 你行动一次 → 背光交换',chapter28Guide:'第28关的月影与两翼防线',howl:'嚎叫暴露位置并引走守卫',basic:'认识真羊并移动',swap:'紫色预兆后才交换',dash:'先预测再扑击',trap:'设置陷阱并困住目标',guard:'牧羊人保护羊群',foot:'泥地留下脚印',bell:'风铃显示线索',mask:'伪装的羊也会受困',global:'换位保留路径',mind:'惊慌与安心',patrol:'守卫巡逻与警戒',gate:'开关围栏',mark:'保留玩家推理标记',ringMap:'环形道路',canyonMap:'峡谷绕行',twinMap:'双牧场双通路',highGrass:'高草藏身但会有动静',moonPrairie:'月光与背光',hardIntro:'困难模式读懂对手',endless:'连续围猎',decoy:'假脚印需重新判断'};
 let demoState=null;
 function demoSmooth(x){x=Math.max(0,Math.min(1,x));return x*x*(3-2*x)}
 function demoLerp(a,b,p){return a+(b-a)*demoSmooth(p)}
@@ -535,12 +565,20 @@ function demoPaint(id,seconds){
  const ctx=canvas.getContext('2d');if(!ctx)return;
  const W=800,H=450;ctx.clearRect(0,0,W,H);
  const grad=ctx.createLinearGradient(0,0,W,H);grad.addColorStop(0,'#173c37');grad.addColorStop(1,'#102923');ctx.fillStyle=grad;ctx.fillRect(0,0,W,H);
- const kind=id==='mask'?'mask':id==='trap'?'trap':id==='swap'||id==='global'?'swap':id==='moonPrairie'||id==='highGrass'?'stealth':id==='guard'||id==='patrol'||id==='howl'?'guard':id==='gate'||id==='twinMap'?'gate':id==='dash'?'dash':'basic';
+ const kind=id==='mask'?'mask':id==='trap'?'trap':id==='swap'||id==='global'?'swap':id==='moonShift'||id==='chapter28Guide'?'moonshift':id==='moonPrairie'||id==='highGrass'?'stealth':id==='guard'||id==='patrol'||id==='howl'?'guard':id==='gate'||id==='twinMap'?'gate':id==='dash'?'dash':'basic';
  const cell=56, x0=110,y0=55;
  for(let y=0;y<5;y++)for(let x=0;x<10;x++){
   ctx.fillStyle=(x+y)%2?'#416f5e':'#4d7e69';ctx.fillRect(x0+x*cell,y0+y*cell,cell-2,cell-2);
   if((kind==='stealth'||kind==='mask')&&((x>=2&&x<=4&&y>=2)||(x===7&&y>=1&&y<=3))){ctx.fillStyle='rgba(19,55,37,.55)';ctx.fillRect(x0+x*cell,y0+y*cell,cell-2,cell-2);ctx.font='33px serif';ctx.fillText('🌾',x0+x*cell+8,y0+(y+1)*cell-12)}
   if(kind==='stealth'&&(x===2||x===3||x===4)&&y>=2){ctx.fillStyle='rgba(8,24,46,.38)';ctx.fillRect(x0+x*cell,y0+y*cell,cell-2,cell-2)}
+   if(kind==='moonshift'){
+    // Split light and shadow around a visible neutral center lane: a genuine phase flip.
+    const shifted=(seconds%6)>=3.8;
+    const lit=(x<=4)!==shifted;
+    ctx.fillStyle=lit?'rgba(255,239,158,.34)':'rgba(4,18,43,.52)';
+    ctx.fillRect(x0+x*cell,y0+y*cell,cell-2,cell-2);
+    if(x===4||x===5){ctx.strokeStyle='rgba(254,222,147,.65)';ctx.strokeRect(x0+x*cell+2,y0+y*cell+2,cell-6,cell-6)}
+   }
  }
  ctx.fillStyle='#f5dca5';ctx.font='29px serif';ctx.fillText('☾',x0+3*cell+8,y0+34);
  const elapsed=seconds%6.0, act=demoSmooth((elapsed-1.3)/2.5), done=elapsed>=3.85;
@@ -556,7 +594,12 @@ function demoPaint(id,seconds){
   const a=demoLerp(5,7,act),b=demoLerp(7,5,act);icon('🐺',1,3);icon('🐑',a,1);icon('🐑',b,3);ring(a,1,'#c697f7');ring(b,3,'#c697f7');if(done){icon('✧',5,1,24);icon('✧',7,3,24)}annotation(done?'换位后留下紫色轨迹，原有线索保留':'先出现预兆，再给狼一回合反制');
  }else if(kind==='guard'){
   icon('🐺',demoLerp(1,4,act),3);icon('🧑‍🌾',5,2);icon('🐑',6,2);ring(6,2,'#84e1be');if(done)icon('🛡️',5,1,28);annotation(done?'守卫在身旁时护盾会挡下扑击':'守卫会警戒与回防，不能无视护盾');
- }else if(kind==='stealth'){
+  }else if(kind==='moonshift'){
+   const swapAt=elapsed>=3.8,warning=elapsed>=1.9&&elapsed<3.8;
+   icon('🐺',demoLerp(2,3,warning?act:0),3);icon('🧑‍🌾',7,1);icon('🐑',8,3);
+   ctx.fillStyle='#ffe9ac';ctx.font='bold 22px sans-serif';ctx.fillText(swapAt?'现在：右边亮、左边暗':warning?'🌗 月影即将变向！先行动一回合':'现在：左边亮、右边暗',150,350);
+   annotation(swapAt?'亮区与阴影已交换，利用新背光路线':'黄色亮区容易暴露；深蓝色是背光，变向前有预告');
+  }else if(kind==='stealth'){
   icon('🐺',demoLerp(1,4,act),3);icon('🧑‍🌾',8,demoLerp(1,2,act));icon('🐑',9,3);if(done)icon('〰️',4,2,25);annotation(done?'背光区弱视野，但高草动静可引发搜查':'沿背光与高草移动，绕开月光亮区');
  }else if(kind==='gate'){
   icon('🐺',demoLerp(1,3,act),3);icon('🐑',7,2);icon('🧑‍🌾',8,3);icon(done?'🚪':'🚧',5,2,44);icon(done?'🚪':'🚧',5,3,44);annotation(done?'开门后通道可通过，守卫与羊也受地形约束':'围栏决定路线，不只是装饰');
@@ -646,7 +689,7 @@ function shapedLandscape(base,idx){
  const grassPatches=floor.filter(([x,y])=>kind==='prairie' ? ((x+y)%3===0||(x>=6&&y>=6&&x+y>=14)) : kind==='twin' ? ((x===2||x===8)&&y>=3&&y<=7) : ['crescent','bastion','maze'].includes(kind) ? ((x+2*y+idx)%5<=1) : false);
  const shadowZones=floor.filter(([x,y])=>(idx>=16||kind==='prairie') ? ((x<=3&&y>=5) || (x>=7&&y<=4) || (x>=4&&x<=6&&y>=7)) : false);
  const moonlitZones=floor.filter(([x,y])=>(idx>=16||kind==='prairie') ? (y<=3 || (x>=4&&x<=8&&y>=4&&y<=6)) : false).filter(([x,y])=>!shadowZones.some(p=>p[0]===x&&p[1]===y));
- const bell=base.bell? (kind==='ring'?[3,5]:kind==='canyon'?[7,7]:kind==='twin'?[3,7]:kind==='crescent'?[7,8]:[8,8]):null;
+ const bell=base.bell? (idx===27?[5,8]:kind==='ring'?[3,5]:kind==='canyon'?[7,7]:kind==='twin'?[3,7]:kind==='crescent'?[7,8]:[8,8]):null;
  return {...base,size:11,shape:kind,shapeName:MAP_NAMES[kind],floor,w:[],fences:[],gates:safeGates,mud,grassPatches,shadowZones,moonlitZones,alarmBell:base.alarm?(kind==='bastion'?[8,5]:kind==='maze'?[8,3]:kind==='twin'?[8,5]:[7,7]):null,
    guard:idx>=16?guard:(base.guard||base.mask||idx>=9?guard:null),
    bell:bell&&at(...bell)?bell:null,wolfStart:wolf,
@@ -704,7 +747,7 @@ function chapterHeader(i){return i%8===0?'<div class="chapterGroup">第'+(Math.f
 function drawPicker(){
  $('pickEasy').classList.toggle('selected',pickerDifficulty==='easy');$('pickHard').classList.toggle('selected',pickerDifficulty==='hard');$('pickStandard').classList.toggle('selected',pickerChallengeMode==='standard');$('pickFree').classList.toggle('selected',pickerChallengeMode==='free');
  $('modeExplainer').textContent=pickerChallengeMode==='standard'?`🏆 标准挑战：${CHAPTER_COUNT} 关固定局面与随机序列；重开、刷新不洗牌。新纪录独立，旧成绩保留。`:'🎲 自由牧场：每次重玩生成新布局；刷新页面保留本局种子，成绩只记在自由记录。';
- const holder=$('levelsPicker');holder.classList.toggle('hardPick',pickerDifficulty==='hard');holder.innerHTML=stages.map((c,i)=>{const best=pickerChallengeMode==='standard'?save.v272Standard?.[pickerDifficulty]?.[i]:save.v272Free?.[pickerDifficulty]?.[i]?.fastest;const legacy=save.v271Standard?.[pickerDifficulty]?.[i]||save.v27Standard?.[pickerDifficulty]?.[i]||save.v264Standard?.[pickerDifficulty]?.[i]||save.v262Standard?.[pickerDifficulty]?.[i]||(pickerDifficulty==='hard'?save.hardBest?.[i]:save.best?.[i]);return `${chapterHeader(i)}<button data-pick="${i}" class="${i===stage&&pickerDifficulty===difficulty?'active':''}"><span class="num">${pickerDifficulty==='hard'?'HARD':'CHAPTER'} ${String(i+1).padStart(2,'0')}</span><span class="nm">${c.name}</span><span class="best">${best?'★ '+(pickerChallengeMode==='standard'?'标准':'自由')+'最佳 '+best+' 回合':'◇ 尚无'+(pickerChallengeMode==='standard'?'标准':'自由')+'纪录'}${legacy?'<small class=\"legacy-score\"> · 旧版 '+legacy+' 回合</small>':''}</span></button>`}).join('');
+ const holder=$('levelsPicker');holder.classList.toggle('hardPick',pickerDifficulty==='hard');holder.innerHTML=stages.map((c,i)=>{const best=pickerChallengeMode==='standard'?save.v280Standard?.[pickerDifficulty]?.[i]:save.v280Free?.[pickerDifficulty]?.[i]?.fastest;const legacy=save.v272Standard?.[pickerDifficulty]?.[i]||save.v272Standard?.[pickerDifficulty]?.[i]||save.v27Standard?.[pickerDifficulty]?.[i]||save.v264Standard?.[pickerDifficulty]?.[i]||save.v262Standard?.[pickerDifficulty]?.[i]||(pickerDifficulty==='hard'?save.hardBest?.[i]:save.best?.[i]);return `${chapterHeader(i)}<button data-pick="${i}" class="${i===stage&&pickerDifficulty===difficulty?'active':''}"><span class="num">${pickerDifficulty==='hard'?'HARD':'CHAPTER'} ${String(i+1).padStart(2,'0')}</span><span class="nm">${c.name}</span><span class="best">${best?'★ '+(pickerChallengeMode==='standard'?'标准':'自由')+'最佳 '+best+' 回合':'◇ 尚无'+(pickerChallengeMode==='standard'?'标准':'自由')+'纪录'}${legacy?'<small class=\"legacy-score\"> · 旧版 '+legacy+' 回合</small>':''}</span></button>`}).join('');
  $('endlessPick').hidden=pickerDifficulty==='hard';$('endlessBest').textContent='最佳连猎 '+(save.endlessBest||0)}
 function setStage(i){startupSavedRun=null;difficulty=pickerDifficulty;challengeMode=pickerChallengeMode;$('chooseOverlay').hidden=true;if(i===ENDLESS_STAGE){difficulty='easy';endlessWave=1;newLevel(ENDLESS_STAGE)}else newLevel(i)}
 function inside(p){return p.x>=0&&p.x<N&&p.y>=0&&p.y<N&&!S.voids?.has(K(p))&&!S.walls.has(K(p))&&!S.fences.has(K(p))&&!(S.gates?.has(K(p))&&S.gates.get(K(p))===false)}
@@ -734,8 +777,8 @@ function chooseSpawn(){
  const pool=[];for(let y=0;y<N;y++)for(let x=0;x<N;x++){let p=xy(x,y);if(!inside(p)||pathDist(S.wolf,p)>=99||pathDist(S.wolf,p)<(stage<CHAPTER_COUNT&&stage>=16?7:stage<CHAPTER_COUNT&&stage>=12?9:stage<CHAPTER_COUNT&&stage>=9?8:stage<CHAPTER_COUNT&&stage>=6?7:difficulty==='hard'?5:4)||S.guard&&dist(p,S.guard.home)<=1||S.bell&&eq(p,S.bell)||S.gates?.has(K(p)))continue;pool.push(p)}
  shuffle(pool);const n=config().n;let first=pool.find(p=>pool.some(q=>!eq(p,q)&&dist(p,q)<=3));let second=pool.find(q=>!eq(q,first)&&dist(q,first)<=3);if(!first||!second)throw Error('No spawn pair');const used=new Set([K(first),K(second)]),extra=pool.filter(p=>!used.has(K(p)));if(extra.length<n-2+(config().mask?1:0))throw Error('Not enough spawn positions');return [first,second,...extra.slice(0,n-2+(config().mask?1:0))]
 }
-function newLevel(i,playTutorial=false,reuseFree=false){finalGuideOpen=false;visualBoardVersion=-1;stopAmbience();screenSeq++;stage=i;if(i===ENDLESS_STAGE){freeRunSeed=freeRunSeed||freshFreeSeed();gameRngState=(freeRunSeed^(endlessWave*0x9e3779b9))|0;}else if(challengeMode==='standard'){gameRngState=standardSeed(i,difficulty)|0;}else{if(!reuseFree||!freeRunSeed)freeRunSeed=freshFreeSeed();gameRngState=freeRunSeed|0;}if(gameRngState===0)gameRngState=1;const c=config();N=c.size||7;
- save.activeV25={stage:i,difficulty,challengeMode,freeRunSeed:challengeMode==='free'?freeRunSeed:null,ruleset:CHALLENGE_RULESET};remember();cardQueue=[];S={mode:'preview',wolf:point(c.wolfStart)||xy(N===9?4:3,N===9?4:3),voids:c.floor?(()=>{const floor=new Set(c.floor.map(p=>p.join(',')));return new Set(Array.from({length:N*N},(_,i)=>`${i%N},${Math.floor(i/N)}`).filter(k=>!floor.has(k)))})():new Set(),shape:c.shape||'square',round:0,walls:new Set(c.w.map(p=>p.join(','))),fences:new Set((c.fences||[]).map(p=>p.join(','))),gates:new Map((c.gates||[]).map(p=>[p.join(','),true])),markers:[],markerArmed:false,gateArmed:false,prevAction:null,lastPounce:false,mud:new Set(c.mud.map(p=>p.join(','))),grassPatches:new Set((c.grassPatches||[]).map(p=>p.join(','))),shadowTiles:new Set((c.shadowZones||[]).map(p=>p.join(','))),moonlitTiles:new Set((c.moonlitZones||[]).map(p=>p.join(','))),rustleFx:null,sheep:[],guard:c.guard?{id:'guardA',home:point(c.guard),p:point(c.guard),state:'hidden',cool:0,escape:0,awakeRound:0,mask:false,facing:3,alertRound:0,snared:0,targetSheepId:null}:null,bell:point(c.bell),bellUsed:false,sniff:2,reveal:0,scentMark:null,prints:[],dashCd:0,dashArmed:false,trapArmed:false,trapFx:null,blockFx:null,howlCd:0,swapFx:0,swapWarning:null,swapTrace:null,swapCooldown:0,swapPressure:0,swapHistory:0,swapSource:'',lastSwapTurn:-99,lastAction:null,moveLog:'',teaching:playTutorial,tut:0,won:false,hardDone:{},hardAttempts:0};if(c.mask){S.otherGuard={id:'guardB',home:null,p:null,state:'masked',cool:0,escape:0,awakeRound:0,mask:true,facing:1,alertRound:0,snared:0,snaredWhileMasked:false,targetSheepId:null,mood:'calm',stress:0,safeMemory:false}};
+function newLevel(i,playTutorial=false,reuseFree=false){outcomeEpoch++;const oldFx=$('outcomeFx');if(oldFx)oldFx.hidden=true;document.body.classList.remove('fxSuccess','fxFailure');finalGuideOpen=false;visualBoardVersion=-1;stopAmbience();screenSeq++;stage=i;if(i===ENDLESS_STAGE){freeRunSeed=freeRunSeed||freshFreeSeed();gameRngState=(freeRunSeed^(endlessWave*0x9e3779b9))|0;}else if(challengeMode==='standard'){gameRngState=standardSeed(i,difficulty)|0;}else{if(!reuseFree||!freeRunSeed)freeRunSeed=freshFreeSeed();gameRngState=freeRunSeed|0;}if(gameRngState===0)gameRngState=1;const c=config();N=c.size||7;
+ save.activeV25={stage:i,difficulty,challengeMode,freeRunSeed:challengeMode==='free'?freeRunSeed:null,ruleset:CHALLENGE_RULESET};remember();cardQueue=[];S={mode:'preview',wolf:point(c.wolfStart)||xy(N===9?4:3,N===9?4:3),voids:c.floor?(()=>{const floor=new Set(c.floor.map(p=>p.join(',')));return new Set(Array.from({length:N*N},(_,i)=>`${i%N},${Math.floor(i/N)}`).filter(k=>!floor.has(k)))})():new Set(),shape:c.shape||'square',round:0,walls:new Set(c.w.map(p=>p.join(','))),fences:new Set((c.fences||[]).map(p=>p.join(','))),gates:new Map((c.gates||[]).map(p=>[p.join(','),true])),markers:[],markerArmed:false,gateArmed:false,prevAction:null,lastPounce:false,mud:new Set(c.mud.map(p=>p.join(','))),grassPatches:new Set((c.grassPatches||[]).map(p=>p.join(','))),shadowTiles:new Set((c.shadowZones||[]).map(p=>p.join(','))),moonlitTiles:new Set((c.moonlitZones||[]).map(p=>p.join(','))),rustleFx:null,sheep:[],guard:c.guard?{id:'guardA',home:point(c.guard),p:point(c.guard),state:'hidden',personality:'cautious',cool:0,escape:0,awakeRound:0,mask:false,facing:3,alertRound:0,snared:0,targetSheepId:null}:null,bell:point(c.bell),bellUsed:false,sniff:2,reveal:0,scentMark:null,prints:[],dashCd:0,dashArmed:false,trapArmed:false,trapFx:null,blockFx:null,howlCd:0,flockRipple:0,flockBluff:0,swapFx:0,swapWarning:null,swapTrace:null,swapCooldown:0,swapPressure:0,swapHistory:0,swapSource:'',lastSwapTurn:-99,lastAction:null,moveLog:'',teaching:playTutorial,tut:0,won:false,hardDone:{},hardAttempts:0};if(c.mask){S.otherGuard={id:'guardB',home:null,p:null,state:'masked',personality:'bold',cool:0,escape:0,awakeRound:0,mask:true,facing:1,alertRound:0,snared:0,snaredWhileMasked:false,targetSheepId:null,mood:'calm',stress:0,safeMemory:false}};
   S.moonPhase=0;S.moonOmenRound=-1;S.alarmRaised=false;S.alarmTTL=0;S.alarmPoint=point(c.alarmBell);S.moonEnabled=!!c.moonCycle;S.alarmEnabled=!!c.alarm;
  if(!inside(S.wolf))throw new Error('狼出生点不可通行：'+(stage+1)+' '+K(S.wolf));
  if(S.guard&&stage>=5)S.guard.state='patrol';const locations=chooseSpawn();for(let j=0;j<c.n;j++)S.sheep.push({...locations[j],id:j,real:j===0,mood:'calm',stress:0,safeMemory:false,comfortGrace:0,snared:0});if(c.mask){S.otherGuard.p={...locations[c.n]};S.otherGuard.home={...locations[c.n]}}
@@ -746,10 +789,29 @@ function newLevel(i,playTutorial=false,reuseFree=false){finalGuideOpen=false;vis
  if(stage===0&&!save.introDone&&save.options.tutorials!==false){mechanicCard('basic',{force:true});cardQueue[0].actions=[{label:'开始互动教学',primary:true,action:()=>{S.teaching=true;S.tut=0;tutText()}},{label:'跳过教程',action:()=>{S.teaching=false;save.introDone=true;remember();tutText()}}]}
  showNextCard();
 }
-function start(){if(S.mode!=='preview')return;S.mode='play';if(stage<CHAPTER_COUNT){save.lastPlayedRun={stage,difficulty,challengeMode,freeRunSeed:challengeMode==='free'?freeRunSeed:null,ruleset:CHALLENGE_RULESET};remember();}if(challengeMode==='free'&&stage<CHAPTER_COUNT){let r=save.v272Free[difficulty][stage]||{plays:0,wins:0,fastest:null};r.plays++;save.v272Free[difficulty][stage]=r;remember();}startAmbience();audioButton();$('begin').hidden=true;post('开始！方向键移动狼。羊会同时采取行动。');if(S.teaching)S.tut=1;tutText();draw()}
+function start(){if(S.mode!=='preview')return;S.mode='play';if(stage<CHAPTER_COUNT){save.lastPlayedRun={stage,difficulty,challengeMode,freeRunSeed:challengeMode==='free'?freeRunSeed:null,ruleset:CHALLENGE_RULESET};remember();}if(challengeMode==='free'&&stage<CHAPTER_COUNT){let r=save.v280Free[difficulty][stage]||{plays:0,wins:0,fastest:null};r.plays++;save.v280Free[difficulty][stage]=r;remember();}startAmbience();audioButton();$('begin').hidden=true;post('开始！方向键移动狼。羊会同时采取行动。');if(S.teaching)S.tut=1;tutText();draw()}
 function tutText(){const e=$('coach');if(!S.teaching){e.hidden=true;return}e.hidden=false;const texts=['教学①：先辨认金圈真羊，然后点击「开始」。','教学②：点击一个方向，观察羊同时移动。','教学③：点击「嗅觉」，消耗一回合后看清真羊现在的位置。','教学完成：线索只显示一次，趁记忆清楚时继续追踪。第3关学预判扑击，第5关学布置陷阱。'];e.textContent=texts[Math.min(S.tut,3)];if(S.tut>=3){save.introDone=true;remember()}}
-function win(){stopAmbience();audioCue('win');S.mode='won';if(stage===ENDLESS_STAGE){const streak=endlessWave;save.endlessBest=Math.max(save.endlessBest||0,streak);remember();draw();card({icon:'🌙',title:'连猎成功 '+streak+' 场！',text:`用 ${S.round} 回合抓到了真羊。\n准备迎接下一场更复杂的猎场。`,index:'无尽猎场',actions:[{label:'下一场',primary:true,action:()=>{endlessWave++;newLevel(ENDLESS_STAGE)}},{label:'结束本轮',action:()=>openPicker()}]});return}if(challengeMode==='standard'){save.v272Standard[difficulty][stage]=Math.min(save.v272Standard[difficulty][stage]||999,S.round)}else{const r=save.v272Free[difficulty][stage]||{plays:1,wins:0,fastest:null};r.wins++;r.fastest=Math.min(r.fastest||999,S.round);save.v272Free[difficulty][stage]=r}remember();draw();card({icon:difficulty==='hard'?'🔥':'🏆',title:difficulty==='hard'?'困难围猎成功！':'抓到真羊！',text:`第 ${stage+1} 关通关 · ${S.round} 回合。\n${stage<CHAPTER_COUNT-1?'后面还有不同地形和机制组合等你破解。':'全部 32 关挑战完成！'}`,index:'胜利',actions:[{label:stage===CHAPTER_COUNT-1?'重玩第一关':'下一关',primary:true,action:()=>newLevel(stage===CHAPTER_COUNT-1?0:stage+1)},{label:'重玩本关',action:()=>newLevel(stage)}]})}
-function lose(cause){stopAmbience();audioCue('lose');if(stage===ENDLESS_STAGE){S.mode='lost';draw();card({icon:'💥',title:'连猎中断',text:`${cause}\n本轮连续抓捕 ${endlessWave-1} 只真羊。\n最高记录 ${save.endlessBest||0}。`,index:'无尽猎场',actions:[{label:'重新挑战',primary:true,action:()=>{endlessWave=1;newLevel(ENDLESS_STAGE)}},{label:'返回选关',action:()=>openPicker()}]});return}S.mode='lost';draw();card({icon:'💥',title:'追捕失败',text:cause+'\n抓错或被牧羊人抓住，直接重开本关。',index:'失败',actions:[{label:'本关重来',primary:true,action:()=>newLevel(stage)},{label:'自由选关',action:()=>newLevel(stage)}]})}
+let outcomeEpoch=0;
+function showOutcomeFx(success){
+ const fx=$('outcomeFx');if(!fx)return;
+ const epoch=++outcomeEpoch;
+ fx.className=success?'success':'failure';fx.hidden=false;
+ fx.querySelector('.outcome-symbol').textContent=success?'🐺✨':'💥🐾';
+ fx.querySelector('.outcome-label').textContent=success?'捕猎成功！':'追捕失败';
+ const symbols=success?['✦','⭐','🌙','✧','✨']:['💨','🍃','✕','🐾'];
+ // No actual random/level state is consumed by decorative effects.
+ fx.querySelector('.outcome-particles').innerHTML=Array.from({length:14},(_,i)=>`<i style="--x:${9+(i*37%82)}%;--y:${17+(i*29%66)}%;--dx:${(i%2?1:-1)*(32+i*6)}px;--dy:${(i%3-1)*70}px;--spin:${i*41}deg;--delay:${i%5*40}ms">${symbols[i%symbols.length]}</i>`).join('');
+ document.body.classList.toggle('fxSuccess',success);document.body.classList.toggle('fxFailure',!success);
+ setTimeout(()=>{if(epoch!==outcomeEpoch)return;fx.hidden=true;document.body.classList.remove('fxSuccess','fxFailure')},1600);
+}
+function failureInsight(cause){
+ const action={move:'走位',wait:'原地等待',pounce:'扑击',trap:'放陷阱',howl:'嚎叫',sniff:'嗅觉',gate:'开关围栏'}[S.lastAction]||'上一回合行动';
+ if(/假羊/.test(cause))return `复盘：${action}命中了假羊。下次先观察换位残影或用嗅觉确认位置，别只看哪只先跑。`;
+ if(/追上|截住|守卫|牧羊人|迎面|撞上/.test(cause))return `复盘：${action}后进入了可见守卫的接触范围。先看警戒方向和可退路；冲刺也不能无视落点守卫。`;
+ return `复盘：${action}没有带来安全落点。换条路线，先看羊群变化与守卫位置。`;
+}
+function win(){if(S.mode==='won'||S.mode==='lost')return;stopAmbience();audioCue('win');S.mode='won';showOutcomeFx(true);if(stage===ENDLESS_STAGE){const streak=endlessWave;save.endlessBest=Math.max(save.endlessBest||0,streak);remember();draw();card({icon:'🌙',title:'连猎成功 '+streak+' 场！',text:`用 ${S.round} 回合抓到了真羊。\n准备迎接下一场更复杂的猎场。`,index:'无尽猎场',actions:[{label:'下一场',primary:true,action:()=>{endlessWave++;newLevel(ENDLESS_STAGE)}},{label:'结束本轮',action:()=>openPicker()}]});return}if(challengeMode==='standard'){save.v280Standard[difficulty][stage]=Math.min(save.v280Standard[difficulty][stage]||999,S.round)}else{const r=save.v280Free[difficulty][stage]||{plays:1,wins:0,fastest:null};r.wins++;r.fastest=Math.min(r.fastest||999,S.round);save.v280Free[difficulty][stage]=r}remember();draw();card({icon:difficulty==='hard'?'🔥':'🏆',title:difficulty==='hard'?'困难围猎成功！':'抓到真羊！',text:`第 ${stage+1} 关通关 · ${S.round} 回合。\n${stage<CHAPTER_COUNT-1?'后面还有不同地形和机制组合等你破解。':'全部 32 关挑战完成！'}`,index:'胜利',actions:[{label:stage===CHAPTER_COUNT-1?'重玩第一关':'下一关',primary:true,action:()=>newLevel(stage===CHAPTER_COUNT-1?0:stage+1)},{label:'重玩本关',action:()=>newLevel(stage)}]})}
+function lose(cause){if(S.mode==='lost'||S.mode==='won')return;stopAmbience();audioCue('lose');showOutcomeFx(false);if(stage===ENDLESS_STAGE){S.mode='lost';draw();card({icon:'💥',title:'连猎中断',text:`${cause}\n本轮连续抓捕 ${endlessWave-1} 只真羊。\n最高记录 ${save.endlessBest||0}。`,index:'无尽猎场',actions:[{label:'重新挑战',primary:true,action:()=>{endlessWave=1;newLevel(ENDLESS_STAGE)}},{label:'返回选关',action:()=>openPicker()}]});return}S.mode='lost';draw();card({icon:'💥',title:'追捕失败',text:cause+'\n'+failureInsight(cause),index:'失败',actions:[{label:'本关重来',primary:true,action:()=>newLevel(stage)},{label:'自由选关',action:()=>openPicker()}]})}
 function sheepAt(p){return S.sheep.find(a=>eq(a,p))}
 function isTallGrass(p){return !!p&&!!S?.grassPatches?.has(K(p))}
 function isShadowTile(p){if(!p||!S)return false;return S.moonPhase===1?S.moonlitTiles?.has(K(p)):S.shadowTiles?.has(K(p))}
@@ -788,7 +850,7 @@ function guardTurns(){for(const g of allGuards()){if(g.snared>0){g.snared--;if(g
  if(activeGuard&&!newlyAwakened&&dist(g.p,S.wolf)===1){
   g.p={...S.wolf};lose('牧羊人就在身旁，及时截住了狼。');return true;
  }
- const threatened=threatenedSheepFor(g);if(threatened&&['patrol','alert','return','investigate'].includes(g.state)){g.state='intercept';g.targetSheepId=threatened.id}if(g.state==='chase'){if(g.awakeRound===S.round)continue;if(g.cool>0){g.cool--;continue}const blocked=new Set([...allGuards().filter(x=>x!==g).map(q=>K(q.p)),...S.sheep.map(K)]);let goal=S.wolf;const endangered=threatenedSheepFor(g);if(endangered){const cover=bestInterceptTile(g,endangered);if(cover)goal=cover}else if(difficulty==='hard'&&S.wolfBeforeAction&&dist(g.p,S.wolf)<=3){const dx=S.wolf.x-S.wolfBeforeAction.x,dy=S.wolf.y-S.wolfBeforeAction.y;if(Math.abs(dx)+Math.abs(dy)===1){const projected=xy(S.wolf.x+dx,S.wolf.y+dy);if(inside(projected)&&!blocked.has(K(projected))&&pathDist(g.p,projected)<99)goal=projected;}}let next=moveTowards(g.p,goal,blocked);if(dist(g.p,S.wolf)===1&&goal===S.wolf)next={...S.wolf};g.p=next;if(triggerTrapOnGuard(g))continue;if(eq(g.p,S.wolf)){lose('牧羊人追上你了。');return true}if(pathDist(g.p,S.wolf)>=4&&!endangered)g.escape++;else g.escape=0;if(g.escape>=2){g.state='investigate';g.escape=0;g.soundOrigin={...(S.rustleFx||S.wolf)};post('🌙 牧羊人追丢了狼，先搜索附近再返回守区。')}}else if(g.state==='investigate'){const urgent=threatenedSheepFor(g);if(urgent){g.state='intercept';g.targetSheepId=urgent.id;}else if(dist(g.p,S.wolf)<=2&&!isTallGrass(S.wolf)){wake(g);g.awakeRound=S.round-1;if(dist(g.p,S.wolf)<=1){lose('调查动静的牧羊人当场发现了你。');return true}continue}else{const blocked=new Set([...allGuards().filter(q=>q!==g).map(q=>K(q.p)),...S.sheep.map(K)]);g.p=moveTowards(g.p,g.soundOrigin||g.home,blocked);if(triggerTrapOnGuard(g))continue;if(eq(g.p,S.wolf)){lose('守卫在搜查高草时撞见了狼。');return true}if(eq(g.p,g.soundOrigin||g.home)){g.state='return';post('👣 牧羊人搜查完毕，准备回去守羊。')}}}else if(g.state==='intercept'){const sheep=S.sheep.find(s=>s.id===g.targetSheepId)||threatenedSheepFor(g);if(!sheep){g.state='return';g.targetSheepId=null;continue}const blocked=new Set([...allGuards().filter(x=>x!==g).map(q=>K(q.p)),...S.sheep.filter(s=>s.id!==sheep.id).map(K)]);const cover=bestInterceptTile(g,sheep);if(cover){g.p=moveTowards(g.p,cover,blocked);if(triggerTrapOnGuard(g))continue;}if(eq(g.p,S.wolf)){lose('回防的牧羊人截住了你。');return true}const dx=Math.sign(S.wolf.x-g.p.x),dy=Math.sign(S.wolf.y-g.p.y);g.facing=Math.abs(dx)>Math.abs(dy)?(dx>0?1:3):(dy>0?2:0);if(dist(sheep,S.wolf)>2&&!inSight(g,S.wolf)){g.state='return';g.targetSheepId=null}}else if(g.state==='return'){if(eq(g.p,g.home)){g.state=g.mask?'masked':stage>=5?'patrol':'hidden';continue}g.p=moveTowards(g.p,g.home,new Set(allGuards().filter(x=>x!==g).map(q=>K(q.p))));if(triggerTrapOnGuard(g))continue;if(eq(g.p,S.wolf)){lose('牧羊人返回时与你迎面撞上。');return true}if(eq(g.p,g.home))g.state=g.mask?'masked':stage>=5?'patrol':'hidden';}else if(g.state==='alert'){if(g.alertRound>=S.round)continue;const urgent=threatenedSheepFor(g);if(urgent){g.state='intercept';g.targetSheepId=urgent.id;post('🛡️ 牧羊人意识到羊更危险，优先回身保护。')}else if(inSight(g,S.wolf)||dist(g.p,S.wolf)<=1){wake(g)}else{g.state='patrol';post('🌿 牧羊人没有看清你，重新巡视。')}}else if(g.state==='patrol'){const urgent=threatenedSheepFor(g);if(urgent){g.state='intercept';g.targetSheepId=urgent.id;continue}if(S.round%2===0){const opts=D.slice(0,4).map(([dx,dy],i)=>({p:xy(g.p.x+dx,g.p.y+dy),f:i})).filter(o=>inside(o.p)&&dist(o.p,g.home)<=2&&!S.sheep.some(s=>eq(s,o.p))&&!eq(o.p,S.wolf)&&!allGuards().some(h=>h!==g&&eq(h.p,o.p)));if(opts.length){const target=opts.sort((a,b)=>dist(a.p,g.home)-dist(b.p,g.home)+gameRandom()*.6)[0];g.p=target.p;g.facing=target.f;if(triggerTrapOnGuard(g))continue;}else g.facing=(g.facing+1)%4;}else g.facing=(g.facing+1)%4;if(inSight(g,S.wolf)){g.state='alert';g.alertRound=S.round;audioCue('alert');post('👀 进入了牧羊人的警戒视野！')}else if(S.rustleFx&&pathDist(g.p,S.rustleFx)<=2){g.state='investigate';g.soundOrigin={...S.rustleFx};post('🌾 巡逻守卫听见高草动静，转去搜查。')}}else if(g.state==='masked'){
+ const threatened=threatenedSheepFor(g);if(threatened&&['patrol','alert','return','investigate'].includes(g.state)){g.state='intercept';g.targetSheepId=threatened.id}if(g.state==='chase'){if(g.awakeRound===S.round)continue;if(g.cool>0){g.cool--;continue}const blocked=new Set([...allGuards().filter(x=>x!==g).map(q=>K(q.p)),...S.sheep.map(K)]);let goal=S.wolf;const endangered=threatenedSheepFor(g);if(endangered&&(g.personality==='cautious'||dist(endangered,S.wolf)<=1)){const cover=bestInterceptTile(g,endangered);if(cover)goal=cover}else if(difficulty==='hard'&&S.wolfBeforeAction&&dist(g.p,S.wolf)<=3){const dx=S.wolf.x-S.wolfBeforeAction.x,dy=S.wolf.y-S.wolfBeforeAction.y;if(Math.abs(dx)+Math.abs(dy)===1){const projected=xy(S.wolf.x+dx,S.wolf.y+dy);if(inside(projected)&&!blocked.has(K(projected))&&pathDist(g.p,projected)<99)goal=projected;}}let next=moveTowards(g.p,goal,blocked);if(dist(g.p,S.wolf)===1&&goal===S.wolf)next={...S.wolf};g.p=next;if(triggerTrapOnGuard(g))continue;if(eq(g.p,S.wolf)){lose('牧羊人追上你了。');return true}if(pathDist(g.p,S.wolf)>=4&&!endangered)g.escape++;else g.escape=0;if(g.escape>=(g.personality==='bold'?3:2)){g.state='investigate';g.escape=0;g.soundOrigin={...(S.rustleFx||S.wolf)};post('🌙 牧羊人追丢了狼，先搜索附近再返回守区。')}}else if(g.state==='investigate'){const urgent=threatenedSheepFor(g);if(urgent){g.state='intercept';g.targetSheepId=urgent.id;}else if(dist(g.p,S.wolf)<=2&&!isTallGrass(S.wolf)){wake(g);g.awakeRound=S.round-1;if(dist(g.p,S.wolf)<=1){lose('调查动静的牧羊人当场发现了你。');return true}continue}else{const blocked=new Set([...allGuards().filter(q=>q!==g).map(q=>K(q.p)),...S.sheep.map(K)]);g.p=moveTowards(g.p,g.soundOrigin||g.home,blocked);if(triggerTrapOnGuard(g))continue;if(eq(g.p,S.wolf)){lose('守卫在搜查高草时撞见了狼。');return true}if(eq(g.p,g.soundOrigin||g.home)){g.state='return';post('👣 牧羊人搜查完毕，准备回去守羊。')}}}else if(g.state==='intercept'){const sheep=S.sheep.find(s=>s.id===g.targetSheepId)||threatenedSheepFor(g);if(!sheep){g.state='return';g.targetSheepId=null;continue}const blocked=new Set([...allGuards().filter(x=>x!==g).map(q=>K(q.p)),...S.sheep.filter(s=>s.id!==sheep.id).map(K)]);const cover=bestInterceptTile(g,sheep);if(cover){g.p=moveTowards(g.p,cover,blocked);if(triggerTrapOnGuard(g))continue;}if(eq(g.p,S.wolf)){lose('回防的牧羊人截住了你。');return true}const dx=Math.sign(S.wolf.x-g.p.x),dy=Math.sign(S.wolf.y-g.p.y);g.facing=Math.abs(dx)>Math.abs(dy)?(dx>0?1:3):(dy>0?2:0);if(dist(sheep,S.wolf)>2&&!inSight(g,S.wolf)){g.state='return';g.targetSheepId=null}}else if(g.state==='return'){if(eq(g.p,g.home)){g.state=g.mask?'masked':stage>=5?'patrol':'hidden';continue}g.p=moveTowards(g.p,g.home,new Set(allGuards().filter(x=>x!==g).map(q=>K(q.p))));if(triggerTrapOnGuard(g))continue;if(eq(g.p,S.wolf)){lose('牧羊人返回时与你迎面撞上。');return true}if(eq(g.p,g.home))g.state=g.mask?'masked':stage>=5?'patrol':'hidden';}else if(g.state==='alert'){if(g.alertRound>=S.round)continue;const urgent=threatenedSheepFor(g);if(urgent){g.state='intercept';g.targetSheepId=urgent.id;post('🛡️ 牧羊人意识到羊更危险，优先回身保护。')}else if(inSight(g,S.wolf)||dist(g.p,S.wolf)<=1){wake(g)}else{g.state='patrol';post('🌿 牧羊人没有看清你，重新巡视。')}}else if(g.state==='patrol'){const urgent=threatenedSheepFor(g);if(urgent){g.state='intercept';g.targetSheepId=urgent.id;continue}if(S.round%2===0){const opts=D.slice(0,4).map(([dx,dy],i)=>({p:xy(g.p.x+dx,g.p.y+dy),f:i})).filter(o=>inside(o.p)&&dist(o.p,g.home)<=2&&!S.sheep.some(s=>eq(s,o.p))&&!eq(o.p,S.wolf)&&!allGuards().some(h=>h!==g&&eq(h.p,o.p)));if(opts.length){const target=opts.sort((a,b)=>dist(a.p,g.home)-dist(b.p,g.home)+gameRandom()*.6)[0];g.p=target.p;g.facing=target.f;if(triggerTrapOnGuard(g))continue;}else g.facing=(g.facing+1)%4;}else g.facing=(g.facing+1)%4;if(inSight(g,S.wolf)){g.state='alert';g.alertRound=S.round;audioCue('alert');post('👀 进入了牧羊人的警戒视野！')}else if(S.rustleFx&&pathDist(g.p,S.rustleFx)<=2){g.state='investigate';g.soundOrigin={...S.rustleFx};post('🌾 巡逻守卫听见高草动静，转去搜查。')}}else if(g.state==='masked'){
   // The wolf is hunted by a *shepherd* wearing sheep skin, not by a sheep.
   // Its priority is local flock defense. It sees wolf proximity and threatened routes,
   // but it NEVER reads the real/decoy identity flag to decide whom to protect.
@@ -852,24 +914,37 @@ function sheepComfort(s){
 function sheepAlarmed(s,howled=false){return dist(s,S.wolf)<=2||(howled&&dist(s,S.wolf)<=4)}
 function moveSheep({howled=false}={}){
  const old=S.sheep.map(z=>({...z}));const flock=shuffle(S.sheep.slice());const occupied=new Set(allGuards().map(g=>K(g.p)));
- const threatAction=howled||S.lastPounce;
+ const jumpedFromGrass=!!S.wolfBeforeAction&&isTallGrass(S.wolfBeforeAction)&&!isTallGrass(S.wolf)&&S.lastAction==='move';
+ const suddenThreat=howled||S.lastPounce||jumpedFromGrass;
+ let rippleCount=0,bluffCount=0;
+
  for(const s of flock){
   const distance=dist(s,S.wolf);
+  const flockConcern=old.some(o=>o.id!==s.id&&o.stress>=3&&dist(o,s)<=2);
+  const nearBurst=suddenThreat&&distance<=4;
    if(s.snared>0){s.mood='snared';occupied.add(K(s));continue}
    // The pair visibly preparing a swap holds position for the player's response.
    if(S.swapWarning&&!howled&&[S.swapWarning.realId,S.swapWarning.decoyId].includes(s.id)){occupied.add(K(s));continue}
    const sheltered=!!protectingGuard(s);if(!sheltered&&s.safeMemory){s.comfortGrace=Math.max(0,(s.comfortGrace||0)-1);if(s.comfortGrace===0)s.safeMemory=false;}
   // When the flock reaches protection, it settles instead of scattering each round.
   // The flock keeps feeling safe after a guardian leaves, until actual danger approaches.
-  if(sheltered&&!sheepAlarmed(s,howled)){
+  if(sheltered&&!sheepAlarmed(s,howled)&&!nearBurst){
    s.stress=0;s.mood='reassured';s.safeMemory=true;s.comfortGrace=3;occupied.add(K(s));continue;
   }
-  if(!sheltered&&sheepComfort(s)&&!sheepAlarmed(s,howled)){
+  if(!sheltered&&sheepComfort(s)&&!sheepAlarmed(s,howled)&&!nearBurst&&!flockConcern){
    s.stress=0;s.mood='reassured';occupied.add(K(s));continue;
   }
-  if(sheepAlarmed(s,howled)){s.safeMemory=false;s.comfortGrace=0;}
-  const stressDelta=howled?(distance<=4?2:0):S.lastPounce?(distance<=3?2:0):distance<=2?1:distance>=4?-1:0;
-  s.stress=Math.max(0,Math.min(5,(s.stress||0)+stressDelta));s.mood=s.stress>=4?'panic':s.stress>=2?'alert':'calm';
+  if(sheepAlarmed(s,howled)||nearBurst||flockConcern){s.safeMemory=false;s.comfortGrace=0;}
+  const stressDelta=howled?(distance<=4?2:0):S.lastPounce?(distance<=3?2:0):jumpedFromGrass?(distance<=3?2:distance===4?1:0):distance<=2?1:distance>=4?-1:0;
+  const echo=flockConcern&&distance<=6?1:0;
+  const previousStress=s.stress||0;
+  s.stress=Math.max(0,Math.min(5,previousStress+stressDelta+echo));
+  // Decoys sometimes make a conspicuous false break; real sheep can also bolt.
+  // A single dash is NEVER proof of identity, and no guard may read this flag.
+  const bluff=config().e&&S.round>1&&distance>=3&&distance<=5&&gameRandom()<(s.real?.12:.30);
+  if(bluff){s.stress=Math.max(2,s.stress);bluffCount++}
+  if(s.stress>=3&&previousStress<3&&(echo||nearBurst))rippleCount++;
+  s.mood=s.stress>=4?'panic':s.stress>=2?'alert':'calm';
   const restricted=new Set([...occupied,...S.sheep.filter(other=>other!==s).map(K)]);
   const options=D.map(([dx,dy])=>xy(s.x+dx,s.y+dy)).filter(p=>inside(p)&&!eq(p,S.wolf)&&!restricted.has(K(p)));
   if(!options.length){occupied.add(K(s));continue}
@@ -889,7 +964,8 @@ function moveSheep({howled=false}={}){
     if(nearGuards.some(g=>dist(p,g.p)<=1))score+=1.1;
    }
    if(difficulty==='hard'&&S.trapFx?.ttl>0&&!S.trapFx.triggered&&eq(p,S.trapFx))score-=5; // Hard sheep can notice an exposed trap, not the wolf's hidden target
-   score-=stays*(s.mood==='panic'?.2:.48);
+   score-=stays*(s.mood==='panic'?.7:.48);
+   if(bluff&&!stays)score+=(now>previous?1.4:.2);
    for(const g of nearGuards){const safe=dist(p,g.p);if(safe<=1&&now>2)score+=4.5;else if(s.mood!=='calm')score+=Math.max(0,3-safe)*(difficulty==='hard'?1.15:(s.mood==='panic'?.75:.48))}
    if(howled&&S.guard&&dist(p,S.guard.home)<=2)score-=2.5;
    if(stays&&now<=2)score-=.5;
@@ -906,7 +982,10 @@ function moveSheep({howled=false}={}){
  }
  S.prints=S.prints.map(t=>({...t,ttl:t.ttl-1})).filter(t=>t.ttl>0);
  for(const s of S.sheep){const p=old.find(o=>o.id===s.id);if(S.mud.has(K(p))&&!eq(p,s)&&(s.real||(config().decoy&&gameRandom()<.4)))S.prints.push({...p,ttl:3})}
- S.prints=S.prints.slice(-9);S.lastPounce=false
+ S.prints=S.prints.slice(-9);
+ S.flockRipple=rippleCount>0?2:Math.max(0,(S.flockRipple||0)-1);
+ S.flockBluff=bluffCount>0?1:0;
+ S.lastPounce=false
 }
 // FAIR SWAP CONTRACT: event-driven warning, a full response turn, local exchange, preserved evidence.
 // v27.2: exchange is a legible action in the flock's deception game, not a random timer.
@@ -1010,7 +1089,7 @@ function guardDisarmTrap(){
  }
 }
 // Aimed pounce: up to two orthogonal steps, bends allowed, never passes through a sheep or guard.
-function pouncePath(target){if(!target||!inside(target)||eq(target,S.wolf))return null;
+function pouncePath(target){if(!target||dist(target,S.wolf)>2||!inside(target)||eq(target,S.wolf))return null;
  let queue=[{p:{...S.wolf},path:[]}],visited=new Set([K(S.wolf)]),occupied=new Set([...S.sheep.map(K),...allGuards().filter(g=>g.snared<=0).map(g=>K(g.p))]);
  while(queue.length){const node=queue.shift();if(node.path.length>=2)continue;
   for(const [dx,dy] of D.slice(0,4)){const p=xy(node.p.x+dx,node.p.y+dy);if(!inside(p)||visited.has(K(p)))continue;
@@ -1028,7 +1107,7 @@ function toggleGate(p){if(!canUseAbility('gate')||S.mode!=='play')return;if(!S.g
  const current=S.gates.get(K(p));if(current&&(eq(S.wolf,p)||S.sheep.some(s=>eq(s,p))||allGuards().some(g=>eq(g.p,p)))){post('🚪 门口有人，不能关门。');return}
  S.gates.set(K(p),!current);audioCue(current?'gate':'gateOpen');if(current)hardCredit('gate');S.gateArmed=false;S.lastAction='gate';S.round++;S.scentMark=null;S.lastPounce=false;S.dashCd=Math.max(0,S.dashCd-1);S.howlCd=Math.max(0,S.howlCd-1);if(S.blockFx)S.blockFx.ttl=Math.max(0,S.blockFx.ttl-1);
  for(const g of allGuards())if(g.state==='chase'&&g.awakeRound!==S.round){/* reaction next turn */}
- if(guardTurns())return;guardDisarmTrap();moveSheep();finishSwapTurn();resolveTrapTurn();decaySwapTrace();decayRustle();
+   if(guardTurns())return;guardDisarmTrap();moveSheep();finishSwapTurn();resolveTrapTurn();decaySwapTrace();decayRustle();updateMoonAndAlarm();
  post(current?'🚪 关上围栏，路线改变了；狼与羊都不能穿过。':'🚪 打开围栏，通道重新可用。');tutText();draw()}
 function selectTile(p){
  if(S.mode==='play'&&$('overlay').hidden&&S.markerArmed&&canUseAbility('marker')){markTile(p);return}
@@ -1193,11 +1272,13 @@ function animateWolfMotion(before,after){
 let finalGuideOpen=false;
 function finalGuideHint(){
  if(!S)return '';
- if(S.mode==='preview')return '① 先认金圈真羊，记住它相对守卫与围栏的位置。\n② 不要开场冲进牧羊人的警戒区。先选好退路。';
+   if(stage===27&&S.mode==='preview')return '① 两位守卫分守上下两片羊群，真羊只由一位守卫保护。\n② 南侧连接路上的风铃是可选线索，不必先与守卫硬碰硬。';
+  if(S.mode==='preview')return '① 先认金圈真羊，记住它相对守卫与围栏的位置。\n② 不要开场冲进牧羊人的警戒区。先选好退路。';
  const guards=allGuards();
  const chased=guards.some(g=>g.state==='chase');
  const real=S.sheep.find(s=>s.real),guarding=real?!!protectingGuard(real):false;
- if(chased)return '🚨 牧羊人已经追上来。先脱离追击，不要直接顶着守卫抓羊。\n利用岩石与围栏制造距离，再观察下一轮羊群位置。';
+   if(stage===27&&S.moonOmenRound>=0)return '🌗 月影马上交换；你还有本次行动时间。先看下一回合亮暗位置，再选择安全岔路。';
+  if(chased)return '🚨 牧羊人已经追上来。先脱离追击，不要直接顶着守卫抓羊。\n利用岩石与围栏制造距离，再观察下一轮羊群位置。';
  if(guarding)return '🛡️ 真羊正在守卫保护范围内。直接捕获会被挡下。\n先用嚎叫或靠近引开守卫，再从侧面切入。';
  if(S.scentMark)return '👃 黄色圈标记的是上一步嗅到的真羊位置，不是实时追踪。\n观察可走路径，别把羊的新落点当作旧线索。';
  if(S.sniff>0)return '🐾 多只羊同时行动，先跟住一只目标的移动规律。\n需要确认身份时才用嗅觉；尽量保留一次给接近抓捕时。';
@@ -1205,8 +1286,8 @@ function finalGuideHint(){
 }
 function renderFinaleGuide(){
  const section=$('finaleGuide');if(!section)return;
- const shown=stage===CHAPTER_COUNT-1;
- section.hidden=!shown;
+   const shown=stage===CHAPTER_COUNT-1||stage===27;
+   section.hidden=!shown;section.querySelector('.guide-head b').textContent=stage===27?'🌙 第28关 · 真假铃阵':'🌙 终幕 · 猎月牧场';
  const text=$('finalGuideText');text.hidden=!shown||!finalGuideOpen;
  $('finalGuideToggle').setAttribute('aria-expanded',String(shown&&finalGuideOpen));
  $('finalGuideToggle').textContent=finalGuideOpen?'收起提示':'🧭 战术提示';
@@ -1253,9 +1334,10 @@ function draw(){if(!S)return;const c=config();let html='';const vision=[];
  }
  renderFinaleGuide();renderHard();
  $('level').textContent=stage===ENDLESS_STAGE?'∞ 第'+endlessWave+'场':`${stage+1} / ${CHAPTER_COUNT}`;$('turn').textContent=S.round;
- const chase=allGuards().some(g=>g.state==='chase');const alert=allGuards().some(g=>g.state==='alert');$('clock').textContent=S.swapWarning?'🔮 换位征兆':!c.e?'没有换位':S.swapTrace?'⇄ 残影可追':S.swapPressure>0&&c.e?'🔮 幻影活跃':chase?'🚨 追捕中':'观察羊群';
- $('challengeBadge').textContent=stage===ENDLESS_STAGE?'🌙 无尽猎场':challengeLabel();$('statusPill').textContent=chase?'🚨 牧羊人追狼':alert?'👀 守卫警觉':S.rustleFx?'🌾 高草有动静':S.scentMark?'👃 已获气味线索':S.swapWarning?'🔮 换位将至·可反制':S.markers?.length?'📍 已标记 '+S.markers.length+' 处':S.moonOmenRound>=0?'🌗 月影将变':S.alarmRaised?'🚨 牧场警报中':'🌙 观察月下草原';
- const setAb=(id,icon,label,disabled=false,active=false)=>{const b=$(id);b.disabled=disabled;b.classList.toggle('active',active);b.innerHTML=`<span class="ability-icon">${icon}</span><span class="ability-caption">${label}</span>`};
+ const chase=allGuards().some(g=>g.state==='chase');const alert=allGuards().some(g=>g.state==='alert');$('clock').textContent=S.swapWarning?'🔮 换位征兆':S.flockRipple>0?'🐑 羊群惊散':!c.e?'没有换位':S.swapTrace?'⇄ 残影可追':S.swapPressure>0&&c.e?'🔮 幻影活跃':chase?'🚨 追捕中':'观察羊群';
+ $('challengeBadge').textContent=stage===ENDLESS_STAGE?'🌙 无尽猎场':challengeLabel();$('statusPill').textContent=chase?'🚨 牧羊人追狼':S.flockRipple>0?'🐑 惊慌正在羊群间传递':alert?'👀 守卫警觉':S.rustleFx?'🌾 高草有动静':S.scentMark?'👃 已获气味线索':S.swapWarning?'🔮 换位将至·可反制':S.markers?.length?'📍 已标记 '+S.markers.length+' 处':S.moonOmenRound>=0?'🌗 月影将变':S.alarmRaised?'🚨 牧场警报中':'🌙 观察月下草原';
+   const moonHUD=$('moonForecast');if(moonHUD){moonHUD.hidden=!S.moonEnabled;if(S.moonEnabled){const leftDark=S.moonPhase===0;moonHUD.textContent=S.moonOmenRound>=0?'🌗 月影预警：你现在有完整一次行动机会；本次行动结束后，亮处和背光区互换。':`🌙 月影 · ${leftDark?'A 相：西南有背光':'B 相：亮暗对调'} · 距下次变向预警约 ${((4-S.round%6+6)%6)||6} 回合（以棋盘实际底色为准）`;}}
+  const setAb=(id,icon,label,disabled=false,active=false)=>{const b=$(id);b.disabled=disabled;b.classList.toggle('active',active);b.innerHTML=`<span class="ability-icon">${icon}</span><span class="ability-caption">${label}</span>`};
  setAb('sniff','👃',`嗅觉 · ${S.sniff}次`,S.mode!=='play'||S.sniff<1);
  setAb('dash','⚡',!canUseAbility('dash')?abilityLockText('dash'):S.dashCd?'冷却 '+S.dashCd:S.dashArmed?'选择扑击格':'预判扑击',S.mode!=='play'||!canUseAbility('dash')||S.dashCd>0,S.dashArmed&&canUseAbility('dash'));
  setAb('trap','🪤',!canUseAbility('trap')?abilityLockText('trap'):S.trapArmed?'选择陷阱格':'布置陷阱',S.mode!=='play'||!canUseAbility('trap'),S.trapArmed&&canUseAbility('trap'));
@@ -1267,7 +1349,7 @@ function draw(){if(!S)return;const c=config();let html='';const vision=[];
  $('gateBtn').disabled=S.mode!=='play'||!canUseAbility('gate')||!S.gates?.size;$('gateBtn').title=canUseAbility('gate')?'开关围栏':abilityLockText('gate');$('gateBtn').classList.toggle('active',S.gateArmed);
  $('wait').disabled=S.mode!=='play';
 }
-function showHelp(){const c=config();const ids=['basic',...c.intro.filter(x=>x!=='basic')];if(stage>=1&&!ids.includes('swap'))ids.push('swap');if(stage>=2&&!ids.includes('dash'))ids.push('dash');if(stage>=3&&!ids.includes('guard'))ids.push('guard');if(canUseAbility('howl')&&!ids.includes('howl'))ids.push('howl');if(stage>=4&&!ids.includes('trap'))ids.push('trap');if(stage>=4&&!ids.includes('foot'))ids.push('foot');if(stage>=5&&!ids.includes('bell'))ids.push('bell');if(stage>=6&&!ids.includes('mask'))ids.push('mask');if(stage>=5)for(const id of ['mind','patrol'])if(!ids.includes(id))ids.push(id);if(stage>=6)for(const id of ['gate','mark'])if(!ids.includes(id))ids.push(id);if(stage>=8&&!ids.includes('global'))ids.push('global');if(stage===ENDLESS_STAGE)ids.push('endless');for(const id of ids){const a=info[id];cardQueue.push({...a,demo:id,isGuide:true,index:'机制回顾'})}showNextCard()}
+function showHelp(){const c=config();const ids=['basic',...c.intro.filter(x=>x!=='basic')];if(stage>=1&&!ids.includes('swap'))ids.push('swap');if(stage>=2&&!ids.includes('dash'))ids.push('dash');if(stage>=3&&!ids.includes('guard'))ids.push('guard');if(canUseAbility('howl')&&!ids.includes('howl'))ids.push('howl');if(stage>=4&&!ids.includes('trap'))ids.push('trap');if(stage>=4&&!ids.includes('foot'))ids.push('foot');if(stage>=5&&!ids.includes('bell'))ids.push('bell');if(stage>=6&&!ids.includes('mask'))ids.push('mask');if(stage>=5)for(const id of ['mind','patrol'])if(!ids.includes(id))ids.push(id);if(stage>=6)for(const id of ['gate','mark'])if(!ids.includes(id))ids.push(id);if(stage>=8&&!ids.includes('global'))ids.push('global');if(c.mapKind==='prairie'&&!ids.includes('moonPrairie'))ids.push('moonPrairie');if(c.moonCycle&&!ids.includes('moonShift'))ids.push('moonShift');if(stage===27)ids.push('chapter28Guide');if(stage===ENDLESS_STAGE)ids.push('endless');for(const id of ids){const a=info[id];cardQueue.push({...a,demo:id,isGuide:true,index:'机制回顾'})}showNextCard()}
 function refreshSettingsUI(){
  const set=(id,enabled)=>{const b=$(id);b.textContent=enabled?'开启':'关闭';b.setAttribute('aria-pressed',String(!!enabled))};
  set('optionSound',soundEnabled);set('optionAmbient',save.options.ambient);set('optionMotion',save.options.reduceMotion);set('optionTutorial',save.options.tutorials);set('optionResume',save.options.resumeOnOpen);
@@ -1279,7 +1361,7 @@ function closeSettings(){$('settingsOverlay').hidden=true}
 function setGameOption(key,value){save.options[key]=value;remember();document.body.classList.toggle('reduceMotion',save.options.reduceMotion);refreshSettingsUI();if(key==='ambient'){if(value)startAmbience();else stopAmbience()}if(key==='volume'&&ambientPlayer)ambientPlayer.volume=.14*value}
 function continueLastStage(){const a=save.lastPlayedRun||startupSavedRun||save.activeV25;startupSavedRun=null;if(!a||!Number.isInteger(a.stage)||a.stage<0||a.stage>=CHAPTER_COUNT){post('本设备还没有可接续的有效关卡。');closeSettings();return;}difficulty=pickerDifficulty=a.difficulty==='hard'?'hard':'easy';challengeMode=pickerChallengeMode=a.challengeMode==='free'?'free':'standard';freeRunSeed=(a.freeRunSeed||0)>>>0;closeSettings();newLevel(a.stage,false,true)}
 function returnToFirst(){startupSavedRun=null;closeSettings();difficulty=pickerDifficulty='easy';challengeMode=pickerChallengeMode='standard';newLevel(0)}
-function eraseV27Scores(){if(!window.confirm('确认清空本设备 v27.2 的成绩？旧版历史纪录与关卡进度不会删除。'))return;save.v272Standard={easy:{},hard:{}};save.v272Free={easy:{},hard:{}};remember();refreshSettingsUI();post('本设备 v27.2 成绩已清空，旧版历史仍保留。')}
+function eraseV27Scores(){if(!window.confirm('确认清空本设备 v28.0 的成绩？旧版历史纪录与关卡进度不会删除。'))return;save.v280Standard={easy:{},hard:{}};save.v280Free={easy:{},hard:{}};remember();refreshSettingsUI();post('本设备 v27.4 成绩已清空，旧版历史仍保留。')}
 function applySettingsOnLaunch(){document.body.classList.toggle('reduceMotion',save.options.reduceMotion)}
 applySettingsOnLaunch();
 $('openSettings').onclick=openSettings;$('closeSettings').onclick=closeSettings;
@@ -1299,6 +1381,6 @@ let boardSwipeClickUntil=0;$('board').addEventListener('click',e=>{if(Date.now()
 document.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA'].includes(document.activeElement?.tagName)||!$('overlay').hidden||!$('chooseOverlay').hidden||!$('settingsOverlay').hidden)return;const moves={ArrowUp:0,ArrowRight:1,ArrowDown:2,ArrowLeft:3,w:0,d:1,s:2,a:3,W:0,D:1,S:2,A:3};if(Object.prototype.hasOwnProperty.call(moves,e.key)){e.preventDefault();advance(moves[e.key])}});
 let finger=null;$('board').addEventListener('touchstart',e=>{finger=xy(e.touches[0].clientX,e.touches[0].clientY)},{passive:true});$('board').addEventListener('touchend',e=>{if(!finger||!$('overlay').hidden||!$('chooseOverlay').hidden||!$('settingsOverlay').hidden||S.markerArmed||S.gateArmed||S.dashArmed||S.trapArmed)return;const dx=e.changedTouches[0].clientX-finger.x,dy=e.changedTouches[0].clientY-finger.y;finger=null;if(Math.max(Math.abs(dx),Math.abs(dy))<18)return;boardSwipeClickUntil=Date.now()+350;e.preventDefault();advance(Math.abs(dx)>Math.abs(dy)?dx>0?1:3:dy>0?2:0)},{passive:false});
 if(window.__WOLF_DEBUG_DEV__){testHook=true;window.__wolfTest={load:(i)=>newLevel(i),start,step:advance,swap,prepareSwapEvent,finishSwapTurn,cancelSwapWarning,swapCandidates,availableSwapPair,resolveTrapTurn,guardDisarmTrap,moveSheep,guardTurns,trap,trapCandidate,pouncePath,selectTile,sniff,dash,howl,card,clean:()=>{$('overlay').hidden=true;cardQueue=[]},state:()=>JSON.parse(JSON.stringify(S,(k,v)=>v instanceof Map?Object.fromEntries(v):v instanceof Set?[...v]:v)),patch:o=>Object.assign(S,o),render:draw,cover:protectingGuard,comfort:sheepComfort,capture:attemptCapture,landscape:config,walkable:inside,route:pathDist,guards:allGuards,spawn:chooseSpawn,info,levels:stages,save:()=>save,setStage,endless:()=>endlessWave,markTile,toggleGate,openPicker,inSight,getSettings:()=>({...save.options}),openSettings,closeSettings,sheepComfort,dangerousLanding,dismissAllGuides,getChallenge:()=>({challengeMode,pickerChallengeMode,rule:CHALLENGE_RULESET,rng:gameRngState,seed:freeRunSeed}),setChallenge:(value)=>{challengeMode=pickerChallengeMode=value;freeRunSeed=0;newLevel(stage===ENDLESS_STAGE?0:stage)},reloadSaved:()=>save.activeV25,getHard:()=>({difficulty,pickerDifficulty,goals:hardItems(),done:{...S.hardDone},ready:hardReady()}),setDifficulty:(value)=>{difficulty=value;pickerDifficulty=value;newLevel(stage===ENDLESS_STAGE?CHAPTER_COUNT-1:stage)},hardCredit,hardReady,finalGuideHint,debugLayout:()=>({cells:document.querySelectorAll('#board > .tile').length,rows:getComputedStyle($('board')).gridTemplateRows,columns:getComputedStyle($('board')).gridTemplateColumns,finalGuideOpen})}}
-const savedRun=save.lastPlayedRun||save.activeV25;if(save.options.resumeOnOpen&&savedRun&&(['v26-moon-prairie-1','v26.1-shepherd-fix-1','v26.2-guard-priority-1','v26.3-ability-gates-1','v26.4-disguise-defense-1','v27-moon-hunt-1',CHALLENGE_RULESET].includes(savedRun.ruleset))&&Number.isInteger(savedRun.stage)&&savedRun.stage>=0&&savedRun.stage<CHAPTER_COUNT&&['easy','hard'].includes(savedRun.difficulty)&&['standard','free'].includes(savedRun.challengeMode)){difficulty=pickerDifficulty=savedRun.difficulty;challengeMode=pickerChallengeMode=savedRun.challengeMode;freeRunSeed=(savedRun.freeRunSeed||0)>>>0;newLevel(savedRun.stage,false,true)}else newLevel(0);
+const savedRun=save.lastPlayedRun||save.activeV25;if(save.options.resumeOnOpen&&savedRun&&(['v26-moon-prairie-1','v26.1-shepherd-fix-1','v26.2-guard-priority-1','v26.3-ability-gates-1','v26.4-disguise-defense-1','v27-moon-hunt-1','v27.2-fair-swap-1','v27.4-fair-balance-1',CHALLENGE_RULESET].includes(savedRun.ruleset))&&Number.isInteger(savedRun.stage)&&savedRun.stage>=0&&savedRun.stage<CHAPTER_COUNT&&['easy','hard'].includes(savedRun.difficulty)&&['standard','free'].includes(savedRun.challengeMode)){difficulty=pickerDifficulty=savedRun.difficulty;challengeMode=pickerChallengeMode=savedRun.challengeMode;freeRunSeed=(savedRun.freeRunSeed||0)>>>0;newLevel(savedRun.stage,false,true)}else newLevel(0);
 })();
 </script></body></html>
