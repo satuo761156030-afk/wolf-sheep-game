@@ -1,0 +1,340 @@
+{
+  "sourceHash": "0f13833a96cbb2ac9a157cc6919a38b5ffcc07a5ba6741b293ead160196749ac",
+  "type": "shipped rules in VM with DOM stubs; not browser or human enjoyment",
+  "passed": 83,
+  "total": 83,
+  "results": [
+    {
+      "name": "retain all 20 legacy maps",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 1",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 2",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 3",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 4",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 5",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 6",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 7",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 8",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 9",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 10",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 11",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 12",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 13",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 14",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 15",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 16",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 17",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 18",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 19",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win easy 20",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 1",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 2",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 3",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 4",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 5",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 6",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 7",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 8",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 9",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 10",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 11",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 12",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 13",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 14",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 15",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 16",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 17",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 18",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 19",
+      "pass": true
+    },
+    {
+      "name": "legacy legal win hard 20",
+      "pass": true
+    },
+    {
+      "name": "solutions.json t2 easy",
+      "pass": true
+    },
+    {
+      "name": "solutions.json t3 easy",
+      "pass": true
+    },
+    {
+      "name": "solutions.json t2 hard",
+      "pass": true
+    },
+    {
+      "name": "solutions.json t3 hard",
+      "pass": true
+    },
+    {
+      "name": "solutions.json t1 easy",
+      "pass": true
+    },
+    {
+      "name": "solutions.json t1 hard",
+      "pass": true
+    },
+    {
+      "name": "solutions.json d23 easy",
+      "pass": true
+    },
+    {
+      "name": "solutions.json d23 hard",
+      "pass": true
+    },
+    {
+      "name": "solutions.json d26 hard",
+      "pass": true
+    },
+    {
+      "name": "solutions.json d26 easy",
+      "pass": true
+    },
+    {
+      "name": "d23-alternate.json d23 easy",
+      "pass": true
+    },
+    {
+      "name": "d23-alternate.json d23 hard",
+      "pass": true
+    },
+    {
+      "name": "d26-alternate.json d26 easy",
+      "pass": true
+    },
+    {
+      "name": "d26-alternate.json d26 hard",
+      "pass": true
+    },
+    {
+      "name": "t3-trap-causal.json t3 easy",
+      "pass": true
+    },
+    {
+      "name": "t3-trap-causal.json t3 hard",
+      "pass": true
+    },
+    {
+      "name": "physical rescue easy real=false",
+      "pass": true
+    },
+    {
+      "name": "physical rescue easy real=true",
+      "pass": true
+    },
+    {
+      "name": "unseen behind wall easy",
+      "pass": true
+    },
+    {
+      "name": "too late refuses easy",
+      "pass": true
+    },
+    {
+      "name": "closed door cancels rescue easy",
+      "pass": true
+    },
+    {
+      "name": "contact capture precedes rescue easy",
+      "pass": true
+    },
+    {
+      "name": "two guards avoid duplicate assignment easy",
+      "pass": true
+    },
+    {
+      "name": "occupied gate cannot close or consume turn easy",
+      "pass": true
+    },
+    {
+      "name": "T3 has two natural exits and no permanent comfort easy",
+      "pass": true
+    },
+    {
+      "name": "dessert wait-only is not a win easy",
+      "pass": true
+    },
+    {
+      "name": "candidate records isolated easy",
+      "pass": true
+    },
+    {
+      "name": "physical rescue hard real=false",
+      "pass": true
+    },
+    {
+      "name": "physical rescue hard real=true",
+      "pass": true
+    },
+    {
+      "name": "unseen behind wall hard",
+      "pass": true
+    },
+    {
+      "name": "too late refuses hard",
+      "pass": true
+    },
+    {
+      "name": "closed door cancels rescue hard",
+      "pass": true
+    },
+    {
+      "name": "contact capture precedes rescue hard",
+      "pass": true
+    },
+    {
+      "name": "two guards avoid duplicate assignment hard",
+      "pass": true
+    },
+    {
+      "name": "occupied gate cannot close or consume turn hard",
+      "pass": true
+    },
+    {
+      "name": "T3 has two natural exits and no permanent comfort hard",
+      "pass": true
+    },
+    {
+      "name": "dessert wait-only is not a win hard",
+      "pass": true
+    },
+    {
+      "name": "candidate records isolated hard",
+      "pass": true
+    },
+    {
+      "name": "rescue causality easy",
+      "pass": true
+    },
+    {
+      "name": "rescue causality hard",
+      "pass": true
+    },
+    {
+      "name": "preserve original archive exact bytes",
+      "pass": true
+    },
+    {
+      "name": "embedded sounds and legacy resource tree untouched",
+      "pass": true
+    }
+  ]
+}

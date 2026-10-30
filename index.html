@@ -952,6 +952,29 @@ const STORAGE='wolf_sheep_v26_memory';let save={seen:{},best:{},hardBest:{},intr
 save.v321Standard=save.v321Standard||{easy:{},hard:{}};
 save.v321Free=save.v321Free||{easy:{},hard:{}};
 let startupSavedRun=save.lastPlayedRun?{...save.lastPlayedRun}:null;let stage=0,S=null,screenSeq=0,cardQueue=[],testHook=false,endlessWave=1,difficulty='easy',pickerDifficulty='easy';
+const RESUMABLE_LEGACY_RULES=['v26-moon-prairie-1','v26.1-shepherd-fix-1','v26.2-guard-priority-1','v26.3-ability-gates-1','v26.4-disguise-defense-1','v27-moon-hunt-1','v27.2-fair-swap-1','v27.4-fair-balance-1','v31.0-lesson-covenant-1','v31.3-beginner-chase-fix-1','v32.0-flock-learning-1',CHALLENGE_RULESET];
+function lastRunTarget(){
+ const c=save.candidateLast;
+ if(c&&typeof c.id==='string'&&Object.hasOwn(HUNTS,c.id)&&['easy','hard'].includes(c.difficulty))return {kind:'hunt',id:c.id,difficulty:c.difficulty};
+ // Validate each source before falling back; a stale/invalid newer field must not hide a usable older one.
+ for(const a of [save.lastPlayedRun,save.activeV25,startupSavedRun]){
+  if(!a||!RESUMABLE_LEGACY_RULES.includes(a.ruleset)||!Number.isInteger(a.stage)||a.stage<0||a.stage>=CHAPTER_COUNT||!['easy','hard'].includes(a.difficulty)||!['standard','free'].includes(a.challengeMode))continue;
+  const current=[CHALLENGE_RULESET,'v32.0-flock-learning-1','v31.3-beginner-chase-fix-1'].includes(a.ruleset);
+  return {kind:'legacy',stage:current?a.stage:0,difficulty:a.difficulty,challengeMode:a.challengeMode,freeRunSeed:(a.freeRunSeed||0)>>>0,migrated:!current};
+ }return null;
+}
+function restoreRunTarget(a){
+ startupSavedRun=null;difficulty=pickerDifficulty=a.difficulty;
+ challengeMode=pickerChallengeMode=a.kind==='hunt'?'standard':a.challengeMode;
+ freeRunSeed=a.kind==='hunt'?0:a.freeRunSeed;
+ newLevel(a.kind==='hunt'?a.id:a.stage,false,true);
+}
+function lastRunDescription(a){
+ if(!a)return '暂无';
+ const mode=a.difficulty==='hard'?'困难':'简单';
+ if(a.kind==='hunt'){const c=HUNTS[a.id];return (c.tutorial?'启程教程 · ':'甜品原型 '+a.id+' · ')+c.name+' · '+mode+' · 固定猎场';}
+ return '第'+(a.stage+1)+'关 · '+stages[a.stage].name+' · '+mode+' · '+(a.challengeMode==='free'?'自由牧场':'标准挑战')+(a.migrated?'（旧版进度转至兼容入口）':'');
+}
 // v31.2: tutorial focus controller. Guide steps never replace real game rules.
 let spotStage=-1,spotSkipped=false,spotAcknowledged=new Set(),spotRaf=0,spotLastKey='',spotStrongSeen=false;
 function spotGuideEnabled(){return save?.options?.tutorials!==false&&!spotSkipped;}
@@ -1395,7 +1418,7 @@ function drawPicker(){
  const holder=$('levelsPicker');holder.classList.toggle('hardPick',pickerDifficulty==='hard');holder.innerHTML=stages.map((c,i)=>{const best=pickerChallengeMode==='standard'?save.v321Standard?.[pickerDifficulty]?.[i]:save.v321Free?.[pickerDifficulty]?.[i]?.fastest;const legacy=save.v320Standard?.[pickerDifficulty]?.[i]||save.v272Standard?.[pickerDifficulty]?.[i]||save.v27Standard?.[pickerDifficulty]?.[i]||save.v264Standard?.[pickerDifficulty]?.[i]||save.v262Standard?.[pickerDifficulty]?.[i]||(pickerDifficulty==='hard'?save.hardBest?.[i]:save.best?.[i]);return `${chapterHeader(i)}<button data-pick="${i}" class="${i===stage&&pickerDifficulty===difficulty?'active':''}"><span class="num">${pickerDifficulty==='hard'?'HARD':'CHAPTER'} ${String(i+1).padStart(2,'0')}</span><span class="nm">${c.name}</span><span class="best">${best?'★ '+(pickerChallengeMode==='standard'?'标准':'自由')+'最佳 '+best+' 回合':'◇ 尚无'+(pickerChallengeMode==='standard'?'标准':'自由')+'纪录'}${legacy?'<small class=\"legacy-score\"> · 旧版 '+legacy+' 回合</small>':''}</span></button>`}).join('');
  holder.insertAdjacentHTML('afterbegin','<div class="chapterGroup">启程 · 三关真实操作教学</div>'+['t1','t2','t3','d23','d26'].map(id=>HUNTS[id]).map(c=>`<button data-hunt="${c.id}"><span class="num">${c.tutorial?'启程':'甜品原型'}</span><span class="nm">${c.name}</span><span class="best">${save.candidateRuns?.[pickerDifficulty]?.[c.id]?'★ 最佳 '+save.candidateRuns[pickerDifficulty][c.id]+' 回合':'选择猎场'}</span></button>`).join(''));
  $('endlessPick').hidden=pickerDifficulty==='hard';$('endlessBest').textContent='最佳连猎 '+(save.endlessBest||0)}
-function setStage(i){startupSavedRun=null;difficulty=pickerDifficulty;challengeMode=pickerChallengeMode;$('chooseOverlay').hidden=true;if(i===ENDLESS_STAGE){difficulty='easy';endlessWave=1;newLevel(ENDLESS_STAGE)}else newLevel(i)}
+function setStage(i){startupSavedRun=null;difficulty=pickerDifficulty;challengeMode=pickerChallengeMode;if(Object.hasOwn(HUNTS,i)){challengeMode=pickerChallengeMode='standard';freeRunSeed=0;}$('chooseOverlay').hidden=true;if(i===ENDLESS_STAGE){difficulty='easy';endlessWave=1;newLevel(ENDLESS_STAGE)}else newLevel(i)}
 function inside(p){return p.x>=0&&p.x<N&&p.y>=0&&p.y<N&&!S.voids?.has(K(p))&&!S.walls.has(K(p))&&!S.fences.has(K(p))&&!(S.gates?.has(K(p))&&S.gates.get(K(p))===false)}
 function pathDist(a,b){const queue=[[a,0]],seen=new Set([K(a)]);while(queue.length){const [p,d]=queue.shift();if(eq(p,b))return d;for(const [dx,dy] of D.slice(0,4)){const np=xy(p.x+dx,p.y+dy);if(inside(np)&&!seen.has(K(np))){seen.add(K(np));queue.push([np,d+1])}}}return 99}
 
@@ -2225,12 +2248,12 @@ function refreshSettingsUI(){
  $('optionActorMotion').textContent=save.options.actorMotion==='on'?'平滑移动':'跟随系统';
  set('optionSound',soundEnabled);set('optionAmbient',save.options.ambient);set('optionMotion',save.options.reduceMotion);set('optionTutorial',save.options.tutorials);set('optionResume',save.options.resumeOnOpen);
  $('optionVolume').value=Math.round((save.options.volume??1)*100);$('volumeText').textContent=Math.round((save.options.volume??1)*100)+'%';
- const a=save.lastPlayedRun||startupSavedRun||save.activeV25;$('localProgress').textContent='本设备上次关卡：'+(a&&Number.isInteger(a.stage)?'第'+(a.stage+1)+'关 · '+(a.difficulty==='hard'?'困难':'简单')+' · '+(a.challengeMode==='free'?'自由牧场':'标准挑战'):'暂无')+'。不同设备之间不会自动同步。';
+ $('localProgress').textContent='本设备上次关卡：'+lastRunDescription(lastRunTarget())+'。不同设备之间不会自动同步。';
 }
 function openSettings(){spotHide();finishActorMotion();refreshSettingsUI();$('settingsOverlay').hidden=false}
 function closeSettings(){$('settingsOverlay').hidden=true;spotSchedule()}
 function setGameOption(key,value){save.options[key]=value;remember();document.body.classList.toggle('reduceMotion',save.options.reduceMotion);refreshSettingsUI();if(key==='ambient'){if(value)startAmbience();else stopAmbience()}if(key==='volume'&&ambientPlayer)ambientPlayer.volume=.14*value}
-function continueLastStage(){const a=save.lastPlayedRun||startupSavedRun||save.activeV25;startupSavedRun=null;if(!a||![CHALLENGE_RULESET,'v32.0-flock-learning-1','v31.3-beginner-chase-fix-1'].includes(a.ruleset)||!Number.isInteger(a.stage)||a.stage<0||a.stage>=CHAPTER_COUNT){post('本设备还没有可接续的有效关卡。');closeSettings();return;}difficulty=pickerDifficulty=a.difficulty==='hard'?'hard':'easy';challengeMode=pickerChallengeMode=a.challengeMode==='free'?'free':'standard';freeRunSeed=(a.freeRunSeed||0)>>>0;closeSettings();newLevel(a.stage,false,true)}
+function continueLastStage(){const a=lastRunTarget();if(!a){post('本设备还没有可接续的有效关卡。');closeSettings();return;}closeSettings();restoreRunTarget(a)}
 function returnToFirst(){startupSavedRun=null;closeSettings();difficulty=pickerDifficulty='easy';challengeMode=pickerChallengeMode='standard';newLevel(0)}
 function eraseV28Scores(){if(!window.confirm('清空本设备当前版本的最佳回合成绩？已解锁的教程、设置和旧版成绩不会删除。'))return;save.v321Standard={easy:{},hard:{}};save.v321Free={easy:{},hard:{}};remember();refreshSettingsUI();post('本版最佳成绩已清空；旧版历史、设置及关卡进度仍保留。')}
 function applySettingsOnLaunch(){document.body.classList.toggle('reduceMotion',save.options.reduceMotion)}
@@ -2347,6 +2370,6 @@ $('lessonSpotSkip').onclick=spotSkipCurrent;
 $('lessonSpotSkipAll').onclick=()=>spotSkipAll(true);
 $('lessonSpotNext').onclick=spotAcknowledge;
 $('replaySpotGuide').onclick=()=>{closeSettings();spotReplayCurrent()};
-const savedRun=save.candidateLast?null:(save.lastPlayedRun||save.activeV25);if(save.options.resumeOnOpen&&savedRun&&(['v26-moon-prairie-1','v26.1-shepherd-fix-1','v26.2-guard-priority-1','v26.3-ability-gates-1','v26.4-disguise-defense-1','v27-moon-hunt-1','v27.2-fair-swap-1','v27.4-fair-balance-1','v31.0-lesson-covenant-1','v31.3-beginner-chase-fix-1','v32.0-flock-learning-1',CHALLENGE_RULESET].includes(savedRun.ruleset))&&Number.isInteger(savedRun.stage)&&savedRun.stage>=0&&savedRun.stage<CHAPTER_COUNT&&['easy','hard'].includes(savedRun.difficulty)&&['standard','free'].includes(savedRun.challengeMode)){difficulty=pickerDifficulty=savedRun.difficulty;challengeMode=pickerChallengeMode=savedRun.challengeMode;freeRunSeed=(savedRun.freeRunSeed||0)>>>0;newLevel([CHALLENGE_RULESET,'v32.0-flock-learning-1','v31.3-beginner-chase-fix-1'].includes(savedRun.ruleset)?savedRun.stage:0,false,true)}else {const last=save.candidateLast;if(save.options.resumeOnOpen&&HUNTS[last?.id]){difficulty=pickerDifficulty=last.difficulty==='hard'?'hard':'easy';newLevel(last.id)}else newLevel('t1');}
+const savedRun=lastRunTarget();if(save.options.resumeOnOpen&&savedRun)restoreRunTarget(savedRun);else newLevel('t1');
 })();
 </script></body></html>

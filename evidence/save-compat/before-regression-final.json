@@ -1,0 +1,120 @@
+{
+  "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+  "type": "actual shipped inline startup and menu handlers with persisted captured JSON; DOM/render/audio stubbed; browser evidence is separate",
+  "fixtureSource": "evidence/phase-b/final-save-compat.json: before and afterWin (actual browser receipts at eb95545)",
+  "passed": 3,
+  "total": 15,
+  "results": [
+    {
+      "name": "captured mixed save: startup and settings prefer candidate over old chapter 13",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n12 !== 't1'\n",
+      "actual": 12,
+      "expected": "t1"
+    },
+    {
+      "name": "captured mixed save: settings names the candidate, not legacy chapter 13",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('T1 · 看见猎物'))\n",
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "candidate-only save supports manual continue when auto-resume is off",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(text.includes('请君入瓮'))\n",
+      "actual": false,
+      "expected": true
+    },
+    {
+      "name": "captured legacy-only chapter 13 survives auto/manual resume and reload",
+      "pass": true,
+      "evidence": {
+        "stage": 12,
+        "difficulty": "easy",
+        "pickerDifficulty": "easy",
+        "challengeMode": "standard",
+        "pickerChallengeMode": "standard",
+        "freeRunSeed": 0,
+        "mode": "play",
+        "name": "草影试探"
+      }
+    },
+    {
+      "name": "invalid candidate id falls back to valid captured legacy save",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n't1' !== 12\n",
+      "actual": "t1",
+      "expected": 12
+    },
+    {
+      "name": "candidate with invalid difficulty falls back instead of silently changing difficulty",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n't3' !== 12\n",
+      "actual": "t3",
+      "expected": 12
+    },
+    {
+      "name": "prototype property name is not a valid candidate ID",
+      "pass": false,
+      "error": "Cannot read properties of undefined (reading 'map')"
+    },
+    {
+      "name": "invalid lastPlayedRun does not hide valid activeV25",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n't1' !== 12\n",
+      "actual": "t1",
+      "expected": 12
+    },
+    {
+      "name": "previewing old map preserves last started candidate; starting old map replaces resume target",
+      "pass": true,
+      "evidence": {
+        "stage": 7,
+        "difficulty": "hard",
+        "challengeMode": "standard",
+        "freeRunSeed": null,
+        "ruleset": "v32.1-stable-patrol-1"
+      }
+    },
+    {
+      "name": "re-entering a new hunt records stable ID/difficulty without touching old scores/progress",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n12 !== 'd23'\n",
+      "actual": 12,
+      "expected": "d23"
+    },
+    {
+      "name": "manual candidate restore resets a legacy free-mode preview to fixed new-hunt rules",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n12 !== 't1'\n",
+      "actual": 12,
+      "expected": "t1"
+    },
+    {
+      "name": "picker entry to a new hunt cannot inherit legacy free mode or seed",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n'free' !== 'standard'\n",
+      "actual": "free",
+      "expected": "standard"
+    },
+    {
+      "name": "legacy free mode retains seed and mode across reload/manual continue",
+      "pass": true
+    },
+    {
+      "name": "older supported schema uses the same migration in startup and settings",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n't3' !== 0\n",
+      "actual": "t3",
+      "expected": 0
+    },
+    {
+      "name": "invalid saves show no progress and do not invent a resume target",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(app.progress().includes('暂无'))\n",
+      "actual": false,
+      "expected": true
+    }
+  ]
+}

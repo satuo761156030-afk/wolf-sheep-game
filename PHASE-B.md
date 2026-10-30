@@ -2,7 +2,19 @@
 
 当前交付是三关教学与两场手作甜品原型。已完整阅读设计 PR #3 的两份文档，并以 Issues #1/#2 检查旧 Bug。没有制作或宣称完成正式32关。PR #4 保持 Draft，不合并、不部署。
 
-完整单文件：`downloads/wolf-sheep-phase-b.html`。它与实际浏览器试玩的 `index.html` 字节一致，SHA-256 为 `f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a`。旧版 b4bcd97 原文件保存在 `archive/v32.1-original.html`，阶段A快照和证据保持原样。
+最新单文件：`downloads/wolf-sheep-phase-b-save-fix.html`，与本次实际浏览器存档验收的 `index.html` 字节一致，SHA-256 为 `0f13833a96cbb2ac9a157cc6919a38b5ffcc07a5ba6741b293ead160196749ac`。旧版 b4bcd97 原文件保存在 `archive/v32.1-original.html`；阶段A及eb95545阶段B快照、下载包和证据保持原样。
+
+## 存档接线修复 · 基于eb95545
+
+修复前在真实浏览器复现：同一份完整存档含candidateLast=t1和旧第13关时，刷新进入T1，但设置显示13关，点击继续跳到13关。见 `evidence/save-compat/before-browser.json` / `before-settings.jpg`。
+
+启动、手动继续和进度展示现共用有效目标选择：candidateLast优先；不存在/无效时依次检查lastPlayedRun、activeV25，不让无效字段遮掉有效旧记录。新猎场显示名称、关卡ID及难度。选关进入和手动恢复新猎场均不会沿用旧自由模式标签或种子。旧版迁移入口在启动/菜单间保持一致。只预览不改最近关卡，实际开始旧关才替换新猎场续接目标；新旧分数不混写。
+
+最终同一组15项存档回归：原eb95545为3/15，修复后15/15；代码运行完整游戏启动、按钮处理器、持久化JSON和重新启动，未复制或模拟待修复函数。初次回放的渲染桩缺口记录及产品失败记录均保留。另在真实浏览器完成7组接线场景与1组续玩后9回合真实通关，共8组通过；新旧记录并存、自动续接关闭、刷新、旧关预览/开始、重入新猎场、重开、返回第一关、自由模式与异常字段均有操作和存档回执。旧自由模式实际初始羊位置在手动恢复后相同，种子保留；无新猎场最佳成绩的旧档在开始T1、刷新、手动续玩并胜利后首次生成9回合纪录，旧标准/自由成绩保持一致。该加严实战曾被工具30秒时限、全页截图失败分别中断，原记录保持未完成/失败；改用正常视口截图后从干净测试存档完整复测通过。
+
+下载HTML另外按原样字节在HTTP页面打开（没有存档播入脚本或测试条），实际完成设置展示、手动继续和一次真实移动，回合从0变1；见 `evidence/save-compat/package-http.json` / `package-settings-confirmed.jpg`。设置可见、聚光灯隐藏的实际UI状态另存于 `package-visible-settings.json`；早先抓到的旧帧截图保留，不用它证明设置画面。新包为 `downloads/wolf-sheep-phase-b-save-fix-20261030.zip`，包含修复HTML、v32.1原版及相关说明。原包保持不变。
+
+本次源码还完成83/83原有规则回归，结果单列于 `evidence/save-compat/gameplay-regression.json`。下文40场旧关与完整甜品路线的浏览器证据属于原eb95545（SHA-256 `f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a`）；没有把它们重标成当前修复版重新试玩40场。本次没有修改AI、地图、胜负或技能规则。存档字段和复现方法见 [存档兼容说明](docs/SAVE_COMPATIBILITY.md)。
 
 | 内容 | 原有行为 / 问题 | 当前行为 |
 |---|---|---|
