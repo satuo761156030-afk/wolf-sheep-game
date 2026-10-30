@@ -1,0 +1,149 @@
+[
+  {
+    "stage": "d26",
+    "difficulty": "easy",
+    "pass": true,
+    "nodes": 6631,
+    "ms": 1176,
+    "round": 11,
+    "actions": [
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      }
+    ],
+    "evidence": {
+      "move": true,
+      "howlGuard": true,
+      "sniff": true,
+      "trap": true,
+      "grass": true,
+      "pounce": true
+    }
+  },
+  {
+    "stage": "d26",
+    "difficulty": "hard",
+    "pass": true,
+    "nodes": 6735,
+    "ms": 1458,
+    "round": 12,
+    "actions": [
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 1,
+          "y": 1
+        }
+      }
+    ],
+    "evidence": {
+      "move": true,
+      "grass": true,
+      "howlGuard": true,
+      "howlFlock": true,
+      "trap": true,
+      "pounce": true
+    }
+  }
+]

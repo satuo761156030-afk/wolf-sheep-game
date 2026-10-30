@@ -1,0 +1,13 @@
+{
+  "base": "eb955458fb6b9f14ea9e30a3e3a66ec4268b5dfc",
+  "sourceHash": "0f13833a96cbb2ac9a157cc6919a38b5ffcc07a5ba6741b293ead160196749ac",
+  "saveRegression": {
+    "before": "3/15",
+    "after": "15/15"
+  },
+  "browserScenarios": 8,
+  "gameplayRules": "83/83",
+  "downloadHTML": "downloads/wolf-sheep-phase-b-save-fix.html",
+  "archive": "downloads/wolf-sheep-phase-b-save-fix-20261030.zip",
+  "originalsPreserved": true
+}

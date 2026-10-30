@@ -1,0 +1,139 @@
+{
+  "source": "eb95545",
+  "initial": "T1 · 看见猎物",
+  "progress": "本设备上次关卡：第13关 · 简单 · 标准挑战。不同设备之间不会自动同步。",
+  "saved": {
+    "seen": {
+      "basic": true,
+      "trap": true,
+      "dash": true,
+      "howl": true,
+      "mark": true,
+      "guard": true,
+      "gate": true,
+      "highGrass": true,
+      "swap": true,
+      "foot": true
+    },
+    "best": {
+      "0": 17
+    },
+    "hardBest": {},
+    "introDone": false,
+    "endlessBest": 0,
+    "v264Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v264Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v321Standard": {
+      "easy": {
+        "0": 9
+      },
+      "hard": {
+        "0": 12
+      }
+    },
+    "v321Free": {
+      "easy": {
+        "0": {
+          "plays": 3,
+          "wins": 1,
+          "fastest": 18
+        }
+      },
+      "hard": {}
+    },
+    "options": {
+      "ambient": false,
+      "reduceMotion": false,
+      "tutorials": true,
+      "resumeOnOpen": true,
+      "volume": 1
+    },
+    "lastPlayedRun": {
+      "stage": 12,
+      "difficulty": "easy",
+      "challengeMode": "standard",
+      "ruleset": "v32.1-stable-patrol-1"
+    },
+    "demoBuild": 15,
+    "v27Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v27Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v271Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v271Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v272Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v272Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "moonDemoRevision": 1,
+    "v274Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v274Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v280Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v290Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v290Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v280Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "lessonSeenV33": {
+      "basic": true,
+      "dash": true,
+      "trap": true,
+      "howl": true,
+      "mark": true,
+      "guard": true,
+      "gate": true,
+      "highGrass": true,
+      "swap": true,
+      "foot": true
+    },
+    "candidateLast": {
+      "id": "t1",
+      "difficulty": "easy"
+    },
+    "candidateRuns": {
+      "easy": {
+        "t1": 9
+      },
+      "hard": {}
+    }
+  },
+  "afterManualContinue": "13 / 20",
+  "expected": "T1 · 看见猎物",
+  "pass": false
+}

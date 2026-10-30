@@ -1,0 +1,143 @@
+{
+  "sourceHash": "0f13833a96cbb2ac9a157cc6919a38b5ffcc07a5ba6741b293ead160196749ac",
+  "type": "actual shipped inline startup and menu handlers with persisted captured JSON; DOM/render/audio stubbed; browser evidence is separate",
+  "fixtureSource": "evidence/phase-b/final-save-compat.json: before and afterWin (actual browser receipts at eb95545)",
+  "passed": 15,
+  "total": 15,
+  "results": [
+    {
+      "name": "captured mixed save: startup and settings prefer candidate over old chapter 13",
+      "pass": true,
+      "evidence": {
+        "stage": "t1",
+        "difficulty": "easy",
+        "pickerDifficulty": "easy",
+        "challengeMode": "standard",
+        "pickerChallengeMode": "standard",
+        "freeRunSeed": 0,
+        "mode": "preview",
+        "name": "T1 · 看见猎物"
+      }
+    },
+    {
+      "name": "captured mixed save: settings names the candidate, not legacy chapter 13",
+      "pass": true,
+      "evidence": {
+        "text": "本设备上次关卡：启程教程 · T1 · 看见猎物 · 简单 · 固定猎场。不同设备之间不会自动同步。"
+      }
+    },
+    {
+      "name": "candidate-only save supports manual continue when auto-resume is off",
+      "pass": true,
+      "evidence": {
+        "stage": "d26",
+        "difficulty": "hard",
+        "pickerDifficulty": "hard",
+        "challengeMode": "standard",
+        "pickerChallengeMode": "standard",
+        "freeRunSeed": 0,
+        "mode": "preview",
+        "name": "请君入瓮"
+      }
+    },
+    {
+      "name": "captured legacy-only chapter 13 survives auto/manual resume and reload",
+      "pass": true,
+      "evidence": {
+        "stage": 12,
+        "difficulty": "easy",
+        "pickerDifficulty": "easy",
+        "challengeMode": "standard",
+        "pickerChallengeMode": "standard",
+        "freeRunSeed": 0,
+        "mode": "play",
+        "name": "草影试探"
+      }
+    },
+    {
+      "name": "invalid candidate id falls back to valid captured legacy save",
+      "pass": true,
+      "evidence": {
+        "stage": 12,
+        "difficulty": "easy",
+        "pickerDifficulty": "easy",
+        "challengeMode": "standard",
+        "pickerChallengeMode": "standard",
+        "freeRunSeed": 0,
+        "mode": "preview",
+        "name": "草影试探"
+      }
+    },
+    {
+      "name": "candidate with invalid difficulty falls back instead of silently changing difficulty",
+      "pass": true
+    },
+    {
+      "name": "prototype property name is not a valid candidate ID",
+      "pass": true
+    },
+    {
+      "name": "invalid lastPlayedRun does not hide valid activeV25",
+      "pass": true
+    },
+    {
+      "name": "previewing old map preserves last started candidate; starting old map replaces resume target",
+      "pass": true,
+      "evidence": {
+        "stage": 7,
+        "difficulty": "hard",
+        "challengeMode": "standard",
+        "freeRunSeed": null,
+        "ruleset": "v32.1-stable-patrol-1"
+      }
+    },
+    {
+      "name": "re-entering a new hunt records stable ID/difficulty without touching old scores/progress",
+      "pass": true,
+      "evidence": {
+        "id": "d23",
+        "difficulty": "hard"
+      }
+    },
+    {
+      "name": "manual candidate restore resets a legacy free-mode preview to fixed new-hunt rules",
+      "pass": true,
+      "evidence": {
+        "stage": "t1",
+        "difficulty": "easy",
+        "pickerDifficulty": "easy",
+        "challengeMode": "standard",
+        "pickerChallengeMode": "standard",
+        "freeRunSeed": 0,
+        "mode": "preview",
+        "name": "T1 · 看见猎物"
+      }
+    },
+    {
+      "name": "picker entry to a new hunt cannot inherit legacy free mode or seed",
+      "pass": true,
+      "evidence": {
+        "stage": "t3",
+        "difficulty": "hard",
+        "pickerDifficulty": "hard",
+        "challengeMode": "standard",
+        "pickerChallengeMode": "standard",
+        "freeRunSeed": 0,
+        "mode": "play",
+        "name": "T3 · 追与堵"
+      }
+    },
+    {
+      "name": "legacy free mode retains seed and mode across reload/manual continue",
+      "pass": true
+    },
+    {
+      "name": "older supported schema uses the same migration in startup and settings",
+      "pass": true
+    },
+    {
+      "name": "invalid saves show no progress and do not invent a resume target",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "status": "INCOMPLETE_NOT_PASS",
+  "reason": "30-second tool call deadline reset the UI kernel; the game was at round 5, no T1 score yet",
+  "sourceHash": "0f13833a96cbb2ac9a157cc6919a38b5ffcc07a5ba6741b293ead160196749ac",
+  "level": "T1 · 看见猎物",
+  "round": "5",
+  "stored": {
+    "seen": {
+      "basic": true,
+      "trap": true,
+      "dash": true,
+      "howl": true,
+      "mark": true,
+      "guard": true,
+      "gate": true,
+      "highGrass": true,
+      "swap": true,
+      "foot": true
+    },
+    "best": {
+      "0": 17
+    },
+    "hardBest": {},
+    "introDone": false,
+    "endlessBest": 0,
+    "v264Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v264Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v321Standard": {
+      "easy": {
+        "0": 9
+      },
+      "hard": {
+        "0": 12
+      }
+    },
+    "v321Free": {
+      "easy": {
+        "0": {
+          "plays": 3,
+          "wins": 1,
+          "fastest": 18
+        }
+      },
+      "hard": {}
+    },
+    "options": {
+      "ambient": false,
+      "reduceMotion": false,
+      "tutorials": true,
+      "resumeOnOpen": true,
+      "volume": 1
+    },
+    "lastPlayedRun": {
+      "stage": 12,
+      "difficulty": "easy",
+      "challengeMode": "standard",
+      "ruleset": "v32.1-stable-patrol-1"
+    },
+    "demoBuild": 15,
+    "v27Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v27Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v271Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v271Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v272Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v272Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "moonDemoRevision": 1,
+    "v274Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v274Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v280Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v290Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v290Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v280Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "lessonSeenV33": {
+      "basic": true,
+      "dash": true,
+      "trap": true,
+      "howl": true,
+      "mark": true,
+      "guard": true,
+      "gate": true,
+      "highGrass": true,
+      "swap": true,
+      "foot": true
+    },
+    "candidateLast": {
+      "id": "t1",
+      "difficulty": "easy"
+    }
+  },
+  "dom": "- main:\n  - heading \"🐺 狼与幻羊\" [level=1]\n  - generic: 独立猎场 · 手作关卡\n  - generic: 🌿 简单模式\n  - generic: 🏆 标准挑战 · 固定开局\n  - button \"打开设置与游戏菜单\": ⚙ 设置\n  - text: 当前关卡\n  - generic: T1 · 看见猎物\n  - text: 猎场回合\n  - generic: \"5\"\n  - text: 幻影动向\n  - generic: 没有换位\n  - generic: ✦ 月影猎场\n  - generic: FOLLOW THE TRACES · 独立手绘迷宫 · 7 × 7\n  - grid \"独立手绘迷宫，7乘7格坐标范围，深色部分不可进入\":\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"第2列第2行\"\n    - gridcell \"第3列第2行\"\n    - gridcell \"第4列第2行\"\n    - gridcell \"第5列第2行 · 羊\"\n    - gridcell \"第6列第2行\":\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"第2列第3行\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"第4列第3行\"\n    - gridcell \"第5列第3行\"\n    - gridcell \"第6列第3行\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"第2列第4行\"\n    - gridcell \"第3列第4行\"\n    - gridcell \"第4列第4行\":\n    - gridcell \"不可行走地形\"\n    - gridcell \"第6列第4行\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"第2列第5行\"\n    - gridcell \"第3列第5行 · 羊\"\n    - gridcell \"第4列第5行\"\n    - gridcell \"第5列第5行\"\n    - gridcell \"第6列第5行\":\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"第2列第6行 · 狼\"\n    - gridcell \"第3列第6行\"\n    - gridcell \"第4列第6行\"\n    - gridcell \"第5列第6行\"\n    - gridcell \"第6列第6行\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n    - gridcell \"不可行走地形\"\n  - strong: T1 · 看见猎物\n  - generic: 记住目标，观察羊的行动，再选择追或截。\n  - button \"查看本关提示\": \"?\"\n  - status:\n    - paragraph: 💗 安心会让羊少逃跑，但不阻止真假换位；追踪、嗅探与嚎叫都能改变幻影局势。\n  - generic: ✨ 识破身份不等于抓住目标\n  - generic: 🌙 观察月下草原\n  - button \"向上\": ↑\n  - button \"向左\": ←\n  - button \"向下\": ↓\n  - button \"向右\": →\n  - button \"👃 嗅觉 · 2次\" [disabled]:\n    - generic: 👃\n    - generic: 嗅觉 · 2次\n  - button \"⚡ 后续猎场开放\" [disabled]:\n    - generic: ⚡\n    - generic: 后续猎场开放\n  - button \"🪤 后续猎场开放\" [disabled]:\n    - generic: 🪤\n    - generic: 后续猎场开放\n  - button \"📣 后续猎场开放\" [disabled]:\n    - generic: 📣\n    - generic: 后续猎场开放\n  - generic \"其他行动\":\n    - button \"📍 推理标记\" [disabled]\n    - button \"🚪 开关围栏\" [disabled]\n    - button \"⏳ 等一回合\"\n- text: ✦\n- complementary:\n  - text: 隔离存档测试：legacy / after\n  - button \"读取真实存档\" [active]\n  - generic: \"{\\\"seen\\\":{\\\"basic\\\":true,\\\"trap\\\":true,\\\"dash\\\":true,\\\"howl\\\":true,\\\"mark\\\":true,\\\"guard\\\":true,\\\"gate\\\":true,\\\"highGrass\\\":true,\\\"swap\\\":true,\\\"foot\\\":true},\\\"best\\\":{\\\"0\\\":17},\\\"hardBest\\\":{},\\\"introDone\\\":false,\\\"endlessBest\\\":0,\\\"v264Standard\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v264Free\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v321Standard\\\":{\\\"easy\\\":{\\\"0\\\":9},\\\"hard\\\":{\\\"0\\\":12}},\\\"v321Free\\\":{\\\"easy\\\":{\\\"0\\\":{\\\"plays\\\":3,\\\"wins\\\":1,\\\"fastest\\\":18}},\\\"hard\\\":{}},\\\"options\\\":{\\\"ambient\\\":false,\\\"reduceMotion\\\":false,\\\"tutorials\\\":true,\\\"resumeOnOpen\\\":true,\\\"volume\\\":1},\\\"lastPlayedRun\\\":{\\\"stage\\\":12,\\\"difficulty\\\":\\\"easy\\\",\\\"challengeMode\\\":\\\"standard\\\",\\\"ruleset\\\":\\\"v32.1-stable-patrol-1\\\"},\\\"demoBuild\\\":15,\\\"v27Standard\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v27Free\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v271Standard\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v271Free\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v272Standard\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v272Free\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"moonDemoRevision\\\":1,\\\"v274Standard\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v274Free\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v280Standard\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v290Standard\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v290Free\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"v280Free\\\":{\\\"easy\\\":{},\\\"hard\\\":{}},\\\"lessonSeenV33\\\":{\\\"basic\\\":true,\\\"dash\\\":true,\\\"trap\\\":true,\\\"howl\\\":true,\\\"mark\\\":true,\\\"guard\\\":true,\\\"gate\\\":true,\\\"highGrass\\\":true,\\\"swap\\\":true,\\\"foot\\\":true},\\\"candidateLast\\\":{\\\"id\\\":\\\"t1\\\",\\\"difficulty\\\":\\\"easy\\\"}}\""
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "stage": "d23",
+    "difficulty": "easy",
+    "pass": true,
+    "nodes": 1265,
+    "ms": 498,
+    "round": 5,
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "evidence": {
+      "pounce": true,
+      "move": true
+    }
+  },
+  {
+    "stage": "d23",
+    "difficulty": "hard",
+    "pass": true,
+    "nodes": 2940,
+    "ms": 1247,
+    "round": 7,
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "evidence": {
+      "sniff": true,
+      "pounce": true,
+      "howlGuard": true,
+      "howlFlock": true,
+      "move": true
+    }
+  }
+]

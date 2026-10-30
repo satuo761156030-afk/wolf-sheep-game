@@ -1,0 +1,27 @@
+[
+  {
+    "name": "wolf-sheep-phase-b.html",
+    "bytes": 1900686,
+    "sha256": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a"
+  },
+  {
+    "name": "wolf-sheep-phase-a.html",
+    "bytes": 1893714,
+    "sha256": "375cabd0d3abf13e46027355eb259486c8ad3764431527329c565be7305d8edd"
+  },
+  {
+    "name": "v32.1-original.html",
+    "bytes": 1882677,
+    "sha256": "59061cb4da1ef3a782236718fb6316ddc453f97def5cbf51f1e44a0a2e279981"
+  },
+  {
+    "name": "PHASE-A.md",
+    "bytes": 2562,
+    "sha256": "eff9e661d6a57420c99acfc3509aef8f81668d24c48379436dfb8a349de196da"
+  },
+  {
+    "name": "PHASE-B.md",
+    "bytes": 6959,
+    "sha256": "14b3181ab70c04effb9e73e09f2044b077e07180471796d5e18d6e602cabb418"
+  }
+]

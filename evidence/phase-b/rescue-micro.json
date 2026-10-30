@@ -1,0 +1,2028 @@
+[
+  {
+    "kind": "seen",
+    "difficulty": "easy",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 5,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "rescue",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 4
+          },
+          "targetSheepId": null,
+          "intentText": "✚ 守卫察觉求援，正赶去解困。",
+          "intentState": "rescue",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 6,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 2,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 4,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "return",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "targetSheepId": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "intentRound": 2,
+          "lastRescuedId": 0
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 0
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 1,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "round": 2,
+          "guard": "guardA",
+          "state": "return",
+          "text": "↩ 羊已脱困，守卫返回守区。",
+          "p": {
+            "x": 4,
+            "y": 3
+          }
+        }
+      ],
+      "trap": null
+    },
+    "bar": "守卫A：↩ 羊已脱困，守卫返回守区。"
+  },
+  {
+    "kind": "seen",
+    "difficulty": "hard",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 5,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "rescue",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 4
+          },
+          "targetSheepId": null,
+          "intentText": "✚ 守卫察觉求援，正赶去解困。",
+          "intentState": "rescue",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 6,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 2,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 4,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "return",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "targetSheepId": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "intentRound": 2,
+          "lastRescuedId": 0
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 0
+        },
+        {
+          "id": 1,
+          "x": 5,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 1,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "round": 2,
+          "guard": "guardA",
+          "state": "return",
+          "text": "↩ 羊已脱困，守卫返回守区。",
+          "p": {
+            "x": 4,
+            "y": 3
+          }
+        }
+      ],
+      "trap": null
+    },
+    "bar": "守卫A：↩ 羊已脱困，守卫返回守区。"
+  },
+  {
+    "kind": "unseen",
+    "difficulty": "easy",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 0,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 4,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 6,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [],
+      "trap": {
+        "x": 4,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 0,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 4,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 6,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [],
+      "trap": {
+        "x": 4,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "bar": "守卫A：巡视守区"
+  },
+  {
+    "kind": "unseen",
+    "difficulty": "hard",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 0,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 4,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 6,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [],
+      "trap": {
+        "x": 4,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 0,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 4,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 6,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [],
+      "trap": {
+        "x": 4,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "bar": "守卫A：巡视守区"
+  },
+  {
+    "kind": "late",
+    "difficulty": "easy",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 0,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "intentText": "🛡 路程已赶不上，守卫继续守区。",
+          "intentState": "patrol",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 0
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 2,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "patrol",
+          "text": "🛡 路程已赶不上，守卫继续守区。",
+          "p": {
+            "x": 7,
+            "y": 3
+          }
+        }
+      ],
+      "trap": null
+    },
+    "final": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 0,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "intentText": "🛡 路程已赶不上，守卫继续守区。",
+          "intentState": "patrol",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 0
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 2,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "patrol",
+          "text": "🛡 路程已赶不上，守卫继续守区。",
+          "p": {
+            "x": 7,
+            "y": 3
+          }
+        }
+      ],
+      "trap": null
+    },
+    "bar": "守卫A：🛡 路程已赶不上，守卫继续守区。"
+  },
+  {
+    "kind": "late",
+    "difficulty": "hard",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 0,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "intentText": "🛡 路程已赶不上，守卫继续守区。",
+          "intentState": "patrol",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 0
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 2,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "patrol",
+          "text": "🛡 路程已赶不上，守卫继续守区。",
+          "p": {
+            "x": 7,
+            "y": 3
+          }
+        }
+      ],
+      "trap": null
+    },
+    "final": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 0,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "intentText": "🛡 路程已赶不上，守卫继续守区。",
+          "intentState": "patrol",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 0
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 2,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "patrol",
+          "text": "🛡 路程已赶不上，守卫继续守区。",
+          "p": {
+            "x": 7,
+            "y": 3
+          }
+        }
+      ],
+      "trap": null
+    },
+    "bar": "守卫A：🛡 路程已赶不上，守卫继续守区。"
+  },
+  {
+    "kind": "door",
+    "difficulty": "easy",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "lastKnownWolf": {
+            "x": 5,
+            "y": 4
+          },
+          "intentText": "↩ 救援通路被挡，守卫改为回防。",
+          "intentState": "return",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 3,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "return",
+          "text": "↩ 救援通路被挡，守卫改为回防。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "lastKnownWolf": {
+            "x": 5,
+            "y": 4
+          },
+          "intentText": "↩ 救援通路被挡，守卫改为回防。",
+          "intentState": "return",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 3,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "return",
+          "text": "↩ 救援通路被挡，守卫改为回防。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "bar": "守卫A：↩ 救援通路被挡，守卫改为回防。"
+  },
+  {
+    "kind": "door",
+    "difficulty": "hard",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "lastKnownWolf": {
+            "x": 5,
+            "y": 4
+          },
+          "intentText": "↩ 救援通路被挡，守卫改为回防。",
+          "intentState": "return",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 3,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "return",
+          "text": "↩ 救援通路被挡，守卫改为回防。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "lastKnownWolf": {
+            "x": 5,
+            "y": 4
+          },
+          "intentText": "↩ 救援通路被挡，守卫改为回防。",
+          "intentState": "return",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 3,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "return",
+          "text": "↩ 救援通路被挡，守卫改为回防。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "bar": "守卫A：↩ 救援通路被挡，守卫改为回防。"
+  },
+  {
+    "kind": "contact",
+    "difficulty": "easy",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "lost",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 4
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "chase",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 3
+          },
+          "lastKnownWolf": {
+            "x": 6,
+            "y": 4
+          },
+          "targetSheepId": null
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 3
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 1,
+      "mode": "lost",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 4
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "chase",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 3
+          },
+          "lastKnownWolf": {
+            "x": 6,
+            "y": 4
+          },
+          "targetSheepId": null
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 3
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "bar": "守卫A：正在追捕"
+  },
+  {
+    "kind": "contact",
+    "difficulty": "hard",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "lost",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 4
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "chase",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 3
+          },
+          "lastKnownWolf": {
+            "x": 6,
+            "y": 4
+          },
+          "targetSheepId": null
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 3
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 1,
+      "mode": "lost",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 6,
+            "y": 4
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "chase",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 3
+          },
+          "lastKnownWolf": {
+            "x": 6,
+            "y": 4
+          },
+          "targetSheepId": null
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 3
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "bar": "守卫A：正在追捕"
+  },
+  {
+    "kind": "dual",
+    "difficulty": "easy",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 5,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "rescue",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 4
+          },
+          "targetSheepId": null,
+          "intentText": "✚ 守卫察觉求援，正赶去解困。",
+          "intentState": "rescue",
+          "intentRound": 1
+        },
+        {
+          "id": "guardB",
+          "p": {
+            "x": 6,
+            "y": 2
+          },
+          "home": {
+            "x": 6,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "bold",
+          "facing": 0,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 4
+          },
+          "intentText": "🛡 已有同伴去救援，这名守卫留守。",
+          "intentState": "patrol",
+          "intentRound": 1
+        }
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 6,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "round": 1,
+          "guard": "guardB",
+          "state": "patrol",
+          "text": "🛡 已有同伴去救援，这名守卫留守。",
+          "p": {
+            "x": 6,
+            "y": 2
+          }
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 2,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 4,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "return",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "targetSheepId": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "intentRound": 2,
+          "lastRescuedId": 0
+        },
+        {
+          "id": "guardB",
+          "p": {
+            "x": 5,
+            "y": 2
+          },
+          "home": {
+            "x": 6,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "bold",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 4
+          },
+          "intentText": "🛡 已有同伴去救援，这名守卫留守。",
+          "intentState": "patrol",
+          "intentRound": 1
+        }
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 0
+        },
+        {
+          "id": 1,
+          "x": 5,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 1,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "round": 1,
+          "guard": "guardB",
+          "state": "patrol",
+          "text": "🛡 已有同伴去救援，这名守卫留守。",
+          "p": {
+            "x": 6,
+            "y": 2
+          }
+        },
+        {
+          "round": 2,
+          "guard": "guardA",
+          "state": "return",
+          "text": "↩ 羊已脱困，守卫返回守区。",
+          "p": {
+            "x": 4,
+            "y": 3
+          }
+        }
+      ],
+      "trap": null
+    },
+    "bar": "守卫A：↩ 羊已脱困，守卫返回守区。 · 守卫B：🛡 已有同伴去救援，这名守卫留守。"
+  },
+  {
+    "kind": "dual",
+    "difficulty": "hard",
+    "real": false,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 5,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "rescue",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 4
+          },
+          "targetSheepId": null,
+          "intentText": "✚ 守卫察觉求援，正赶去解困。",
+          "intentState": "rescue",
+          "intentRound": 1
+        },
+        {
+          "id": "guardB",
+          "p": {
+            "x": 6,
+            "y": 2
+          },
+          "home": {
+            "x": 6,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "bold",
+          "facing": 0,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 4
+          },
+          "intentText": "🛡 已有同伴去救援，这名守卫留守。",
+          "intentState": "patrol",
+          "intentRound": 1
+        }
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 6,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "round": 1,
+          "guard": "guardB",
+          "state": "patrol",
+          "text": "🛡 已有同伴去救援，这名守卫留守。",
+          "p": {
+            "x": 6,
+            "y": 2
+          }
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 2,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 4,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "return",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "targetSheepId": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "intentRound": 2,
+          "lastRescuedId": 0
+        },
+        {
+          "id": "guardB",
+          "p": {
+            "x": 5,
+            "y": 2
+          },
+          "home": {
+            "x": 6,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "bold",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 4
+          },
+          "intentText": "🛡 已有同伴去救援，这名守卫留守。",
+          "intentState": "patrol",
+          "intentRound": 1
+        }
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 0
+        },
+        {
+          "id": 1,
+          "x": 6,
+          "y": 2,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 1,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "round": 1,
+          "guard": "guardB",
+          "state": "patrol",
+          "text": "🛡 已有同伴去救援，这名守卫留守。",
+          "p": {
+            "x": 6,
+            "y": 2
+          }
+        },
+        {
+          "round": 2,
+          "guard": "guardA",
+          "state": "return",
+          "text": "↩ 羊已脱困，守卫返回守区。",
+          "p": {
+            "x": 4,
+            "y": 3
+          }
+        }
+      ],
+      "trap": null
+    },
+    "bar": "守卫A：↩ 羊已脱困，守卫返回守区。 · 守卫B：🛡 已有同伴去救援，这名守卫留守。"
+  },
+  {
+    "kind": "seen",
+    "difficulty": "easy",
+    "real": true,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 5,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "rescue",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 4
+          },
+          "targetSheepId": null,
+          "intentText": "✚ 守卫察觉求援，正赶去解困。",
+          "intentState": "rescue",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 6,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 2,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 4,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "return",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "targetSheepId": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "intentRound": 2,
+          "lastRescuedId": 0
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 0
+        },
+        {
+          "id": 1,
+          "x": 7,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 1,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "round": 2,
+          "guard": "guardA",
+          "state": "return",
+          "text": "↩ 羊已脱困，守卫返回守区。",
+          "p": {
+            "x": 4,
+            "y": 3
+          }
+        }
+      ],
+      "trap": null
+    },
+    "bar": "守卫A：↩ 羊已脱困，守卫返回守区。"
+  },
+  {
+    "kind": "seen",
+    "difficulty": "hard",
+    "real": true,
+    "first": {
+      "round": 1,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 5,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "rescue",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": {
+            "id": 0,
+            "p": {
+              "x": 3,
+              "y": 3
+            },
+            "expires": 4
+          },
+          "targetSheepId": null,
+          "intentText": "✚ 守卫察觉求援，正赶去解困。",
+          "intentState": "rescue",
+          "intentRound": 1
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 2
+        },
+        {
+          "id": 1,
+          "x": 6,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 0,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    },
+    "final": {
+      "round": 2,
+      "mode": "play",
+      "guards": [
+        {
+          "id": "guardA",
+          "p": {
+            "x": 4,
+            "y": 3
+          },
+          "home": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "return",
+          "personality": "cautious",
+          "facing": 3,
+          "snared": 0,
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": -2,
+          "rescueMemory": null,
+          "targetSheepId": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "intentRound": 2,
+          "lastRescuedId": 0
+        },
+        null
+      ],
+      "sheep": [
+        {
+          "id": 0,
+          "x": 3,
+          "y": 3,
+          "snared": 0
+        },
+        {
+          "id": 1,
+          "x": 5,
+          "y": 1,
+          "snared": 0
+        }
+      ],
+      "rescueCount": 1,
+      "events": [
+        {
+          "round": 1,
+          "guard": "guardA",
+          "state": "rescue",
+          "text": "✚ 守卫察觉求援，正赶去解困。",
+          "p": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        {
+          "round": 2,
+          "guard": "guardA",
+          "state": "return",
+          "text": "↩ 羊已脱困，守卫返回守区。",
+          "p": {
+            "x": 4,
+            "y": 3
+          }
+        }
+      ],
+      "trap": null
+    },
+    "bar": "守卫A：↩ 羊已脱困，守卫返回守区。"
+  }
+]

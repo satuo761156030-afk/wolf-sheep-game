@@ -1,0 +1,711 @@
+{
+  "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+  "status": "PLAYABLE_PHASE_A_B_PROTOTYPE_NOT_32_MAP_CAMPAIGN",
+  "original": "b4bcd97",
+  "phaseA": "62f3f1fda0d8b71df5d62b58108ada103bda59b6",
+  "ids": [
+    "t1",
+    "t2",
+    "t3",
+    "d23",
+    "d26"
+  ],
+  "legacyMaps": 20,
+  "browser": {
+    "allRecorded": 56,
+    "latestByVariant": [
+      {
+        "stage": "d26",
+        "difficulty": "easy",
+        "variant": "without-gate",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "请君入瓮 · 11 回合。你选择了自己的办法。可以重玩尝试另一种策略。"
+      },
+      {
+        "stage": "d26",
+        "difficulty": "hard",
+        "variant": "without-gate",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "请君入瓮 · 12 回合。你选择了自己的办法。可以重玩尝试另一种策略。"
+      },
+      {
+        "stage": "d23",
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "好心办坏事 · 12 回合。你选择了自己的办法。可以重玩尝试另一种策略。"
+      },
+      {
+        "stage": "d23",
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "好心办坏事 · 16 回合。你选择了自己的办法。可以重玩尝试另一种策略。"
+      },
+      {
+        "stage": "d26",
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 844,
+          "width": 390
+        },
+        "result": "抓到真羊！",
+        "text": "请君入瓮 · 23 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+        "locked": {
+          "round": "19",
+          "guards": [
+            {
+              "x": 4,
+              "y": 5
+            },
+            {
+              "x": 6,
+              "y": 7
+            }
+          ],
+          "wolf": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        "usedThirdGateAfterLock": true
+      },
+      {
+        "stage": "d26",
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 844,
+          "width": 390
+        },
+        "result": "抓到真羊！",
+        "text": "请君入瓮 · 28 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+        "locked": {
+          "round": "22",
+          "guards": [
+            {
+              "x": 6,
+              "y": 5
+            },
+            {
+              "x": 3,
+              "y": 6
+            }
+          ],
+          "wolf": {
+            "x": 6,
+            "y": 3
+          }
+        },
+        "usedThirdGateAfterLock": true
+      },
+      {
+        "stage": 0,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 1 关通关 · 7 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 1,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 2 关通关 · 9 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 2,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 3 关通关 · 5 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 3,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 4 关通关 · 4 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 4,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 5 关通关 · 10 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 5,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 6 关通关 · 7 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 6,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 7 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 7,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 8 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 8,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 9 关通关 · 10 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 9,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 10 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 10,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 11 关通关 · 5 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 11,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 12 关通关 · 4 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 12,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 13 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 13,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 14 关通关 · 6 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 14,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 15 关通关 · 9 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 15,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 16 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 16,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 17 关通关 · 6 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 17,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 18 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 18,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 19 关通关 · 9 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 19,
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "第 20 关通关 · 17 回合。\n全部 20 关挑战完成！"
+      },
+      {
+        "stage": 0,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 1 关通关 · 9 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 1,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 2 关通关 · 9 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 2,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 3 关通关 · 5 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 3,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 4 关通关 · 3 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 4,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 5 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 5,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 6 关通关 · 7 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 6,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 7 关通关 · 8 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 7,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 8 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 8,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 9 关通关 · 5 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 9,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 10 关通关 · 7 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 10,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 11 关通关 · 4 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 11,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 12 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 12,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 13 关通关 · 9 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 13,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 14 关通关 · 7 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 14,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 15 关通关 · 9 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 15,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 16 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 16,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 17 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 17,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 18 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 18,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 19 关通关 · 9 回合。\n后面还有不同地形和机制组合等你破解。"
+      },
+      {
+        "stage": 19,
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "困难围猎成功！",
+        "text": "第 20 关通关 · 16 回合。\n全部 20 关挑战完成！"
+      },
+      {
+        "stage": "t1",
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "T1 · 看见猎物 · 9 回合。带着刚才的发现，进入下一场。"
+      },
+      {
+        "stage": "t2",
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "T2 · 认清目标 · 9 回合。带着刚才的发现，进入下一场。"
+      },
+      {
+        "stage": "t3",
+        "difficulty": "easy",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 900,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "T3 · 追与堵 · 5 回合。你选择了自己的办法。可以重玩尝试另一种策略。"
+      },
+      {
+        "stage": "t1",
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 844,
+          "width": 390
+        },
+        "result": "抓到真羊！",
+        "text": "T1 · 看见猎物 · 12 回合。带着刚才的发现，进入下一场。"
+      },
+      {
+        "stage": "t2",
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 844,
+          "width": 390
+        },
+        "result": "抓到真羊！",
+        "text": "T2 · 认清目标 · 9 回合。带着刚才的发现，进入下一场。"
+      },
+      {
+        "stage": "t3",
+        "difficulty": "hard",
+        "variant": "main",
+        "pass": true,
+        "viewport": {
+          "height": 844,
+          "width": 390
+        },
+        "result": "抓到真羊！",
+        "text": "T3 · 追与堵 · 5 回合。你选择了自己的办法。可以重玩尝试另一种策略。"
+      },
+      {
+        "stage": "d23",
+        "difficulty": "easy",
+        "variant": "without-trap",
+        "pass": true,
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "好心办坏事 · 5 回合。你选择了自己的办法。可以重玩尝试另一种策略。"
+      },
+      {
+        "stage": "d23",
+        "difficulty": "hard",
+        "variant": "without-trap",
+        "pass": true,
+        "viewport": {
+          "height": 720,
+          "width": 1280
+        },
+        "result": "抓到真羊！",
+        "text": "好心办坏事 · 7 回合。你选择了自己的办法。可以重玩尝试另一种策略。"
+      }
+    ],
+    "legacyWins": 40
+  },
+  "unknown": [
+    "Android/iOS hardware",
+    "content:// local open",
+    "independent human novice comprehension and fun",
+    "formal maps 01-32 and finale design"
+  ],
+  "date": "2026-10-30"
+}

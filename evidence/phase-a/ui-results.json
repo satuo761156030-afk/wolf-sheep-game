@@ -1,0 +1,527 @@
+[
+  {
+    "sourceHash": "1245fc6ef9275f80a92537bf60bcb3cdd5a9a96e0a6f70430b69c47886083c1f",
+    "at": "2026-10-30T06:16:29.148Z",
+    "stage": "t1",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": false,
+    "error": "Error: Error: Playwright selector deadline exceeded\nwaiting on click for selector #pickEasy\nLocator diagnostics: {\"kind\":\"no_visible_match\",\"action\":\"click\",\"locator\":\"#pickEasy\",\"matchCount\":1,\"matches\":[{\"ariaLabel\":null,\"disabled\":false,\"role\":null,\"tag\":\"button\",\"text\":\"🌿 简单模式\",\"type\":null,\"visible\":false}],\"visibleCount\":0,\"truncated\":false}",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "e4d7becfba2f2241eb1fdbb5723a12e6ffc14d94842f86a7a4d9b8b8963491a5",
+    "at": "2026-10-30T06:17:00.023Z",
+    "stage": "t1",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T1 · 看见猎物 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这就是你",
+      "金圈里是真羊",
+      "这只是假羊",
+      "现在轮到你截住它"
+    ]
+  },
+  {
+    "sourceHash": "e4d7becfba2f2241eb1fdbb5723a12e6ffc14d94842f86a7a4d9b8b8963491a5",
+    "at": "2026-10-30T06:17:07.188Z",
+    "stage": "t2",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T2 · 认清目标 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这是刚才闻到的位置",
+      "气味线索已经过期"
+    ]
+  },
+  {
+    "sourceHash": "e4d7becfba2f2241eb1fdbb5723a12e6ffc14d94842f86a7a4d9b8b8963491a5",
+    "at": "2026-10-30T06:17:13.714Z",
+    "stage": "t3",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": false,
+    "error": "Error: Error: Playwright selector deadline exceeded\nwaiting on click for selector #openLevels\nLocator diagnostics: {\"kind\":\"no_visible_match\",\"action\":\"click\",\"locator\":\"#openLevels\",\"matchCount\":1,\"matches\":[{\"ariaLabel\":null,\"disabled\":false,\"role\":null,\"tag\":\"button\",\"text\":\"🗺️ 关卡与模式\",\"type\":\"button\",\"visible\":false}],\"visibleCount\":0,\"truncated\":false}",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:18:21.647Z",
+    "stage": "t1",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T1 · 看见猎物 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这就是你",
+      "金圈里是真羊",
+      "这只是假羊",
+      "现在轮到你截住它"
+    ]
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:18:28.884Z",
+    "stage": "t2",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T2 · 认清目标 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这是刚才闻到的位置",
+      "气味线索已经过期"
+    ]
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:18:35.492Z",
+    "stage": "t3",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T3 · 追与堵 · 5 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": [
+      "追，还是设伏？由你选"
+    ]
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:18:56.180Z",
+    "stage": "t1",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 0
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T1 · 看见猎物 · 12 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这就是你",
+      "金圈里是真羊",
+      "这只是假羊",
+      "现在轮到你截住它"
+    ]
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:19:08.860Z",
+    "stage": "t2",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T2 · 认清目标 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这是刚才闻到的位置",
+      "气味线索已经过期"
+    ]
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:19:18.969Z",
+    "stage": "t3",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T3 · 追与堵 · 5 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": [
+      "追，还是设伏？由你选"
+    ]
+  }
+]

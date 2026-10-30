@@ -1,0 +1,6035 @@
+[
+  {
+    "stage": "d23",
+    "difficulty": "easy",
+    "pass": true,
+    "nodes": 20866,
+    "ms": 7373,
+    "round": 12,
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 5,
+          "y": 5
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 7,
+          "y": 6
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "evidence": {
+      "pounce": true,
+      "move": true,
+      "trap": true,
+      "waitAfterTrap": true,
+      "wait": true,
+      "sniff": true,
+      "howlGuard": true,
+      "howlFlock": true
+    },
+    "states": [
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 1,
+          "y": 5
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 0,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 4,
+            "id": 0,
+            "real": true,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0
+          },
+          {
+            "x": 3,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": null,
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {},
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 3,
+          "y": 5
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 1,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 4,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 4,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 0,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 3,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "pounce",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 1,
+          "y": 5
+        },
+        "walkFrame": {
+          "round": 1,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 5
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 2,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 5,
+            "id": 0,
+            "real": true,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 2,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 3,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 1,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 0,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 2,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true,
+          "move": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 3,
+          "y": 5
+        },
+        "walkFrame": {
+          "round": 2,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 3,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 2,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 5
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 3,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 5,
+            "id": 0,
+            "real": true,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 1,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 4,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 1,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 1,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 1,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 4,
+          "y": 4,
+          "ttl": 7,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "trap",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true,
+          "move": true,
+          "trap": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 5
+        },
+        "walkFrame": {
+          "round": 3,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 2,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 5
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 4,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 4,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 4,
+            "y": 2,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 2,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 2,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 4,
+          "y": 4,
+          "ttl": 6,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "wait",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true,
+          "move": true,
+          "trap": true,
+          "waitAfterTrap": true,
+          "wait": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 5
+        },
+        "walkFrame": {
+          "round": 4,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 2,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 3,
+          "y": 5
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 5,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 4,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 4,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 1,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 4,
+          "y": 4,
+          "ttl": 5,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true,
+          "move": true,
+          "trap": true,
+          "waitAfterTrap": true,
+          "wait": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 5
+        },
+        "walkFrame": {
+          "round": 5,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 3,
+          "y": 5
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 6,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 4,
+            "id": 0,
+            "real": true,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 2,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 4,
+            "y": 4,
+            "id": 1,
+            "real": false,
+            "mood": "snared",
+            "stress": 1,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 3,
+            "behavior": "calm"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": {
+          "x": 7,
+          "y": 4
+        },
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 4,
+          "y": 4,
+          "ttl": 5,
+          "triggered": true,
+          "snaredId": 1,
+          "snaredType": "sheep"
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "sniff",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true,
+          "move": true,
+          "trap": true,
+          "waitAfterTrap": true,
+          "wait": true,
+          "sniff": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 3,
+          "y": 5
+        },
+        "walkFrame": {
+          "round": 6,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 6
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 7,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 6,
+            "y": 4,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 4,
+            "y": 4,
+            "id": 1,
+            "real": false,
+            "mood": "snared",
+            "stress": 1,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 2,
+            "behavior": "calm"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 5,
+            "y": 3
+          },
+          "state": "rescue",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": {
+            "id": 1,
+            "p": {
+              "x": 4,
+              "y": 4
+            },
+            "expires": 10
+          },
+          "intentText": "✚ 守卫察觉求援，正赶去解困。",
+          "intentState": "rescue"
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 3,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 4,
+          "y": 4,
+          "ttl": 5,
+          "triggered": true,
+          "snaredId": 1,
+          "snaredType": "sheep"
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "pounce",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true,
+          "move": true,
+          "trap": true,
+          "waitAfterTrap": true,
+          "wait": true,
+          "sniff": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 3,
+          "y": 5
+        },
+        "walkFrame": {
+          "round": 7,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 6,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 7,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          }
+        ]
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 6
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 8,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 4,
+            "id": 0,
+            "real": true,
+            "mood": "alert",
+            "stress": 2,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee"
+          },
+          {
+            "x": 4,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 3,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 5,
+            "y": 4
+          },
+          "state": "return",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 2,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "soundOrigin": {
+            "x": 4,
+            "y": 6
+          },
+          "lastRescuedId": 1
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 2,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 4,
+        "flockRipple": 2,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "howl",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true,
+          "move": true,
+          "trap": true,
+          "waitAfterTrap": true,
+          "wait": true,
+          "sniff": true,
+          "howlGuard": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 6
+        },
+        "walkFrame": {
+          "round": 8,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 5,
+              "y": 4,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 7,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "round": 8,
+            "guard": "guardA",
+            "state": "return",
+            "text": "↩ 羊已脱困，守卫返回守区。",
+            "p": {
+              "x": 5,
+              "y": 4
+            }
+          }
+        ],
+        "rescueCount": 1
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 5,
+          "y": 6
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 9,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 5,
+            "id": 0,
+            "real": true,
+            "mood": "calm",
+            "stress": 1,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 4,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 5,
+            "y": 3
+          },
+          "state": "return",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 2,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "soundOrigin": {
+            "x": 4,
+            "y": 6
+          },
+          "lastRescuedId": 1
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 1,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 3,
+        "flockRipple": 1,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true,
+          "move": true,
+          "trap": true,
+          "waitAfterTrap": true,
+          "wait": true,
+          "sniff": true,
+          "howlGuard": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 6
+        },
+        "walkFrame": {
+          "round": 9,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 5,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 7,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "round": 8,
+            "guard": "guardA",
+            "state": "return",
+            "text": "↩ 羊已脱困，守卫返回守区。",
+            "p": {
+              "x": 5,
+              "y": 4
+            }
+          }
+        ],
+        "rescueCount": 1
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 5,
+          "y": 6
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 10,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 6,
+            "id": 0,
+            "real": true,
+            "mood": "calm",
+            "stress": 1,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 5,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "return",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 2,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "soundOrigin": {
+            "x": 4,
+            "y": 6
+          },
+          "lastRescuedId": 1
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 5,
+          "y": 5,
+          "ttl": 7,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 2,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "trap",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true,
+          "move": true,
+          "trap": true,
+          "waitAfterTrap": true,
+          "wait": true,
+          "sniff": true,
+          "howlGuard": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 5,
+          "y": 6
+        },
+        "walkFrame": {
+          "round": 10,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 6,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 5,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 7,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "round": 8,
+            "guard": "guardA",
+            "state": "return",
+            "text": "↩ 羊已脱困，守卫返回守区。",
+            "p": {
+              "x": 5,
+              "y": 4
+            }
+          }
+        ],
+        "rescueCount": 1
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 7,
+          "y": 6
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 11,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 7,
+            "id": 0,
+            "real": true,
+            "mood": "alert",
+            "stress": 3,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee"
+          },
+          {
+            "x": 4,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 2,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 2,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "soundOrigin": {
+            "x": 4,
+            "y": 6
+          },
+          "lastRescuedId": 1
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 3,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 5,
+          "y": 5,
+          "ttl": 6,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 1,
+        "flockRipple": 2,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "pounce",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true,
+          "move": true,
+          "trap": true,
+          "waitAfterTrap": true,
+          "wait": true,
+          "sniff": true,
+          "howlGuard": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 5,
+          "y": 6
+        },
+        "walkFrame": {
+          "round": 11,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 7,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 7,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "round": 8,
+            "guard": "guardA",
+            "state": "return",
+            "text": "↩ 羊已脱困，守卫返回守区。",
+            "p": {
+              "x": 5,
+              "y": 4
+            }
+          }
+        ],
+        "rescueCount": 1
+      },
+      {
+        "mode": "won",
+        "wolf": {
+          "x": 7,
+          "y": 7
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 12,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 7,
+            "id": 0,
+            "real": true,
+            "mood": "alert",
+            "stress": 3,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee"
+          },
+          {
+            "x": 4,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 2,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 2,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "soundOrigin": {
+            "x": 4,
+            "y": 6
+          },
+          "lastRescuedId": 1
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 2,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 5,
+          "y": 5,
+          "ttl": 6,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 2,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "pounce": true,
+          "move": true,
+          "trap": true,
+          "waitAfterTrap": true,
+          "wait": true,
+          "sniff": true,
+          "howlGuard": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 7,
+          "y": 6
+        },
+        "walkFrame": {
+          "round": 11,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 7,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 7,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "round": 8,
+            "guard": "guardA",
+            "state": "return",
+            "text": "↩ 羊已脱困，守卫返回守区。",
+            "p": {
+              "x": 5,
+              "y": 4
+            }
+          }
+        ],
+        "rescueCount": 1
+      }
+    ]
+  },
+  {
+    "stage": "d23",
+    "difficulty": "hard",
+    "pass": true,
+    "nodes": 41323,
+    "ms": 16729,
+    "round": 23,
+    "actions": [
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 4
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 4
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 7,
+          "y": 6
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "evidence": {
+      "move": true,
+      "trap": true,
+      "pounce": true,
+      "howlFlock": true,
+      "sniff": true,
+      "howlGuard": true
+    },
+    "states": [
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 1,
+          "y": 5
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 0,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 4,
+            "id": 0,
+            "real": true,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0
+          },
+          {
+            "x": 3,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": null,
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {},
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 1,
+          "y": 6
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 1,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 4,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 4,
+            "y": 3,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 0,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 1,
+          "y": 5
+        },
+        "walkFrame": {
+          "round": 1,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 1,
+          "y": 6
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 2,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 3,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 4,
+            "y": 4,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 0,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 4,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "howl",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 1,
+          "y": 6
+        },
+        "walkFrame": {
+          "round": 2,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 2,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 2,
+          "y": 6
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 3,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 3,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 4,
+            "y": 5,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm"
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 1,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 3,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 1,
+          "y": 6
+        },
+        "walkFrame": {
+          "round": 3,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 4,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 2,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 2,
+          "y": 6
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 4,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 6,
+            "y": 3,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 3,
+            "y": 5,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": {
+              "x": 2,
+              "y": 5,
+              "seen": 4
+            }
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 6,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 2,
+          "y": 5,
+          "ttl": 7,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 2,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "trap",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 2,
+          "y": 6
+        },
+        "walkFrame": {
+          "round": 4,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 6,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 3,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 2,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 2,
+          "y": 7
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 5,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 6,
+            "y": 3,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 3,
+            "y": 6,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": {
+              "x": 2,
+              "y": 5,
+              "seen": 5
+            }
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 6,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 0,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 2,
+          "y": 5,
+          "ttl": 6,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 1,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 2,
+          "y": 6
+        },
+        "walkFrame": {
+          "round": 5,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 6,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 3,
+              "y": 6,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 2,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 7
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 6,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 6,
+            "y": 3,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 3,
+            "y": 5,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 2,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee",
+            "knownTrap": {
+              "x": 2,
+              "y": 5,
+              "seen": 5
+            }
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 1,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 3,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 2,
+          "y": 5,
+          "ttl": 5,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "pounce",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 2,
+          "y": 7
+        },
+        "walkFrame": {
+          "round": 6,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 6,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 3,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 2,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 7
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 7,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 6,
+            "y": 2,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 2,
+            "y": 5,
+            "id": 1,
+            "real": false,
+            "mood": "snared",
+            "stress": 4,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 3,
+            "behavior": "panic",
+            "knownTrap": {
+              "x": 2,
+              "y": 5,
+              "seen": 5
+            }
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 2
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 2,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 2,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 2,
+          "y": 5,
+          "ttl": 5,
+          "triggered": true,
+          "snaredId": 1,
+          "snaredType": "sheep"
+        },
+        "blockFx": null,
+        "howlCd": 4,
+        "flockRipple": 2,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "howl",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 7
+        },
+        "walkFrame": {
+          "round": 7,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 6,
+              "y": 2,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 2,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 2,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 6
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 8,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 6,
+            "y": 3,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 2,
+            "y": 5,
+            "id": 1,
+            "real": false,
+            "mood": "snared",
+            "stress": 4,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 2,
+            "behavior": "panic",
+            "knownTrap": {
+              "x": 2,
+              "y": 5,
+              "seen": 5
+            }
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 2,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 1,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 2,
+          "y": 5,
+          "ttl": 5,
+          "triggered": true,
+          "snaredId": 1,
+          "snaredType": "sheep"
+        },
+        "blockFx": null,
+        "howlCd": 3,
+        "flockRipple": 1,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 7
+        },
+        "walkFrame": {
+          "round": 8,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 6,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 2,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 5
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 9,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 6,
+            "y": 3,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "calm"
+          },
+          {
+            "x": 2,
+            "y": 5,
+            "id": 1,
+            "real": false,
+            "mood": "snared",
+            "stress": 4,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 1,
+            "behavior": "panic",
+            "knownTrap": {
+              "x": 2,
+              "y": 5,
+              "seen": 5
+            }
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 2,
+          "y": 5,
+          "ttl": 5,
+          "triggered": true,
+          "snaredId": 1,
+          "snaredType": "sheep"
+        },
+        "blockFx": null,
+        "howlCd": 2,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 6
+        },
+        "walkFrame": {
+          "round": 9,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 6,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 2,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 5,
+          "y": 4
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 10,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 6,
+            "y": 2,
+            "id": 0,
+            "real": true,
+            "mood": "alert",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee"
+          },
+          {
+            "x": 2,
+            "y": 5,
+            "id": 1,
+            "real": false,
+            "mood": "snared",
+            "stress": 4,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "panic",
+            "knownTrap": {
+              "x": 2,
+              "y": 5,
+              "seen": 5
+            }
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 4
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 2,
+          "alertRound": 0,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 3,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 1,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "pounce",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 5
+        },
+        "walkFrame": {
+          "round": 10,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 6,
+              "y": 2,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 2,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 5,
+          "y": 4
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 11,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 5,
+            "y": 2,
+            "id": 0,
+            "real": true,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 11
+            }
+          },
+          {
+            "x": 2,
+            "y": 6,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 3,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "alert",
+            "knownTrap": {
+              "x": 2,
+              "y": 5,
+              "seen": 5
+            }
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 4
+          },
+          "state": "alert",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 11,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 2,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 6,
+          "y": 4,
+          "ttl": 7,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "trap",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 5,
+          "y": 4
+        },
+        "walkFrame": {
+          "round": 11,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 5,
+              "y": 2,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 2,
+              "y": 6,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 4,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 4
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 12,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 4,
+            "y": 2,
+            "id": 0,
+            "real": true,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 11
+            }
+          },
+          {
+            "x": 1,
+            "y": 6,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 2,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "alert",
+            "knownTrap": {
+              "x": 2,
+              "y": 5,
+              "seen": 5
+            }
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 4
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 11,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 1,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 6,
+          "y": 4,
+          "ttl": 6,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 5,
+          "y": 4
+        },
+        "walkFrame": {
+          "round": 12,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 4,
+              "y": 2,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 1,
+              "y": 6,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 4,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 5
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 13,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 4,
+            "y": 3,
+            "id": 0,
+            "real": true,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 11
+            }
+          },
+          {
+            "x": 2,
+            "y": 6,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 1,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": {
+              "x": 2,
+              "y": 5,
+              "seen": 5
+            }
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 4
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 0,
+          "alertRound": 11,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 6,
+          "y": 4,
+          "ttl": 5,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 4
+        },
+        "walkFrame": {
+          "round": 13,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 4,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 2,
+              "y": 6,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 4,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 3
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 14,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 4,
+            "y": 2,
+            "id": 0,
+            "real": true,
+            "mood": "alert",
+            "stress": 2,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 11
+            }
+          },
+          {
+            "x": 1,
+            "y": 6,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 3,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee",
+            "knownTrap": null
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 3
+          },
+          "state": "patrol",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 0,
+          "alertRound": 11,
+          "snared": 0,
+          "targetSheepId": null
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 2,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 3,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 6,
+          "y": 4,
+          "ttl": 4,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 2,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "pounce",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 5
+        },
+        "walkFrame": {
+          "round": 14,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 4,
+              "y": 2,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 1,
+              "y": 6,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 7,
+              "y": 4,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 3
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 15,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 5,
+            "y": 2,
+            "id": 0,
+            "real": true,
+            "mood": "alert",
+            "stress": 3,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 11
+            }
+          },
+          {
+            "x": 1,
+            "y": 7,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 2,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "alert",
+            "knownTrap": null
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "intercept",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 11,
+          "snared": 0,
+          "targetSheepId": 0
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": {
+          "x": 5,
+          "y": 2
+        },
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 2,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 6,
+          "y": 4,
+          "ttl": 3,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 1,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "sniff",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true,
+          "sniff": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 3
+        },
+        "walkFrame": {
+          "round": 15,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 5,
+              "y": 2,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 1,
+              "y": 7,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 2
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 16,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 5,
+            "y": 3,
+            "id": 0,
+            "real": true,
+            "mood": "panic",
+            "stress": 4,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "panic",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 11
+            }
+          },
+          {
+            "x": 1,
+            "y": 6,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 1,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": null
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 6,
+            "y": 2
+          },
+          "state": "intercept",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 11,
+          "snared": 0,
+          "targetSheepId": 0
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 1,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 6,
+          "y": 4,
+          "ttl": 2,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true,
+          "sniff": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 3
+        },
+        "walkFrame": {
+          "round": 16,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 5,
+              "y": 3,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 1,
+              "y": 6,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 2,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 4,
+          "y": 3
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 17,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 5,
+            "y": 4,
+            "id": 0,
+            "real": true,
+            "mood": "panic",
+            "stress": 5,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "panic",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 17
+            }
+          },
+          {
+            "x": 1,
+            "y": 5,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": null
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "intercept",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 11,
+          "snared": 0,
+          "targetSheepId": 0
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": {
+          "x": 6,
+          "y": 4,
+          "ttl": 1,
+          "triggered": false,
+          "snaredId": null,
+          "snaredType": null
+        },
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true,
+          "sniff": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 2
+        },
+        "walkFrame": {
+          "round": 17,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 5,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 1,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        }
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 5,
+          "y": 4
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 18,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 6,
+            "y": 4,
+            "id": 0,
+            "real": true,
+            "mood": "reassured",
+            "stress": 0,
+            "safeMemory": true,
+            "comfortGrace": 3,
+            "snared": 0,
+            "behavior": "panic",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 17
+            }
+          },
+          {
+            "x": 2,
+            "y": 5,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": null
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "return",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 0,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 18,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "lastRescuedId": 0
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 3,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "pounce",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true,
+          "sniff": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 4,
+          "y": 3
+        },
+        "walkFrame": {
+          "round": 18,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 6,
+              "y": 4,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 2,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "return",
+            "text": "↩ 羊已脱困，守卫返回守区。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          }
+        ],
+        "rescueCount": 1
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 5,
+          "y": 4
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 19,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 6,
+            "y": 5,
+            "id": 0,
+            "real": true,
+            "mood": "alert",
+            "stress": 2,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 17
+            }
+          },
+          {
+            "x": 1,
+            "y": 5,
+            "id": 1,
+            "real": false,
+            "mood": "alert",
+            "stress": 2,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee",
+            "knownTrap": null
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 5,
+            "y": 3
+          },
+          "state": "chase",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 18,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 18,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "lastRescuedId": 0
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 2,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 4,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "howl",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true,
+          "sniff": true,
+          "howlGuard": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 5,
+          "y": 4
+        },
+        "walkFrame": {
+          "round": 19,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 6,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 1,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 5,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "return",
+            "text": "↩ 羊已脱困，守卫返回守区。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          }
+        ],
+        "rescueCount": 1
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 6,
+          "y": 4
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 20,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 5,
+            "id": 0,
+            "real": true,
+            "mood": "alert",
+            "stress": 3,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "flee",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 17
+            }
+          },
+          {
+            "x": 1,
+            "y": 6,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 1,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": null
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 6,
+            "y": 3
+          },
+          "state": "chase",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 18,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 18,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "lastRescuedId": 0
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 1,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 3,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true,
+          "sniff": true,
+          "howlGuard": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 5,
+          "y": 4
+        },
+        "walkFrame": {
+          "round": 20,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 5,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 1,
+              "y": 6,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 3,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "return",
+            "text": "↩ 羊已脱困，守卫返回守区。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          }
+        ],
+        "rescueCount": 1
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 6,
+          "y": 5
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 21,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 6,
+            "id": 0,
+            "real": true,
+            "mood": "panic",
+            "stress": 4,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "panic",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 17
+            }
+          },
+          {
+            "x": 2,
+            "y": 6,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": null
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 6,
+            "y": 4
+          },
+          "state": "chase",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 18,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 18,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "lastRescuedId": 0
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 0,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 2,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true,
+          "sniff": true,
+          "howlGuard": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 6,
+          "y": 4
+        },
+        "walkFrame": {
+          "round": 21,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 6,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 2,
+              "y": 6,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 4,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "return",
+            "text": "↩ 羊已脱困，守卫返回守区。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          }
+        ],
+        "rescueCount": 1
+      },
+      {
+        "mode": "play",
+        "wolf": {
+          "x": 7,
+          "y": 6
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 22,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 7,
+            "id": 0,
+            "real": true,
+            "mood": "panic",
+            "stress": 5,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "panic",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 17
+            }
+          },
+          {
+            "x": 2,
+            "y": 7,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": null
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 4
+          },
+          "state": "chase",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 18,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 18,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "lastRescuedId": 0
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 3,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 1,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "pounce",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true,
+          "sniff": true,
+          "howlGuard": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 6,
+          "y": 5
+        },
+        "walkFrame": {
+          "round": 22,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 7,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 2,
+              "y": 7,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 4,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "return",
+            "text": "↩ 羊已脱困，守卫返回守区。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          }
+        ],
+        "rescueCount": 1
+      },
+      {
+        "mode": "won",
+        "wolf": {
+          "x": 7,
+          "y": 7
+        },
+        "voids": {},
+        "shape": "handcrafted",
+        "round": 23,
+        "walls": {},
+        "fences": {},
+        "gates": {},
+        "markers": [],
+        "markerArmed": false,
+        "gateArmed": false,
+        "prevAction": null,
+        "lastPounce": false,
+        "mud": {},
+        "grassPatches": {},
+        "shadowTiles": {},
+        "moonlitTiles": {},
+        "rustleFx": null,
+        "sheep": [
+          {
+            "x": 7,
+            "y": 7,
+            "id": 0,
+            "real": true,
+            "mood": "panic",
+            "stress": 5,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "panic",
+            "knownTrap": {
+              "x": 6,
+              "y": 4,
+              "seen": 17
+            }
+          },
+          {
+            "x": 2,
+            "y": 7,
+            "id": 1,
+            "real": false,
+            "mood": "calm",
+            "stress": 0,
+            "safeMemory": false,
+            "comfortGrace": 0,
+            "snared": 0,
+            "behavior": "calm",
+            "knownTrap": null
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "home": {
+            "x": 7,
+            "y": 3
+          },
+          "p": {
+            "x": 7,
+            "y": 4
+          },
+          "state": "chase",
+          "personality": "cautious",
+          "cool": 0,
+          "escape": 0,
+          "awakeRound": 18,
+          "mask": false,
+          "facing": 3,
+          "alertRound": 18,
+          "snared": 0,
+          "targetSheepId": null,
+          "rescueMemory": null,
+          "intentText": "↩ 羊已脱困，守卫返回守区。",
+          "intentState": "return",
+          "lastRescuedId": 0
+        },
+        "bell": null,
+        "bellUsed": false,
+        "sniff": 1,
+        "reveal": 0,
+        "scentMark": null,
+        "trainingScent": false,
+        "prints": [],
+        "dashCd": 2,
+        "dashArmed": false,
+        "trapArmed": false,
+        "trapFx": null,
+        "blockFx": null,
+        "howlCd": 0,
+        "flockRipple": 0,
+        "flockBluff": 0,
+        "swapFx": 0,
+        "swapWarning": null,
+        "swapTrace": null,
+        "swapCooldown": 0,
+        "swapPressure": 0,
+        "swapHistory": 0,
+        "swapSource": "",
+        "lastSwapTurn": -99,
+        "lastAction": "move",
+        "moveLog": "",
+        "teaching": false,
+        "tut": 0,
+        "won": false,
+        "hardDone": {},
+        "hardAttempts": 0,
+        "lessonEvidence": {
+          "move": true,
+          "trap": true,
+          "pounce": true,
+          "howlFlock": true,
+          "sniff": true,
+          "howlGuard": true
+        },
+        "guideStep": 4,
+        "moonPhase": 0,
+        "moonOmenRound": -1,
+        "alarmRaised": false,
+        "alarmTTL": 0,
+        "alarmPoint": null,
+        "moonEnabled": false,
+        "alarmEnabled": false,
+        "actionShield": {},
+        "wolfBeforeAction": {
+          "x": 7,
+          "y": 6
+        },
+        "walkFrame": {
+          "round": 22,
+          "actors": [
+            {
+              "key": "s0",
+              "x": 7,
+              "y": 7,
+              "type": "sheep"
+            },
+            {
+              "key": "s1",
+              "x": 2,
+              "y": 7,
+              "type": "sheep"
+            },
+            {
+              "key": "guardA",
+              "x": 6,
+              "y": 4,
+              "type": "guard"
+            }
+          ]
+        },
+        "guardEvents": [
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "rescue",
+            "text": "✚ 守卫察觉求援，正赶去解困。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          },
+          {
+            "round": 18,
+            "guard": "guardA",
+            "state": "return",
+            "text": "↩ 羊已脱困，守卫返回守区。",
+            "p": {
+              "x": 6,
+              "y": 3
+            }
+          }
+        ],
+        "rescueCount": 1
+      }
+    ]
+  }
+]
