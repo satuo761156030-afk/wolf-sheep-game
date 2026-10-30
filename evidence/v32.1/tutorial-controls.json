@@ -1,0 +1,8 @@
+{
+  "replay": true,
+  "skip": true,
+  "disabledPersists": true,
+  "reEnabled": true,
+  "easyAndHardScoresAfterReload": true,
+  "confirmation": "native dialog accepted via CUA"
+}

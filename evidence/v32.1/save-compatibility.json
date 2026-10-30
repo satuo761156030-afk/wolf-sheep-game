@@ -1,0 +1,252 @@
+{
+  "before": {
+    "seen": {
+      "basic": true,
+      "hardIntro": true,
+      "swapRework": true
+    },
+    "best": {
+      "0": 12
+    },
+    "hardBest": {
+      "1": 24
+    },
+    "introDone": true,
+    "endlessBest": 4,
+    "v264Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v264Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v272Standard": {
+      "easy": {
+        "2": 23
+      },
+      "hard": {
+        "2": 29
+      }
+    },
+    "v320Standard": {
+      "easy": {
+        "0": 10
+      },
+      "hard": {
+        "0": 13
+      }
+    },
+    "v320Free": {
+      "easy": {
+        "0": {
+          "plays": 2,
+          "wins": 1,
+          "fastest": 16
+        }
+      },
+      "hard": {}
+    },
+    "options": {
+      "ambient": false,
+      "reduceMotion": true,
+      "tutorials": true,
+      "resumeOnOpen": true,
+      "volume": 0.4
+    },
+    "lastPlayedRun": {
+      "stage": 2,
+      "difficulty": "hard",
+      "challengeMode": "standard",
+      "freeRunSeed": null,
+      "ruleset": "v32.1-stable-patrol-1"
+    },
+    "demoBuild": 15,
+    "v27Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v27Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v271Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v271Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v272Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "moonDemoRevision": 1,
+    "v274Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v274Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v280Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v290Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v290Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v280Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v321Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v321Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "activeV25": {
+      "stage": 2,
+      "difficulty": "hard",
+      "challengeMode": "standard",
+      "freeRunSeed": null,
+      "ruleset": "v32.1-stable-patrol-1"
+    }
+  },
+  "after": {
+    "seen": {
+      "basic": true,
+      "hardIntro": true,
+      "swapRework": true
+    },
+    "best": {
+      "0": 12
+    },
+    "hardBest": {
+      "1": 24
+    },
+    "introDone": true,
+    "endlessBest": 4,
+    "v264Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v264Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v272Standard": {
+      "easy": {
+        "2": 23
+      },
+      "hard": {
+        "2": 29
+      }
+    },
+    "v320Standard": {
+      "easy": {
+        "0": 10
+      },
+      "hard": {
+        "0": 13
+      }
+    },
+    "v320Free": {
+      "easy": {
+        "0": {
+          "plays": 2,
+          "wins": 1,
+          "fastest": 16
+        }
+      },
+      "hard": {}
+    },
+    "options": {
+      "ambient": false,
+      "reduceMotion": true,
+      "tutorials": true,
+      "resumeOnOpen": true,
+      "volume": 0.4
+    },
+    "lastPlayedRun": {
+      "stage": 2,
+      "difficulty": "hard",
+      "challengeMode": "standard",
+      "freeRunSeed": null,
+      "ruleset": "v32.1-stable-patrol-1"
+    },
+    "demoBuild": 15,
+    "v27Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v27Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v271Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v271Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v272Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "moonDemoRevision": 1,
+    "v274Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v274Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v280Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v290Standard": {
+      "easy": {},
+      "hard": {}
+    },
+    "v290Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v280Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "v321Standard": {
+      "easy": {},
+      "hard": {
+        "2": 5
+      }
+    },
+    "v321Free": {
+      "easy": {},
+      "hard": {}
+    },
+    "activeV25": {
+      "stage": 2,
+      "difficulty": "hard",
+      "challengeMode": "standard",
+      "freeRunSeed": null,
+      "ruleset": "v32.1-stable-patrol-1"
+    }
+  }
+}

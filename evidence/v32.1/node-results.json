@@ -1,0 +1,192 @@
+{
+  "sourceHash": "59061cb4da1ef3a782236718fb6316ddc453f97def5cbf51f1e44a0a2e279981",
+  "type": "rules with DOM stubs; not browser acceptance",
+  "passed": 46,
+  "total": 46,
+  "results": [
+    {
+      "name": "20 chapters retained",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 1",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 2",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 3",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 4",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 5",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 6",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 7",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 8",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 9",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 10",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 11",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 12",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 13",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 14",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 15",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 16",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 17",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 18",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 19",
+      "pass": true
+    },
+    {
+      "name": "legal win easy 20",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 1",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 2",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 3",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 4",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 5",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 6",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 7",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 8",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 9",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 10",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 11",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 12",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 13",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 14",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 15",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 16",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 17",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 18",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 19",
+      "pass": true
+    },
+    {
+      "name": "legal win hard 20",
+      "pass": true
+    },
+    {
+      "name": "observed trap avoided using detour",
+      "pass": true
+    },
+    {
+      "name": "startled sheep cannot read undiscovered trap",
+      "pass": true
+    },
+    {
+      "name": "cornered panic permits a risky mistake",
+      "pass": true
+    },
+    {
+      "name": "comfort expires and sheep resumes moving",
+      "pass": true
+    },
+    {
+      "name": "adjacent rescue precedes patrol movement",
+      "pass": true
+    }
+  ]
+}

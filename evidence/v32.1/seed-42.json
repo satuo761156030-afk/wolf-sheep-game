@@ -1,0 +1,697 @@
+[
+  {
+    "seed": 42,
+    "stage": 0,
+    "difficulty": "easy",
+    "pass": true,
+    "nodes": 503,
+    "ms": 54,
+    "round": 8,
+    "actions": [
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "evidence": {
+      "wait": true,
+      "move": true
+    }
+  },
+  {
+    "seed": 42,
+    "stage": 2,
+    "difficulty": "easy",
+    "pass": true,
+    "nodes": 101,
+    "ms": 13,
+    "round": 5,
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "evidence": {
+      "sniff": true,
+      "move": true
+    }
+  },
+  {
+    "seed": 42,
+    "stage": 6,
+    "difficulty": "easy",
+    "pass": true,
+    "nodes": 2290,
+    "ms": 275,
+    "round": 7,
+    "actions": [
+      {
+        "type": "trap",
+        "p": {
+          "x": 2,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "evidence": {
+      "trap": true,
+      "move": true,
+      "waitAfterTrap": true,
+      "wait": true
+    }
+  },
+  {
+    "seed": 42,
+    "stage": 8,
+    "difficulty": "easy",
+    "pass": true,
+    "nodes": 6933,
+    "ms": 1072,
+    "round": 13,
+    "actions": [
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "type": "marker",
+        "p": {
+          "x": 1,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 1,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "evidence": {
+      "move": true,
+      "trap": true,
+      "marker": true,
+      "howlGuard": true,
+      "howlFlock": true,
+      "waitAfterTrap": true,
+      "wait": true,
+      "sniff": true,
+      "pounce": true
+    }
+  },
+  {
+    "seed": 42,
+    "stage": 11,
+    "difficulty": "easy",
+    "pass": true,
+    "nodes": 795,
+    "ms": 134,
+    "round": 5,
+    "actions": [
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "evidence": {
+      "wait": true,
+      "pounce": true,
+      "move": true
+    }
+  },
+  {
+    "seed": 42,
+    "stage": 19,
+    "difficulty": "easy",
+    "pass": true,
+    "nodes": 9011,
+    "ms": 1923,
+    "round": 19,
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 8,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 1,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 8,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      }
+    ],
+    "evidence": {}
+  },
+  {
+    "seed": 42,
+    "stage": 0,
+    "difficulty": "hard",
+    "pass": true,
+    "nodes": 220,
+    "ms": 24,
+    "round": 7,
+    "actions": [
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "evidence": {
+      "wait": true,
+      "move": true
+    }
+  },
+  {
+    "seed": 42,
+    "stage": 2,
+    "difficulty": "hard",
+    "pass": true,
+    "nodes": 101,
+    "ms": 17,
+    "round": 5,
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "evidence": {
+      "sniff": true,
+      "move": true
+    }
+  },
+  {
+    "seed": 42,
+    "stage": 6,
+    "difficulty": "hard",
+    "pass": true,
+    "nodes": 2383,
+    "ms": 320,
+    "round": 7,
+    "actions": [
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "evidence": {
+      "howlGuard": true,
+      "howlFlock": true,
+      "move": true,
+      "trap": true,
+      "waitAfterTrap": true,
+      "wait": true,
+      "pounce": true
+    }
+  },
+  {
+    "seed": 42,
+    "stage": 8,
+    "difficulty": "hard",
+    "pass": true,
+    "nodes": 3303,
+    "ms": 618,
+    "round": 7,
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "marker",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "evidence": {
+      "pounce": true,
+      "trap": true,
+      "move": true,
+      "marker": true,
+      "sniff": true
+    }
+  },
+  {
+    "seed": 42,
+    "stage": 11,
+    "difficulty": "hard",
+    "pass": true,
+    "nodes": 1575,
+    "ms": 342,
+    "round": 6,
+    "actions": [
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      }
+    ],
+    "evidence": {
+      "wait": true,
+      "move": true,
+      "pounce": true
+    }
+  },
+  {
+    "seed": 42,
+    "stage": 19,
+    "difficulty": "hard",
+    "pass": true,
+    "nodes": 8210,
+    "ms": 1947,
+    "round": 17,
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 8,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 6
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 7,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 8,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "evidence": {}
+  }
+]

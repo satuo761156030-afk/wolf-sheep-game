@@ -1,0 +1,16 @@
+{
+  "status": "PLAYABLE_PENDING_FINAL_ACCEPTANCE",
+  "branch": "codex/v32-1-complete-acceptance",
+  "base": "af205b3",
+  "reference": "ec6ea5324762e816b18cd5bc9b03edff46d0d7c6",
+  "htmlSha256": "59061cb4da1ef3a782236718fb6316ddc453f97def5cbf51f1e44a0a2e279981",
+  "browserStandardWins": 40,
+  "browserWinsBuild": "stable patrol before final panic/rescue fixes",
+  "nodeTests": 46,
+  "knownUnfinished": [
+    "direct local HTML gameplay",
+    "40 browser matches after final panic/rescue fixes",
+    "complete free/endless matches this round",
+    "physical mobile devices and independent novice experience"
+  ]
+}

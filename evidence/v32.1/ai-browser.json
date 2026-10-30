@@ -1,0 +1,341 @@
+[
+  {
+    "name": "seen",
+    "history": [
+      {
+        "label": "seen",
+        "round": 3,
+        "wolf": {
+          "x": 1,
+          "y": 3
+        },
+        "sheep": [
+          {
+            "x": 2,
+            "y": 3,
+            "known": null,
+            "snared": 0,
+            "safe": false
+          }
+        ],
+        "guard": null,
+        "trap": {
+          "x": 3,
+          "y": 3,
+          "ttl": 6,
+          "triggered": false
+        }
+      },
+      {
+        "label": "wait",
+        "round": 4,
+        "wolf": {
+          "x": 1,
+          "y": 3
+        },
+        "sheep": [
+          {
+            "x": 2,
+            "y": 2,
+            "state": "cornered",
+            "known": {
+              "x": 3,
+              "y": 3,
+              "seen": 4
+            },
+            "snared": 0,
+            "safe": false
+          }
+        ],
+        "guard": null,
+        "trap": {
+          "x": 3,
+          "y": 3,
+          "ttl": 5,
+          "triggered": false
+        }
+      }
+    ]
+  },
+  {
+    "name": "unseen",
+    "history": [
+      {
+        "label": "unseen",
+        "round": 3,
+        "wolf": {
+          "x": 1,
+          "y": 3
+        },
+        "sheep": [
+          {
+            "x": 2,
+            "y": 3,
+            "known": null,
+            "snared": 0,
+            "safe": false
+          }
+        ],
+        "guard": null,
+        "trap": {
+          "x": 3,
+          "y": 3,
+          "ttl": 6,
+          "triggered": false
+        }
+      },
+      {
+        "label": "howl",
+        "round": 4,
+        "wolf": {
+          "x": 1,
+          "y": 3
+        },
+        "sheep": [
+          {
+            "x": 3,
+            "y": 3,
+            "state": "cornered",
+            "known": null,
+            "snared": 3,
+            "safe": false
+          }
+        ],
+        "guard": null,
+        "trap": {
+          "x": 3,
+          "y": 3,
+          "ttl": 6,
+          "triggered": true,
+          "snaredType": "sheep",
+          "snaredId": 0
+        }
+      }
+    ]
+  },
+  {
+    "name": "corner",
+    "history": [
+      {
+        "label": "corner",
+        "round": 3,
+        "wolf": {
+          "x": 1,
+          "y": 3
+        },
+        "sheep": [
+          {
+            "x": 2,
+            "y": 3,
+            "known": {
+              "x": 3,
+              "y": 3,
+              "seen": 3
+            },
+            "snared": 0,
+            "safe": false
+          }
+        ],
+        "guard": null,
+        "trap": {
+          "x": 3,
+          "y": 3,
+          "ttl": 6,
+          "triggered": false
+        }
+      },
+      {
+        "label": "howl",
+        "round": 4,
+        "wolf": {
+          "x": 1,
+          "y": 3
+        },
+        "sheep": [
+          {
+            "x": 3,
+            "y": 3,
+            "state": "cornered",
+            "known": {
+              "x": 3,
+              "y": 3,
+              "seen": 3
+            },
+            "snared": 3,
+            "safe": false
+          }
+        ],
+        "guard": null,
+        "trap": {
+          "x": 3,
+          "y": 3,
+          "ttl": 6,
+          "triggered": true,
+          "snaredType": "sheep",
+          "snaredId": 0
+        }
+      }
+    ]
+  },
+  {
+    "name": "comfort",
+    "history": [
+      {
+        "label": "comfort",
+        "round": 3,
+        "wolf": {
+          "x": 0,
+          "y": 3
+        },
+        "sheep": [
+          {
+            "x": 5,
+            "y": 3,
+            "known": null,
+            "snared": 0,
+            "safe": true
+          }
+        ],
+        "guard": null,
+        "trap": null
+      },
+      {
+        "label": "wait",
+        "round": 4,
+        "wolf": {
+          "x": 0,
+          "y": 3
+        },
+        "sheep": [
+          {
+            "x": 5,
+            "y": 2,
+            "state": "alert",
+            "known": null,
+            "snared": 0,
+            "safe": true
+          }
+        ],
+        "guard": null,
+        "trap": null
+      },
+      {
+        "label": "wait",
+        "round": 5,
+        "wolf": {
+          "x": 0,
+          "y": 3
+        },
+        "sheep": [
+          {
+            "x": 5,
+            "y": 3,
+            "state": "calm",
+            "known": null,
+            "snared": 0,
+            "safe": false
+          }
+        ],
+        "guard": null,
+        "trap": null
+      },
+      {
+        "label": "wait",
+        "round": 6,
+        "wolf": {
+          "x": 0,
+          "y": 3
+        },
+        "sheep": [
+          {
+            "x": 5,
+            "y": 2,
+            "state": "alert",
+            "known": null,
+            "snared": 0,
+            "safe": false
+          }
+        ],
+        "guard": null,
+        "trap": null
+      }
+    ]
+  },
+  {
+    "name": "rescue",
+    "history": [
+      {
+        "label": "rescue",
+        "round": 3,
+        "wolf": {
+          "x": 0,
+          "y": 0
+        },
+        "sheep": [
+          {
+            "x": 3,
+            "y": 3,
+            "known": null,
+            "snared": 3,
+            "safe": false
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "p": {
+            "x": 3,
+            "y": 2
+          },
+          "home": {
+            "x": 3,
+            "y": 2
+          },
+          "state": "patrol",
+          "snared": 0,
+          "facing": 0
+        },
+        "trap": {
+          "x": 3,
+          "y": 3,
+          "ttl": 5,
+          "triggered": true,
+          "snaredType": "sheep",
+          "snaredId": 0
+        }
+      },
+      {
+        "label": "wait",
+        "round": 4,
+        "wolf": {
+          "x": 0,
+          "y": 0
+        },
+        "sheep": [
+          {
+            "x": 3,
+            "y": 3,
+            "state": "calm",
+            "known": null,
+            "snared": 0,
+            "safe": true
+          }
+        ],
+        "guard": {
+          "id": "guardA",
+          "p": {
+            "x": 3,
+            "y": 2
+          },
+          "home": {
+            "x": 3,
+            "y": 2
+          },
+          "state": "patrol",
+          "snared": 0,
+          "facing": 0
+        },
+        "trap": null
+      }
+    ]
+  }
+]
