@@ -1,0 +1,33 @@
+[
+  {
+    "action": "skip this lesson",
+    "visible": false
+  },
+  {
+    "action": "replay hint",
+    "visible": true,
+    "title": "用气味复核目标"
+  },
+  {
+    "action": "all guides off fresh tab",
+    "visible": true
+  },
+  {
+    "action": "all guides off after native confirm",
+    "visible": false
+  },
+  {
+    "action": "enable in settings",
+    "setting": "true",
+    "spotHiddenBehindSettings": true
+  },
+  {
+    "action": "close settings reopens guide",
+    "visible": true
+  },
+  {
+    "action": "reload compatible saved setting",
+    "visible": true,
+    "chapter": "T2 · 认清目标"
+  }
+]

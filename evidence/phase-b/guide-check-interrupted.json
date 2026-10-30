@@ -1,0 +1,14 @@
+{
+  "checks": [
+    {
+      "action": "skip this lesson",
+      "visible": false
+    },
+    {
+      "action": "replay hint",
+      "visible": true,
+      "title": "用气味复核目标"
+    }
+  ],
+  "interruption": "Browser CDP focus/mouse command timed out before all-off click could be verified"
+}

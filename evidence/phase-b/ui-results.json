@@ -1,0 +1,4396 @@
+[
+  {
+    "sourceHash": "1245fc6ef9275f80a92537bf60bcb3cdd5a9a96e0a6f70430b69c47886083c1f",
+    "at": "2026-10-30T06:16:29.148Z",
+    "stage": "t1",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": false,
+    "error": "Error: Error: Playwright selector deadline exceeded\nwaiting on click for selector #pickEasy\nLocator diagnostics: {\"kind\":\"no_visible_match\",\"action\":\"click\",\"locator\":\"#pickEasy\",\"matchCount\":1,\"matches\":[{\"ariaLabel\":null,\"disabled\":false,\"role\":null,\"tag\":\"button\",\"text\":\"🌿 简单模式\",\"type\":null,\"visible\":false}],\"visibleCount\":0,\"truncated\":false}",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "e4d7becfba2f2241eb1fdbb5723a12e6ffc14d94842f86a7a4d9b8b8963491a5",
+    "at": "2026-10-30T06:17:00.023Z",
+    "stage": "t1",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T1 · 看见猎物 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这就是你",
+      "金圈里是真羊",
+      "这只是假羊",
+      "现在轮到你截住它"
+    ]
+  },
+  {
+    "sourceHash": "e4d7becfba2f2241eb1fdbb5723a12e6ffc14d94842f86a7a4d9b8b8963491a5",
+    "at": "2026-10-30T06:17:07.188Z",
+    "stage": "t2",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T2 · 认清目标 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这是刚才闻到的位置",
+      "气味线索已经过期"
+    ]
+  },
+  {
+    "sourceHash": "e4d7becfba2f2241eb1fdbb5723a12e6ffc14d94842f86a7a4d9b8b8963491a5",
+    "at": "2026-10-30T06:17:13.714Z",
+    "stage": "t3",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": false,
+    "error": "Error: Error: Playwright selector deadline exceeded\nwaiting on click for selector #openLevels\nLocator diagnostics: {\"kind\":\"no_visible_match\",\"action\":\"click\",\"locator\":\"#openLevels\",\"matchCount\":1,\"matches\":[{\"ariaLabel\":null,\"disabled\":false,\"role\":null,\"tag\":\"button\",\"text\":\"🗺️ 关卡与模式\",\"type\":\"button\",\"visible\":false}],\"visibleCount\":0,\"truncated\":false}",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:18:21.647Z",
+    "stage": "t1",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T1 · 看见猎物 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这就是你",
+      "金圈里是真羊",
+      "这只是假羊",
+      "现在轮到你截住它"
+    ]
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:18:28.884Z",
+    "stage": "t2",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T2 · 认清目标 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这是刚才闻到的位置",
+      "气味线索已经过期"
+    ]
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:18:35.492Z",
+    "stage": "t3",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T3 · 追与堵 · 5 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": [
+      "追，还是设伏？由你选"
+    ]
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:18:56.180Z",
+    "stage": "t1",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 0
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T1 · 看见猎物 · 12 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这就是你",
+      "金圈里是真羊",
+      "这只是假羊",
+      "现在轮到你截住它"
+    ]
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:19:08.860Z",
+    "stage": "t2",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T2 · 认清目标 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这是刚才闻到的位置",
+      "气味线索已经过期"
+    ]
+  },
+  {
+    "sourceHash": "2725025c001dc0bce685c248ef4719a264cd0deebdce0c1bb3649888126f29a0",
+    "at": "2026-10-30T06:19:18.969Z",
+    "stage": "t3",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T3 · 追与堵 · 5 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": [
+      "追，还是设伏？由你选"
+    ]
+  },
+  {
+    "sourceHash": "e88548f65688bdfa85ca25a10167ac2d94a2fb41a6722bceab9f09c0202ffd20",
+    "at": "2026-10-30T06:50:13.937Z",
+    "stage": "d23",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 5,
+          "y": 5
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 7,
+          "y": 6
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "好心办坏事 · 12 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "e88548f65688bdfa85ca25a10167ac2d94a2fb41a6722bceab9f09c0202ffd20",
+    "at": "2026-10-30T06:50:25.792Z",
+    "stage": "d23",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "好心办坏事 · 16 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "02e2ad27940bdd0b8265868629a5ffe1eb08ca794ae8c1fc76c09e7bfef609e2",
+    "at": "2026-10-30T07:13:02.464Z",
+    "stage": "d26",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "locked": {
+      "round": "19",
+      "guards": [
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 6,
+          "y": 7
+        }
+      ],
+      "wolf": {
+        "x": 6,
+        "y": 3
+      }
+    },
+    "usedThirdGateAfterLock": true,
+    "result": "抓到真羊！",
+    "text": "请君入瓮 · 23 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "02e2ad27940bdd0b8265868629a5ffe1eb08ca794ae8c1fc76c09e7bfef609e2",
+    "at": "2026-10-30T07:13:25.731Z",
+    "stage": "d26",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "locked": {
+      "round": "22",
+      "guards": [
+        {
+          "x": 6,
+          "y": 5
+        },
+        {
+          "x": 3,
+          "y": 6
+        }
+      ],
+      "wolf": {
+        "x": 6,
+        "y": 3
+      }
+    },
+    "usedThirdGateAfterLock": true,
+    "result": "抓到真羊！",
+    "text": "请君入瓮 · 28 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "variant": "without-trap",
+    "sourceHash": "259b416d212d280dd05a498dda411f6748f4c569479a5ea50851bf1fef30df6d",
+    "at": "2026-10-30T07:15:52.668Z",
+    "stage": "d23",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "好心办坏事 · 5 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "variant": "without-trap",
+    "sourceHash": "259b416d212d280dd05a498dda411f6748f4c569479a5ea50851bf1fef30df6d",
+    "at": "2026-10-30T07:15:57.227Z",
+    "stage": "d23",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "好心办坏事 · 7 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "variant": "without-gate",
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:22:18.998Z",
+    "stage": "d26",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "请君入瓮 · 11 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "variant": "without-gate",
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:22:28.076Z",
+    "stage": "d26",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 1,
+          "y": 1
+        }
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "请君入瓮 · 12 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:25:43.804Z",
+    "stage": "d23",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 5,
+          "y": 5
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 7,
+          "y": 6
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "好心办坏事 · 12 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:25:53.926Z",
+    "stage": "d23",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "好心办坏事 · 16 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:26:12.777Z",
+    "stage": "d26",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "locked": {
+      "round": "19",
+      "guards": [
+        {
+          "x": 4,
+          "y": 5
+        },
+        {
+          "x": 6,
+          "y": 7
+        }
+      ],
+      "wolf": {
+        "x": 6,
+        "y": 3
+      }
+    },
+    "usedThirdGateAfterLock": true,
+    "result": "抓到真羊！",
+    "text": "请君入瓮 · 23 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:26:36.316Z",
+    "stage": "d26",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "locked": {
+      "round": "22",
+      "guards": [
+        {
+          "x": 6,
+          "y": 5
+        },
+        {
+          "x": 3,
+          "y": 6
+        }
+      ],
+      "wolf": {
+        "x": 6,
+        "y": 3
+      }
+    },
+    "usedThirdGateAfterLock": true,
+    "result": "抓到真羊！",
+    "text": "请君入瓮 · 28 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:29:25.522Z",
+    "stage": 0,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 1 关通关 · 7 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:29:30.589Z",
+    "stage": 1,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 2 关通关 · 9 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:29:36.265Z",
+    "stage": 2,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 3 关通关 · 5 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:29:40.814Z",
+    "stage": 3,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 4 关通关 · 4 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:29:45.418Z",
+    "stage": 4,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 5
+        }
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 5 关通关 · 10 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:29:57.401Z",
+    "stage": 5,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 6 关通关 · 7 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:30:04.206Z",
+    "stage": 6,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 5,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 1
+        }
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 7 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:30:10.885Z",
+    "stage": 7,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 8 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:30:17.767Z",
+    "stage": 8,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "marker",
+        "p": {
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 1,
+          "y": 5
+        }
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 9 关通关 · 10 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:30:29.639Z",
+    "stage": 9,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 10 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:30:41.492Z",
+    "stage": 10,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 11 关通关 · 5 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:30:46.617Z",
+    "stage": 11,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 12 关通关 · 4 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:30:51.946Z",
+    "stage": 12,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 13 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:30:59.290Z",
+    "stage": 13,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 8
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 14 关通关 · 6 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:31:06.296Z",
+    "stage": 14,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 6
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 15 关通关 · 9 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:31:21.496Z",
+    "stage": 15,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 7,
+          "y": 7
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 8,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 16 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:31:29.040Z",
+    "stage": 16,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 17 关通关 · 6 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:31:34.834Z",
+    "stage": 17,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 7,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 18 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:31:42.180Z",
+    "stage": 18,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 6
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 9,
+          "y": 6
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 19 关通关 · 9 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:31:50.188Z",
+    "stage": 19,
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 8,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 8,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "第 20 关通关 · 17 回合。\n全部 20 关挑战完成！",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:32:12.188Z",
+    "stage": 0,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 1 关通关 · 9 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:32:18.242Z",
+    "stage": 1,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 2 关通关 · 9 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:32:24.022Z",
+    "stage": 2,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 3 关通关 · 5 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:32:29.007Z",
+    "stage": 3,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 4 关通关 · 3 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:32:33.759Z",
+    "stage": 4,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 5 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:32:50.458Z",
+    "stage": 5,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 4
+        }
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 6 关通关 · 7 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:32:57.999Z",
+    "stage": 6,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "trap",
+        "p": {
+          "x": 1,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 4
+        }
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 7 关通关 · 8 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:33:04.888Z",
+    "stage": 7,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 8 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:33:11.616Z",
+    "stage": 8,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 3
+        }
+      },
+      {
+        "type": "marker",
+        "p": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 9 关通关 · 5 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:33:18.905Z",
+    "stage": 9,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 1,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 10 关通关 · 7 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:33:54.197Z",
+    "stage": 10,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 11 关通关 · 4 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:33:58.987Z",
+    "stage": 11,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 1,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 12 关通关 · 6 回合。\n接下来继续练习实际操作。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:34:04.378Z",
+    "stage": 12,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 8,
+          "y": 8
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 8,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 13 关通关 · 9 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:34:11.761Z",
+    "stage": 13,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 14 关通关 · 7 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:34:18.427Z",
+    "stage": 14,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 5,
+          "y": 4
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 6
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 15 关通关 · 9 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:34:32.347Z",
+    "stage": 15,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 8,
+          "y": 3
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 16 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:34:39.958Z",
+    "stage": 16,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 7
+        }
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 17 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:34:47.790Z",
+    "stage": 17,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 7,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 18 关通关 · 8 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:34:54.939Z",
+    "stage": 18,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 1
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 19 关通关 · 9 回合。\n后面还有不同地形和机制组合等你破解。",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:35:02.764Z",
+    "stage": 19,
+    "difficulty": "hard",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 8,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 9,
+          "y": 3
+        }
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "困难围猎成功！",
+    "text": "第 20 关通关 · 16 回合。\n全部 20 关挑战完成！",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:37:47.193Z",
+    "stage": "t1",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T1 · 看见猎物 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这就是你",
+      "金圈里是真羊",
+      "这只是假羊",
+      "现在轮到你截住它"
+    ]
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:37:54.990Z",
+    "stage": "t2",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T2 · 认清目标 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这是刚才闻到的位置",
+      "气味线索已经过期"
+    ]
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:38:01.940Z",
+    "stage": "t3",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T3 · 追与堵 · 5 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": [
+      "追，还是设伏？由你选"
+    ]
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:38:15.653Z",
+    "stage": "t1",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 0
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T1 · 看见猎物 · 12 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这就是你",
+      "金圈里是真羊",
+      "这只是假羊",
+      "现在轮到你截住它"
+    ]
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:38:28.282Z",
+    "stage": "t2",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T2 · 认清目标 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这是刚才闻到的位置",
+      "气味线索已经过期"
+    ]
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:38:38.613Z",
+    "stage": "t3",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 4
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T3 · 追与堵 · 5 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": [
+      "追，还是设伏？由你选"
+    ]
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:46:01.782Z",
+    "stage": "t1",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": false,
+    "error": "Error: Error: Playwright selector deadline exceeded\nwaiting on click for selector #openLevels\nLocator diagnostics: {\"kind\":\"no_visible_match\",\"action\":\"click\",\"locator\":\"#openLevels\",\"matchCount\":1,\"matches\":[{\"ariaLabel\":null,\"disabled\":false,\"role\":null,\"tag\":\"button\",\"text\":\"🗺️ 关卡与模式\",\"type\":\"button\",\"visible\":false}],\"visibleCount\":0,\"truncated\":false}",
+    "lessonSteps": []
+  },
+  {
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T07:46:52.639Z",
+    "stage": "t1",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": true,
+    "result": "抓到真羊！",
+    "text": "T1 · 看见猎物 · 9 回合。带着刚才的发现，进入下一场。",
+    "lessonSteps": [
+      "这就是你",
+      "金圈里是真羊",
+      "这只是假羊",
+      "现在轮到你截住它"
+    ]
+  },
+  {
+    "variant": "without-trap",
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T08:00:00.570Z",
+    "stage": "d23",
+    "difficulty": "easy",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "好心办坏事 · 5 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  },
+  {
+    "variant": "without-trap",
+    "sourceHash": "f3f694818a061fac2ddea4b97b27b36d7506cbce1f6d42220439e2b7b30d816a",
+    "at": "2026-10-30T08:00:05.210Z",
+    "stage": "d23",
+    "difficulty": "hard",
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    },
+    "actions": [
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      }
+    ],
+    "pass": true,
+    "guideAtStart": false,
+    "result": "抓到真羊！",
+    "text": "好心办坏事 · 7 回合。你选择了自己的办法。可以重玩尝试另一种策略。",
+    "lessonSteps": []
+  }
+]

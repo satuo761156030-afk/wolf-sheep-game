@@ -1,0 +1,212 @@
+[
+  {
+    "difficulty": "easy",
+    "steps": [
+      {
+        "a": {
+          "type": "move",
+          "d": 4
+        },
+        "before": 0,
+        "after": 1,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "trap",
+          "p": {
+            "x": 2,
+            "y": 5
+          }
+        },
+        "before": 1,
+        "after": 2,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 1
+        },
+        "before": 2,
+        "after": 3,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 3
+        },
+        "before": 3,
+        "after": 4,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "sniff"
+        },
+        "before": 4,
+        "after": 5,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 0
+        },
+        "before": 5,
+        "after": 6,
+        "snared": 1
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 2
+        },
+        "before": 6,
+        "after": 7,
+        "snared": 1
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 1
+        },
+        "before": 7,
+        "after": 8,
+        "snared": 1
+      }
+    ],
+    "title": "抓到真羊！",
+    "pass": true
+  },
+  {
+    "difficulty": "hard",
+    "steps": [
+      {
+        "a": {
+          "type": "trap",
+          "p": {
+            "x": 2,
+            "y": 5
+          }
+        },
+        "before": 0,
+        "after": 1,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 1
+        },
+        "before": 1,
+        "after": 2,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "sniff"
+        },
+        "before": 2,
+        "after": 3,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 1
+        },
+        "before": 3,
+        "after": 4,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 4
+        },
+        "before": 4,
+        "after": 5,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 1
+        },
+        "before": 5,
+        "after": 6,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 0
+        },
+        "before": 6,
+        "after": 7,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 3
+        },
+        "before": 7,
+        "after": 8,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 1
+        },
+        "before": 8,
+        "after": 9,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "trap",
+          "p": {
+            "x": 4,
+            "y": 5
+          }
+        },
+        "before": 9,
+        "after": 10,
+        "snared": 0
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 1
+        },
+        "before": 10,
+        "after": 11,
+        "snared": 1
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 2
+        },
+        "before": 11,
+        "after": 12,
+        "snared": 1
+      },
+      {
+        "a": {
+          "type": "move",
+          "d": 3
+        },
+        "before": 12,
+        "after": 13,
+        "snared": 1
+      }
+    ],
+    "title": "抓到真羊！",
+    "pass": true
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "stage": "d26",
+    "difficulty": "hard",
+    "pass": true,
+    "nodes": 83983,
+    "ms": 19907,
+    "round": 28,
+    "actions": [
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 5,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 2
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 6,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 4
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 6,
+          "y": 2
+        }
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      }
+    ],
+    "evidence": {
+      "howlGuard": true,
+      "move": true,
+      "sniff": true,
+      "trap": true,
+      "grass": true,
+      "gate": true,
+      "waitAfterTrap": true,
+      "wait": true,
+      "pounce": true
+    }
+  },
+  {
+    "stage": "d26",
+    "difficulty": "easy",
+    "pass": true,
+    "nodes": 58662,
+    "ms": 33908,
+    "round": 23,
+    "actions": [
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "sniff"
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 8
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 3,
+          "y": 7
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 5
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "howl"
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 4,
+          "y": 3
+        }
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 4,
+          "y": 4
+        }
+      },
+      {
+        "type": "trap",
+        "p": {
+          "x": 4,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 1
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 6,
+          "y": 3
+        }
+      },
+      {
+        "type": "gate",
+        "p": {
+          "x": 6,
+          "y": 4
+        }
+      },
+      {
+        "type": "move",
+        "d": 0
+      },
+      {
+        "type": "move",
+        "d": 3
+      },
+      {
+        "type": "pounce",
+        "p": {
+          "x": 3,
+          "y": 2
+        }
+      },
+      {
+        "type": "move",
+        "d": 3
+      }
+    ],
+    "evidence": {
+      "move": true,
+      "sniff": true,
+      "howlGuard": true,
+      "trap": true,
+      "grass": true,
+      "howlFlock": true,
+      "pounce": true,
+      "gate": true
+    }
+  }
+]

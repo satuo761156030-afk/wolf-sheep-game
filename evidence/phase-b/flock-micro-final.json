@@ -1,0 +1,61 @@
+[
+  {
+    "kind": "detour",
+    "result": {
+      "round": 4,
+      "sheep": [
+        {
+          "id": 0,
+          "real": true,
+          "x": 2,
+          "y": 2,
+          "stress": 1,
+          "mood": "alert",
+          "safeMemory": false,
+          "comfortGrace": 0,
+          "snared": 0,
+          "knownTrap": {
+            "x": 3,
+            "y": 3,
+            "seen": 4
+          },
+          "behavior": "cornered"
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 5,
+        "triggered": false
+      }
+    }
+  },
+  {
+    "kind": "startle",
+    "result": {
+      "round": 4,
+      "sheep": [
+        {
+          "id": 0,
+          "real": true,
+          "x": 3,
+          "y": 3,
+          "stress": 2,
+          "mood": "snared",
+          "safeMemory": false,
+          "comfortGrace": 0,
+          "snared": 3,
+          "behavior": "cornered"
+        }
+      ],
+      "trap": {
+        "x": 3,
+        "y": 3,
+        "ttl": 6,
+        "triggered": true,
+        "snaredType": "sheep",
+        "snaredId": 0
+      }
+    }
+  }
+]
